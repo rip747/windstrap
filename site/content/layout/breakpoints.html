@@ -1,0 +1,100 @@
+<h2 id="concepts">Concepts <a class="anchor" href="#concepts">#</a></h2>
+<p>
+  Breakpoints are customizable widths that determine how your responsive layout
+  behaves across device or viewport sizes. Bootstrap’s grid tiers are matched
+  exactly by WindStrap’s Tailwind <code>screens</code>, so the responsive variants
+  (<code>sm:</code>, <code>md:</code>, <code>lg:</code>, <code>xl:</code>,
+  <code>xxl:</code>) fire at the same widths.
+</p>
+
+<h2 id="available-breakpoints">Available breakpoints <a class="anchor" href="#available-breakpoints">#</a></h2>
+<p>
+  Bootstrap includes six default breakpoints, sometimes referred to as grid tiers.
+</p>
+<div class="bd-example">
+  <table class="table table-striped align-middle">
+    <thead>
+      <tr>
+        <th>Breakpoint</th>
+        <th>Class infix</th>
+        <th>Dimensions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="text-muted">Extra small</td>
+        <td><em>None</em></td>
+        <td>&lt;576px</td>
+      </tr>
+      <tr>
+        <td>Small</td>
+        <td><code>sm</code></td>
+        <td>&ge;576px</td>
+      </tr>
+      <tr>
+        <td>Medium</td>
+        <td><code>md</code></td>
+        <td>&ge;768px</td>
+      </tr>
+      <tr>
+        <td>Large</td>
+        <td><code>lg</code></td>
+        <td>&ge;992px</td>
+      </tr>
+      <tr>
+        <td>Extra large</td>
+        <td><code>xl</code></td>
+        <td>&ge;1200px</td>
+      </tr>
+      <tr>
+        <td>Extra extra large</td>
+        <td><code>xxl</code></td>
+        <td>&ge;1400px</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<p>
+  Each breakpoint was chosen to comfortably hold containers whose widths are
+  multiples of 12. Breakpoints are also representative of a subset of common device
+  sizes and viewport dimensions — they don’t specifically target every use case.
+</p>
+
+<h2 id="css-variables">CSS variables <a class="anchor" href="#css-variables">#</a></h2>
+<p>
+  Breakpoints are also exposed as CSS variables in <code>:root</code>:
+</p>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+:root {
+  --bs-breakpoint-xs: 0;
+  --bs-breakpoint-sm: 576px;
+  --bs-breakpoint-md: 768px;
+  --bs-breakpoint-lg: 992px;
+  --bs-breakpoint-xl: 1200px;
+  --bs-breakpoint-xxl: 1400px;
+}
+  </code></pre>
+</div>
+
+<h2 id="media-queries">Media queries <a class="anchor" href="#media-queries">#</a></h2>
+<p>
+  Since WindStrap uses Tailwind’s engine, you write responsive behavior with
+  breakpoint variants in <code>@apply</code> (or directly in your HTML). These are
+  the equivalent of Bootstrap’s <code>min-width</code> media queries:
+</p>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+/* Bootstrap: @include media-breakpoint-up(md) { … } */
+.card-body { @apply md:flex md:justify-between; }
+
+/* Bootstrap: .d-md-none */
+.element { @apply md:hidden; }
+  </code></pre>
+</div>
+<p>
+  These translate into real <code>@media (min-width: …)</code> queries in the
+  compiled output, exactly like Bootstrap’s.
+</p>

@@ -1,0 +1,112 @@
+<h2 id="example">Example <a class="anchor" href="#example">#</a></h2>
+<p>
+  Use an ordered or unordered list with linked list items to create a
+  stylized breadcrumb. Use <code>.breadcrumb-item</code> on the items; the
+  separator is added automatically via CSS.
+</p>
+<div class="bd-example">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Home</li>
+    </ol>
+  </nav>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Library</li>
+    </ol>
+  </nav>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Library</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Data</li>
+    </ol>
+  </nav>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">Library</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Data</li>
+  </ol>
+</nav>
+  </code></pre>
+</div>
+
+<h2 id="dividers">Dividers <a class="anchor" href="#dividers">#</a></h2>
+<p>
+  Dividers are automatically added in CSS through <code>::before</code> and
+  <code>content</code>. They can be changed by modifying a local CSS custom
+  property <code>--bs-breadcrumb-divider</code>, or through the
+  <code>$breadcrumb-divider</code> Sass variable — and <code>$breadcrumb-divider-flipped</code> for its RTL counterpart, if needed. We default to our Sass variable, which is set as a fallback to the custom property. This way you get a global divider that you can override without recompiling.
+</p>
+<div class="bd-example">
+  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Library</li>
+    </ol>
+  </nav>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Library</li>
+  </ol>
+</nav>
+  </code></pre>
+</div>
+<p>
+  When modifying via Sass, the <a href="#variables" class="text-decoration-none">quote function</a>
+  is required to generate the quotes around a string. For example, using
+  <code>&gt;</code> as the divider:
+</p>
+<div class="bd-example">
+  <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Library</li>
+    </ol>
+  </nav>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<nav style="--bs-breadcrumb-divider: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&quot;);" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Library</li>
+  </ol>
+</nav>
+  </code></pre>
+</div>
+<p>
+  You can also remove the divider setting <code>--bs-breadcrumb-divider: '';</code>
+  (empty strings in CSS custom properties counts as a value).
+</p>
+<div class="bd-example">
+  <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Library</li>
+    </ol>
+  </nav>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Library</li>
+  </ol>
+</nav>
+  </code></pre>
+</div>

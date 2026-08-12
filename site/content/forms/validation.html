@@ -1,0 +1,116 @@
+<h2 id="how-it-works">How it works <a class="anchor" href="#how-it-works">#</a></h2>
+<p>
+  Here’s how form validation works with Bootstrap:
+</p>
+<ul>
+  <li>HTML form validation is applied via CSS’s two pseudo-classes, <code>:invalid</code> and <code>:valid</code>. It applies to <code>&lt;input&gt;</code>, <code>&lt;select&gt;</code>, and <code>&lt;textarea&gt;</code> elements.</li>
+  <li>Bootstrap scopes the <code>:valid</code> and <code>:invalid</code> styles to parent <code>.was-validated</code> class, usually applied to the <code>&lt;form&gt;</code>. Otherwise, any required field without a value shows up as invalid on page load.</li>
+  <li>You can swap <code>.was-validated</code> for the <code>.is-valid</code> and <code>.is-invalid</code> classes to control validation states without a server-side round trip.</li>
+</ul>
+<div class="bd-callout bd-callout-warning">
+  <h5>Support for client side validation</h5>
+  <p class="mb-0">Client-side validation is handled by the browser (and your own JavaScript). WindStrap translates the styling classes (<code>.was-validated</code>, <code>.is-valid</code>, <code>.is-invalid</code>, feedback and tooltip elements) from Bootstrap’s CSS.</p>
+</div>
+
+<h2 id="custom-styles">Custom styles <a class="anchor" href="#custom-styles">#</a></h2>
+<p>
+  For custom Bootstrap form validation messages, you’ll need to add the
+  <code>novalidate</code> boolean attribute to your <code>&lt;form&gt;</code>. This
+  disables the browser default feedback tooltips, but still provides access to the
+  form validation APIs in JavaScript.
+</p>
+<div class="bd-example">
+  <form class="row g-3 needs-validation" novalidate>
+    <div class="col-md-4">
+      <label for="validationCustom01" class="form-label">First name</label>
+      <input type="text" class="form-control is-valid" id="validationCustom01" value="Mark" required>
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustom02" class="form-label">Last name</label>
+      <input type="text" class="form-control is-valid" id="validationCustom02" value="Otto" required>
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustomUsername" class="form-label">Username</label>
+      <div class="input-group has-validation">
+        <span class="input-group-text" id="inputGroupPrepend">@</span>
+        <input type="text" class="form-control is-invalid" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+        <div class="invalid-feedback">Please choose a username.</div>
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+  </form>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<form class="row g-3 needs-validation" novalidate>
+  <div class="col-md-4">
+    <label for="validationCustom01" class="form-label">First name</label>
+    <input type="text" class="form-control is-valid" id="validationCustom01" value="Mark" required>
+    <div class="valid-feedback">Looks good!</div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustom02" class="form-label">Last name</label>
+    <input type="text" class="form-control is-valid" id="validationCustom02" value="Otto" required>
+    <div class="valid-feedback">Looks good!</div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustomUsername" class="form-label">Username</label>
+    <div class="input-group has-validation">
+      <span class="input-group-text" id="inputGroupPrepend">@</span>
+      <input type="text" class="form-control is-invalid" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+      <div class="invalid-feedback">Please choose a username.</div>
+    </div>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </div>
+</form>
+  </code></pre>
+</div>
+
+<h2 id="tooltips">Tooltips <a class="anchor" href="#tooltips">#</a></h2>
+<p>
+  If your form layout allows it, you can swap the <code>.{valid|invalid}-feedback</code>
+  classes for <code>.{valid|invalid}-tooltip</code> classes to display validation
+  feedback in a styled tooltip.
+</p>
+<div class="bd-example">
+  <form class="row g-3">
+    <div class="col-md-4">
+      <label for="validationTooltip01" class="form-label">First name</label>
+      <input type="text" class="form-control is-valid" id="validationTooltip01" value="Mark" required>
+      <div class="valid-tooltip">Looks good!</div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationTooltip02" class="form-label">Last name</label>
+      <input type="text" class="form-control is-valid" id="validationTooltip02" value="Otto" required>
+      <div class="valid-tooltip">Looks good!</div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationTooltipUsername" class="form-label">Username</label>
+      <div class="input-group has-validation">
+        <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+        <input type="text" class="form-control is-invalid" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
+        <div class="invalid-tooltip">Please choose a unique and valid username.</div>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="col-md-4">
+  <label for="validationTooltipUsername" class="form-label">Username</label>
+  <div class="input-group has-validation">
+    <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+    <input type="text" class="form-control is-invalid" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
+    <div class="invalid-tooltip">Please choose a unique and valid username.</div>
+  </div>
+</div>
+  </code></pre>
+</div>

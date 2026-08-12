@@ -1,0 +1,66 @@
+<h2 id="arrange">Arrange <a class="anchor" href="#arrange">#</a></h2>
+<p>
+  Use the <code>position-*</code> utilities to set the <code>position</code>
+  property of an element.
+</p>
+<div class="bd-example">
+  <div class="position-relative p-3 bg-body-tertiary border rounded-3">
+    <div class="position-absolute top-0 start-0 p-2 bg-primary text-white rounded-1">top-0 start-0</div>
+    <div class="position-absolute top-0 end-0 p-2 bg-primary text-white rounded-1">top-0 end-0</div>
+    <div class="position-absolute top-50 start-50 translate-middle p-2 bg-primary text-white rounded-1">top-50 start-50</div>
+    <div class="position-absolute bottom-50 end-50 p-2 bg-primary text-white rounded-1">bottom-50 end-50</div>
+    <div class="position-absolute bottom-0 start-0 p-2 bg-primary text-white rounded-1">bottom-0 start-0</div>
+    <div class="position-absolute bottom-0 end-0 p-2 bg-primary text-white rounded-1">bottom-0 end-0</div>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="position-relative">
+  <div class="position-absolute top-0 start-0">top-0 start-0</div>
+  <div class="position-absolute top-0 end-0">top-0 end-0</div>
+  <div class="position-absolute top-50 start-50 translate-middle">top-50 start-50</div>
+  <div class="position-absolute bottom-50 end-50">bottom-50 end-50</div>
+  <div class="position-absolute bottom-0 start-0">bottom-0 start-0</div>
+  <div class="position-absolute bottom-0 end-0">bottom-0 end-0</div>
+</div>
+  </code></pre>
+</div>
+
+<h2 id="center-elements">Center elements <a class="anchor" href="#center-elements">#</a></h2>
+<div class="bd-example">
+  <div class="position-relative bg-body-tertiary border rounded-3" style="height: 180px;">
+    <div class="position-absolute top-50 start-50 translate-middle bg-primary text-white rounded-1 px-3 py-2">Centered element</div>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="position-relative" style="height: 180px;">
+  <div class="position-absolute top-50 start-50 translate-middle">Centered element</div>
+</div>
+  </code></pre>
+</div>
+
+<h2 id="examples">Examples <a class="anchor" href="#examples">#</a></h2>
+<p>
+  Position utilities are also available for <code>static</code>, <code>relative</code>,
+  <code>absolute</code>, <code>fixed</code>, and <code>sticky</code>.
+</p>
+<div class="bd-example">
+  <div class="position-static p-3 mb-2 bg-body-secondary border rounded-2">position-static</div>
+  <div class="position-relative p-3 mb-2 bg-body-secondary border rounded-2">position-relative</div>
+  <div class="position-absolute p-3 mb-2 bg-body-secondary border rounded-2">position-absolute</div>
+  <div class="position-fixed p-3 mb-2 bg-body-secondary border rounded-2">position-fixed</div>
+  <div class="position-sticky p-3 mb-2 bg-body-secondary border rounded-2">position-sticky</div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="position-static">…</div>
+<div class="position-relative">…</div>
+<div class="position-absolute">…</div>
+<div class="position-fixed">…</div>
+<div class="position-sticky">…</div>
+  </code></pre>
+</div>

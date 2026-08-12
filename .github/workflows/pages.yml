@@ -1,0 +1,70 @@
+# Deploys the WindStrap docs to GitHub Pages.
+#
+# The docs pages reference assets with repo-root-relative paths
+# (e.g. ../../dist/windstrap.css, ../css/docs.css), so the site must be served
+# from the repo-root layout — NOT just the docs/ folder. This workflow builds
+# from source (site/ + src/) and stages index.html, demo.html, dist/ and docs/
+# into _site/ (mirroring the repo root), then deploys it to Pages.
+#
+# To enable:
+#   Repo Settings -> Pages -> Source: "GitHub Actions"
+#   (push to main triggers a deploy automatically)
+
+name: Deploy docs to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build CSS + docs
+        run: |
+          mkdir -p dist
+          npm run build:all
+
+      - name: Stage Pages content (repo root = site root)
+        run: |
+          mkdir -p _site
+          cp -r index.html demo.html dist docs _site/
+          touch _site/.nojekyll
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

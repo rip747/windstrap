@@ -1,0 +1,288 @@
+/* ==========================================================================
+   SECTION: buttons.css — .btn, its variants/sizes and button groups.
+   ========================================================================== */
+
+.btn {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--bs-body-color);
+  @apply text-center no-underline align-middle cursor-pointer select-none border border-transparent rounded bg-transparent;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn { transition: none; }
+}
+
+.btn:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb, 13, 110, 253), 0.5);
+}
+.btn-check:focus-visible + .btn {
+  border-color: var(--bs-btn-hover-border-color);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb, 13, 110, 253), 0.5);
+}
+
+.btn.disabled,
+.btn:disabled,
+fieldset:disabled .btn {
+  @apply opacity-65 pointer-events-none;
+}
+
+/* --------------------------------------------------------------------------
+   Solid variants (hover/focus/active follow Bootstrap's exact shades)
+   -------------------------------------------------------------------------- */
+
+.btn-primary {
+  @apply bg-primary text-white border-primary hover:bg-[#0b5ed7] hover:border-[#0a58ca] focus-visible:bg-[#0b5ed7] focus-visible:border-[#0a58ca] active:bg-[#0a58ca] active:border-[#0a53be] active:shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-white border-secondary hover:bg-[#5c636a] hover:border-[#565e64] focus-visible:bg-[#5c636a] focus-visible:border-[#565e64] active:bg-[#565e64] active:border-[#51585e] active:shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+  --bs-btn-focus-shadow-rgb: 130, 138, 145;
+}
+
+.btn-success {
+  @apply bg-success text-white border-success hover:bg-[#157347] hover:border-[#146c43] focus-visible:bg-[#157347] focus-visible:border-[#146c43] active:bg-[#146c43] active:border-[#13653f] active:shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+  --bs-btn-focus-shadow-rgb: 60, 153, 110;
+}
+
+.btn-info {
+  @apply bg-info text-black border-info hover:bg-[#31d2f2] hover:border-[#25cff2] focus-visible:bg-[#31d2f2] focus-visible:border-[#25cff2] active:bg-[#3dd5f3] active:border-[#25cff2] active:shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+  --bs-btn-focus-shadow-rgb: 11, 172, 204;
+}
+
+.btn-warning {
+  @apply bg-warning text-black border-warning hover:bg-[#ffca2c] hover:border-[#ffc720] focus-visible:bg-[#ffca2c] focus-visible:border-[#ffc720] active:bg-[#ffcd39] active:border-[#ffc720] active:shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+  --bs-btn-focus-shadow-rgb: 217, 164, 6;
+}
+
+.btn-danger {
+  @apply bg-danger text-white border-danger hover:bg-[#bb2d3b] hover:border-[#b02a37] focus-visible:bg-[#bb2d3b] focus-visible:border-[#b02a37] active:bg-[#b02a37] active:border-[#a52834] active:shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+  --bs-btn-focus-shadow-rgb: 225, 83, 97;
+}
+
+.btn-light {
+  @apply bg-light text-black border-light hover:bg-[#d3d4d5] hover:border-[#c6c7c8] focus-visible:bg-[#d3d4d5] focus-visible:border-[#c6c7c8] active:bg-[#c6c7c8] active:border-[#babbbc] active:shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+  --bs-btn-focus-shadow-rgb: 211, 212, 213;
+}
+
+.btn-dark {
+  @apply bg-dark text-white border-dark hover:bg-[#424649] hover:border-[#373b3e] focus-visible:bg-[#424649] focus-visible:border-[#373b3e] active:bg-[#4d5154] active:border-[#373b3e] active:shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+  --bs-btn-focus-shadow-rgb: 66, 70, 73;
+}
+
+/* Persistent `.active` / `.show` / `.btn-check:checked` states (Bootstrap
+   applies the same "active" look outside of a real click). */
+.btn-primary.active, .btn-primary.show, .btn-check:checked + .btn-primary {
+  @apply bg-[#0a58ca] border-[#0a53be] text-white shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+}
+.btn-secondary.active, .btn-secondary.show, .btn-check:checked + .btn-secondary {
+  @apply bg-[#565e64] border-[#51585e] text-white shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+}
+.btn-success.active, .btn-success.show, .btn-check:checked + .btn-success {
+  @apply bg-[#146c43] border-[#13653f] text-white shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+}
+.btn-info.active, .btn-info.show, .btn-check:checked + .btn-info {
+  @apply bg-[#3dd5f3] border-[#25cff2] text-black shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+}
+.btn-warning.active, .btn-warning.show, .btn-check:checked + .btn-warning {
+  @apply bg-[#ffcd39] border-[#ffc720] text-black shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+}
+.btn-danger.active, .btn-danger.show, .btn-check:checked + .btn-danger {
+  @apply bg-[#b02a37] border-[#a52834] text-white shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+}
+.btn-light.active, .btn-light.show, .btn-check:checked + .btn-light {
+  @apply bg-[#c6c7c8] border-[#babbbc] text-black shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+}
+.btn-dark.active, .btn-dark.show, .btn-check:checked + .btn-dark {
+  @apply bg-[#4d5154] border-[#373b3e] text-white shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+}
+
+/* --------------------------------------------------------------------------
+   Outline variants
+   -------------------------------------------------------------------------- */
+
+.btn-outline-primary {
+  @apply text-primary border-primary bg-transparent hover:bg-primary hover:text-white hover:border-primary focus-visible:bg-primary focus-visible:text-white focus-visible:border-primary active:bg-primary active:text-white active:border-primary active:shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+  --bs-btn-focus-shadow-rgb: 13, 110, 253;
+}
+.btn-outline-secondary {
+  @apply text-secondary border-secondary bg-transparent hover:bg-secondary hover:text-white hover:border-secondary focus-visible:bg-secondary focus-visible:text-white focus-visible:border-secondary active:bg-secondary active:text-white active:border-secondary active:shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+  --bs-btn-focus-shadow-rgb: 108, 117, 125;
+}
+.btn-outline-success {
+  @apply text-success border-success bg-transparent hover:bg-success hover:text-white hover:border-success focus-visible:bg-success focus-visible:text-white focus-visible:border-success active:bg-success active:text-white active:border-success active:shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+  --bs-btn-focus-shadow-rgb: 25, 135, 84;
+}
+.btn-outline-info {
+  @apply text-info border-info bg-transparent hover:bg-info hover:text-black hover:border-info focus-visible:bg-info focus-visible:text-black focus-visible:border-info active:bg-info active:text-black active:border-info active:shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+  --bs-btn-focus-shadow-rgb: 13, 202, 240;
+}
+.btn-outline-warning {
+  @apply text-warning border-warning bg-transparent hover:bg-warning hover:text-black hover:border-warning focus-visible:bg-warning focus-visible:text-black focus-visible:border-warning active:bg-warning active:text-black active:border-warning active:shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+  --bs-btn-focus-shadow-rgb: 255, 193, 7;
+}
+.btn-outline-danger {
+  @apply text-danger border-danger bg-transparent hover:bg-danger hover:text-white hover:border-danger focus-visible:bg-danger focus-visible:text-white focus-visible:border-danger active:bg-danger active:text-white active:border-danger active:shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+  --bs-btn-focus-shadow-rgb: 220, 53, 69;
+}
+.btn-outline-light {
+  @apply text-light border-light bg-transparent hover:bg-light hover:text-black hover:border-light focus-visible:bg-light focus-visible:text-black focus-visible:border-light active:bg-light active:text-black active:border-light active:shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+  --bs-btn-focus-shadow-rgb: 248, 249, 250;
+}
+.btn-outline-dark {
+  @apply text-dark border-dark bg-transparent hover:bg-dark hover:text-white hover:border-dark focus-visible:bg-dark focus-visible:text-white focus-visible:border-dark active:bg-dark active:text-white active:border-dark active:shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+  --bs-btn-focus-shadow-rgb: 33, 37, 41;
+}
+
+.btn-outline-primary.active, .btn-outline-primary.show, .btn-check:checked + .btn-outline-primary {
+  @apply bg-primary text-white border-primary shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+}
+.btn-outline-secondary.active, .btn-outline-secondary.show, .btn-check:checked + .btn-outline-secondary {
+  @apply bg-secondary text-white border-secondary shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+}
+.btn-outline-success.active, .btn-outline-success.show, .btn-check:checked + .btn-outline-success {
+  @apply bg-success text-white border-success shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+}
+.btn-outline-info.active, .btn-outline-info.show, .btn-check:checked + .btn-outline-info {
+  @apply bg-info text-black border-info shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+}
+.btn-outline-warning.active, .btn-outline-warning.show, .btn-check:checked + .btn-outline-warning {
+  @apply bg-warning text-black border-warning shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+}
+.btn-outline-danger.active, .btn-outline-danger.show, .btn-check:checked + .btn-outline-danger {
+  @apply bg-danger text-white border-danger shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+}
+.btn-outline-light.active, .btn-outline-light.show, .btn-check:checked + .btn-outline-light {
+  @apply bg-light text-black border-light shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+}
+.btn-outline-dark.active, .btn-outline-dark.show, .btn-check:checked + .btn-outline-dark {
+  @apply bg-dark text-white border-dark shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+}
+
+/* --------------------------------------------------------------------------
+   Link button
+   -------------------------------------------------------------------------- */
+
+.btn-link {
+  @apply font-normal underline bg-transparent border-0;
+  color: var(--bs-link-color);
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+}
+.btn-link:hover,
+.btn-link:focus-visible {
+  color: var(--bs-link-hover-color);
+}
+.btn-link.disabled,
+.btn-link:disabled {
+  color: #6c757d;
+}
+
+/* --------------------------------------------------------------------------
+   Sizes
+   -------------------------------------------------------------------------- */
+
+.btn-lg, .btn-group-lg > .btn {
+  @apply px-3 py-2 text-[1.25rem] rounded-[var(--bs-border-radius-lg)];
+}
+.btn-sm, .btn-group-sm > .btn {
+  @apply px-2 py-1 text-[0.875rem] rounded-[var(--bs-border-radius-sm)];
+}
+
+/* --------------------------------------------------------------------------
+   Button group
+   -------------------------------------------------------------------------- */
+
+.btn-group,
+.btn-group-vertical {
+  position: relative;
+  @apply inline-flex align-middle;
+}
+.btn-group > .btn,
+.btn-group-vertical > .btn {
+  position: relative;
+  flex: 1 1 auto;
+}
+.btn-group > .btn-check:checked + .btn,
+.btn-group > .btn-check:focus + .btn,
+.btn-group > .btn:hover,
+.btn-group > .btn:focus,
+.btn-group > .btn:active,
+.btn-group > .btn.active,
+.btn-group-vertical > .btn-check:checked + .btn,
+.btn-group-vertical > .btn-check:focus + .btn,
+.btn-group-vertical > .btn:hover,
+.btn-group-vertical > .btn:focus,
+.btn-group-vertical > .btn:active,
+.btn-group-vertical > .btn.active {
+  z-index: 1;
+}
+
+.btn-toolbar {
+  @apply flex flex-wrap justify-start;
+}
+.btn-toolbar .input-group { width: auto; }
+
+.btn-group { border-radius: var(--bs-border-radius); }
+.btn-group > :not(.btn-check:first-child) + .btn,
+.btn-group > .btn-group:not(:first-child) {
+  margin-left: calc(-1 * var(--bs-border-width));
+}
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn.dropdown-toggle-split:first-child,
+.btn-group > .btn-group:not(:last-child) > .btn {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.btn-group > .btn:nth-child(n + 3),
+.btn-group > :not(.btn-check) + .btn,
+.btn-group > .btn-group:not(:first-child) > .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.dropdown-toggle-split {
+  padding-right: 0.5625rem;
+  padding-left: 0.5625rem;
+}
+.dropdown-toggle-split::after,
+.dropup .dropdown-toggle-split::after,
+.dropend .dropdown-toggle-split::after { margin-left: 0; }
+.dropstart .dropdown-toggle-split::before { margin-right: 0; }
+
+.btn-sm + .dropdown-toggle-split,
+.btn-group-sm > .btn + .dropdown-toggle-split {
+  padding-right: 0.375rem;
+  padding-left: 0.375rem;
+}
+.btn-lg + .dropdown-toggle-split,
+.btn-group-lg > .btn + .dropdown-toggle-split {
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+.btn-group-vertical {
+  @apply flex-col items-start justify-center;
+}
+.btn-group-vertical > .btn,
+.btn-group-vertical > .btn-group { width: 100%; }
+.btn-group-vertical > .btn:not(:first-child),
+.btn-group-vertical > .btn-group:not(:first-child) {
+  margin-top: calc(-1 * var(--bs-border-width));
+}
+.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
+.btn-group-vertical > .btn-group:not(:last-child) > .btn {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.btn-group-vertical > .btn:nth-child(n + 3),
+.btn-group-vertical > :not(.btn-check) + .btn,
+.btn-group-vertical > .btn-group:not(:first-child) > .btn {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}

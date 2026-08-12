@@ -1,0 +1,180 @@
+<h2 id="alignment">Alignment <a class="anchor" href="#alignment">#</a></h2>
+<p>
+  Use flexbox alignment utilities to vertically and horizontally align columns.
+</p>
+<h3 id="vertical-alignment">Vertical alignment <a class="anchor" href="#vertical-alignment">#</a></h3>
+<div class="bd-example">
+  <div class="container text-center">
+    <div class="row align-items-start" style="min-height: 6rem;">
+      <div class="col"><div class="p-2 border rounded bg-light">.align-items-start</div></div>
+    </div>
+    <div class="row align-items-center" style="min-height: 6rem;">
+      <div class="col"><div class="p-2 border rounded bg-light">.align-items-center</div></div>
+    </div>
+    <div class="row align-items-end" style="min-height: 6rem;">
+      <div class="col"><div class="p-2 border rounded bg-light">.align-items-end</div></div>
+    </div>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="row align-items-start">…</div>
+<div class="row align-items-center">…</div>
+<div class="row align-items-end">…</div>
+  </code></pre>
+</div>
+<p>Or, use <code>align-self-*</code> on each column individually:</p>
+<div class="bd-example">
+  <div class="container text-center">
+    <div class="row" style="min-height: 6rem;">
+      <div class="col align-self-start"><div class="p-2 border rounded bg-light">.align-self-start</div></div>
+      <div class="col align-self-center"><div class="p-2 border rounded bg-light">.align-self-center</div></div>
+      <div class="col align-self-end"><div class="p-2 border rounded bg-light">.align-self-end</div></div>
+    </div>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="row">
+  <div class="col align-self-start">…</div>
+  <div class="col align-self-center">…</div>
+  <div class="col align-self-end">…</div>
+</div>
+  </code></pre>
+</div>
+
+<h3 id="horizontal-alignment">Horizontal alignment <a class="anchor" href="#horizontal-alignment">#</a></h3>
+<div class="bd-example">
+  <div class="container text-center">
+    <div class="row justify-content-start">
+      <div class="col-4"><div class="p-2 border rounded bg-light">.justify-content-start</div></div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-4"><div class="p-2 border rounded bg-light">.justify-content-center</div></div>
+    </div>
+    <div class="row justify-content-end">
+      <div class="col-4"><div class="p-2 border rounded bg-light">.justify-content-end</div></div>
+    </div>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="row justify-content-start">…</div>
+<div class="row justify-content-center">…</div>
+<div class="row justify-content-end">…</div>
+  </code></pre>
+</div>
+
+<h2 id="column-wrapping">Column wrapping <a class="anchor" href="#column-wrapping">#</a></h2>
+<p>
+  If more than 12 columns are placed within a single row, each group of extra columns
+  will, as one unit, wrap onto a new line.
+</p>
+<div class="bd-example">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-9"><div class="p-2 border rounded bg-light">.col-9</div></div>
+      <div class="col-4"><div class="p-2 border rounded bg-light">.col-4</div></div>
+      <div class="col-6"><div class="p-2 border rounded bg-light">.col-6</div></div>
+    </div>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="row">
+  <div class="col-9">.col-9</div>
+  <div class="col-4">.col-4</div>
+  <div class="col-6">.col-6</div>
+</div>
+  </code></pre>
+</div>
+
+<h2 id="column-breaks">Column breaks <a class="anchor" href="#column-breaks">#</a></h2>
+<p>
+  Breaking columns to a new line in flexbox requires a small hack: add an element
+  with <code>width: 100%</code> wherever you want to wrap your columns to a new line.
+</p>
+<div class="bd-example">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-6 col-sm-3"><div class="p-2 border rounded bg-light">.col-6 .col-sm-3</div></div>
+      <div class="col-6 col-sm-3"><div class="p-2 border rounded bg-light">.col-6 .col-sm-3</div></div>
+      <div class="w-100"></div>
+      <div class="col-6 col-sm-3"><div class="p-2 border rounded bg-light">.col-6 .col-sm-3</div></div>
+      <div class="col-6 col-sm-3"><div class="p-2 border rounded bg-light">.col-6 .col-sm-3</div></div>
+    </div>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="row">
+  <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+  <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+  <div class="w-100"></div>
+  <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+  <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+</div>
+  </code></pre>
+</div>
+
+<h2 id="column-order">Column ordering <a class="anchor" href="#column-order">#</a></h2>
+<p>
+  Use <code>.order-*</code> classes for controlling the <strong>visual order</strong>
+  of your content. These classes are responsive, so you can set the <code>order</code>
+  by breakpoint.
+</p>
+<div class="bd-example">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col"><div class="p-2 border rounded bg-light">First, but unordered</div></div>
+      <div class="col order-last"><div class="p-2 border rounded bg-light">Second, but last</div></div>
+      <div class="col order-first"><div class="p-2 border rounded bg-light">Third, but first</div></div>
+    </div>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="row">
+  <div class="col">First, but unordered</div>
+  <div class="col order-last">Second, but last</div>
+  <div class="col order-first">Third, but first</div>
+</div>
+  </code></pre>
+</div>
+
+<h2 id="offsetting-columns">Offsetting columns <a class="anchor" href="#offsetting-columns">#</a></h2>
+<p>
+  Move columns to the right using <code>.offset-md-*</code> classes. These classes
+  increase the left margin of a column by <code>*</code> columns.
+</p>
+<div class="bd-example">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-md-4"><div class="p-2 border rounded bg-light">.col-md-4</div></div>
+      <div class="col-md-4 offset-md-4"><div class="p-2 border rounded bg-light">.col-md-4 .offset-md-4</div></div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 offset-md-3"><div class="p-2 border rounded bg-light">.col-md-3 .offset-md-3</div></div>
+      <div class="col-md-3 offset-md-3"><div class="p-2 border rounded bg-light">.col-md-3 .offset-md-3</div></div>
+    </div>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="row">
+  <div class="col-md-4">.col-md-4</div>
+  <div class="col-md-4 offset-md-4">.col-md-4 .offset-md-4</div>
+</div>
+<div class="row">
+  <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+  <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+</div>
+  </code></pre>
+</div>

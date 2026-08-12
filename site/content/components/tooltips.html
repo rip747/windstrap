@@ -1,0 +1,81 @@
+<h2 id="overview">Overview <a class="anchor" href="#overview">#</a></h2>
+<p>
+  Things to know when using the tooltip plugin:
+</p>
+<ul>
+  <li>Tooltips rely on the third party library <a href="https://popper.js.org/docs/v2/" target="_blank" rel="noopener">Popper</a> for positioning. You must include <code>popper.min.js</code> before <code>bootstrap.js</code>, or use <code>bootstrap.bundle.min.js</code> which contains Popper.</li>
+  <li>Tooltips are opt-in for performance reasons, so <strong>you must initialize them yourself</strong>.</li>
+  <li>Tooltips with zero-length titles are never displayed.</li>
+  <li>Specify <code>container: 'body'</code> to avoid rendering problems in more complex components.</li>
+  <li>Triggering tooltips on hidden elements will not work.</li>
+  <li>Tooltips for <code>.disabled</code> or <code>disabled</code> elements must be triggered on a wrapper element.</li>
+</ul>
+<div class="bd-callout bd-callout-info">
+  <h5>Initialization on this page</h5>
+  <p class="mb-0">The tooltip demos below are initialized automatically by <code>docs/js/docs.js</code>. The tooltip styling (including the arrow and <code>.fade</code>) is part of the WindStrap CSS translation.</p>
+</div>
+
+<h2 id="examples">Examples <a class="anchor" href="#examples">#</a></h2>
+<p>
+  Hover the buttons below to see the four tooltip directions: top, right, bottom,
+  and left.
+</p>
+<div class="bd-example">
+  <div class="bd-example-tooltips d-flex flex-wrap gap-2">
+    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">Tooltip on top</button>
+    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip on right">Tooltip on right</button>
+    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Tooltip on bottom">Tooltip on bottom</button>
+    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Tooltip on left">Tooltip on left</button>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">
+  Tooltip on top
+</button>
+<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip on right">
+  Tooltip on right
+</button>
+<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Tooltip on bottom">
+  Tooltip on bottom
+</button>
+<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Tooltip on left">
+  Tooltip on left
+</button>
+  </code></pre>
+</div>
+
+<h2 id="usage">Usage <a class="anchor" href="#usage">#</a></h2>
+<p>
+  The tooltip plugin generates content and markup on demand, and by default places
+  tooltips after their trigger element. Trigger the tooltip via JavaScript:
+</p>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+const exampleEl = document.getElementById('example')
+const tooltip = new bootstrap.Tooltip(exampleEl, options)
+  </code></pre>
+</div>
+<p>
+  Or with <code>data-bs-title</code> attributes and automatic initialization:
+</p>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(tooltipEl => {
+  new bootstrap.Tooltip(tooltipEl)
+})
+  </code></pre>
+</div>
+
+<h2 id="css">CSS <a class="anchor" href="#css">#</a></h2>
+<h3 id="variables">Variables <a class="anchor" href="#variables">#</a></h3>
+<p>
+  WindStrap keeps the tooltip CSS variables — <code>--bs-tooltip-zindex</code>,
+  <code>--bs-tooltip-max-width</code>, <code>--bs-tooltip-bg</code>,
+  <code>--bs-tooltip-color</code>, <code>--bs-tooltip-border-radius</code>,
+  <code>--bs-tooltip-opacity</code>, <code>--bs-tooltip-arrow-*</code> — defined in
+  <code>src/sections/overlays.css</code>.
+</p>

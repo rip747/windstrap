@@ -1,0 +1,102 @@
+<h2 id="all-colors">All colors <a class="anchor" href="#all-colors">#</a></h2>
+<p>
+  Bootstrap’s color system is available as Sass variables, maps, and CSS custom
+  properties. WindStrap defines the same palette in
+  <code>tailwind.config.js</code> so Tailwind utilities resolve to Bootstrap’s
+  exact values, and keeps the <code>--bs-*</code> tokens in
+  <code>src/sections/root.css</code>.
+</p>
+<div class="bd-example">
+  <div class="row g-3 text-center">
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="p-3 rounded bg-primary-subtle text-primary-emphasis">.bg-primary-subtle</div>
+      <div class="p-3 rounded bg-primary text-white mt-1">.bg-primary</div>
+      <div class="p-3 rounded border border-primary mt-1">.border-primary</div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="p-3 rounded bg-secondary-subtle text-secondary-emphasis">.bg-secondary-subtle</div>
+      <div class="p-3 rounded bg-secondary text-white mt-1">.bg-secondary</div>
+      <div class="p-3 rounded border border-secondary mt-1">.border-secondary</div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="p-3 rounded bg-success-subtle text-success-emphasis">.bg-success-subtle</div>
+      <div class="p-3 rounded bg-success text-white mt-1">.bg-success</div>
+      <div class="p-3 rounded border border-success mt-1">.border-success</div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="p-3 rounded bg-danger-subtle text-danger-emphasis">.bg-danger-subtle</div>
+      <div class="p-3 rounded bg-danger text-white mt-1">.bg-danger</div>
+      <div class="p-3 rounded border border-danger mt-1">.border-danger</div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="p-3 rounded bg-warning-subtle text-warning-emphasis">.bg-warning-subtle</div>
+      <div class="p-3 rounded bg-warning mt-1">.bg-warning</div>
+      <div class="p-3 rounded border border-warning mt-1">.border-warning</div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="p-3 rounded bg-info-subtle text-info-emphasis">.bg-info-subtle</div>
+      <div class="p-3 rounded bg-info mt-1">.bg-info</div>
+      <div class="p-3 rounded border border-info mt-1">.border-info</div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="p-3 rounded bg-light-subtle text-light-emphasis">.bg-light-subtle</div>
+      <div class="p-3 rounded bg-light mt-1">.bg-light</div>
+      <div class="p-3 rounded border border-light mt-1">.border-light</div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="p-3 rounded bg-dark-subtle text-dark-emphasis">.bg-dark-subtle</div>
+      <div class="p-3 rounded bg-dark text-white mt-1">.bg-dark</div>
+      <div class="p-3 rounded border border-dark mt-1">.border-dark</div>
+    </div>
+  </div>
+</div>
+
+<h2 id="theme-colors">Theme colors <a class="anchor" href="#theme-colors">#</a></h2>
+<p>
+  The eight theme colors are defined once in <code>tailwind.config.js</code> and
+  power the <code>bg-*</code>, <code>text-*</code>, <code>border-*</code> and
+  <code>text-bg-*</code> classes:
+</p>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+// tailwind.config.js
+theme: {
+  extend: {
+    colors: {
+      primary: '#0d6efd',
+      secondary: '#6c757d',
+      success: '#198754',
+      info: '#0dcaf0',
+      warning: '#ffc107',
+      danger: '#dc3545',
+      light: '#f8f9fa',
+      dark: '#212529',
+    },
+  },
+}
+  </code></pre>
+</div>
+
+<h2 id="adding-new-colors">Adding new colors <a class="anchor" href="#adding-new-colors">#</a></h2>
+<p>
+  To add a custom color (<code>$custom</code> in Bootstrap), add it to the Tailwind
+  theme and define its tokens in <code>:root</code>:
+</p>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+/* tailwind.config.js */
+colors: { custom: '#a6120d' }
+
+/* src/sections/root.css */
+:root {
+  --bs-custom: #a6120d;
+  --bs-custom-rgb: 166, 18, 13;
+}
+  </code></pre>
+</div>
+<p>
+  Then use it like any theme color: <code>.bg-custom</code>,
+  <code>.text-custom</code>, <code>.border-custom</code>.
+</p>

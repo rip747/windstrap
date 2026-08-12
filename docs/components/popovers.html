@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Popovers · WindStrap v5.3.8</title>
+  <link rel="stylesheet" href="../../dist/windstrap.css">
+  <link rel="stylesheet" href="../css/docs.css">
+</head>
+<body class="d-flex flex-column h-100">
+
+  <a class="visually-hidden-focusable" href="#content">Skip to main content</a>
+  <a class="visually-hidden-focusable" href="#bd-docs-nav">Skip to docs navigation</a>
+
+  <!-- ===================== Navbar ===================== -->
+  <header class="navbar navbar-expand-lg navbar-dark bd-navbar sticky-top">
+    <div class="container-xl">
+      <a class="navbar-brand" href="../index.html">WindStrap<span class="bd-badge">v5.3.8</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bd-navbar" aria-controls="bd-navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="bd-navbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Docs</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://getbootstrap.com/docs/5.3/" target="_blank" rel="noopener">Bootstrap docs</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== Layout ===================== -->
+  <div class="bd-layout container-xl" id="bd-docs-nav">
+
+    <!-- Left sidebar navigation -->
+    <aside class="bd-sidebar">
+      <nav class="bd-links" aria-label="Docs navigation">
+        <ul class="bd-links-nav list-unstyled mb-0 pb-lg-3 pb-4">
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Customize</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/overview.html">Overview</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/sass.html">Sass</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/color.html">Color</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/components.html">Components</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/css-variables.html">CSS variables</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/optimize.html">Optimize</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/dark-mode.html">Dark mode</a></li>
+    </ul>
+  </li>
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Layout</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/breakpoints.html">Breakpoints</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/containers.html">Containers</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/grid.html">Grid</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/columns.html">Columns</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/gutters.html">Gutters</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/utilities.html">Utilities</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/z-index.html">Z-index</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/css-grid.html">CSS grid</a></li>
+    </ul>
+  </li>
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Content</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="../content/reboot.html">Reboot</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../content/typography.html">Typography</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../content/images.html">Images</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../content/tables.html">Tables</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../content/figures.html">Figures</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../content/syntax-highlighting.html">Syntax highlighting</a></li>
+    </ul>
+  </li>
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Forms</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/overview.html">Overview</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/form-control.html">Form control</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/select.html">Select</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/checks-radios.html">Checks & radios</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/range.html">Range</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/input-group.html">Input group</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/floating-labels.html">Floating labels</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/layout.html">Layout</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/validation.html">Validation</a></li>
+    </ul>
+  </li>
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Components</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="accordion.html">Accordion</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="alerts.html">Alerts</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="badge.html">Badge</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="breadcrumb.html">Breadcrumb</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="buttons.html">Buttons</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="button-group.html">Button group</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="card.html">Card</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="carousel.html">Carousel</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="collapse.html">Collapse</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="dropdowns.html">Dropdowns</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="list-group.html">List group</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="modal.html">Modal</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="navs-tabs.html">Navs & tabs</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="navbar.html">Navbar</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="offcanvas.html">Offcanvas</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="pagination.html">Pagination</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="placeholders.html">Placeholders</a></li>
+      <li><a class="bd-links-link d-inline-block rounded active" href="popovers.html">Popovers</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="progress.html">Progress</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="scrollspy.html">Scrollspy</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="spinners.html">Spinners</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="toasts.html">Toasts</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="tooltips.html">Tooltips</a></li>
+    </ul>
+  </li>
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Helpers</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/clearfix.html">Clearfix</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/color-background.html">Color & background</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/colored-links.html">Colored links</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/focus-ring.html">Focus ring</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/icon-link.html">Icon link</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/position.html">Position</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/ratio.html">Ratio</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/stacks.html">Stacks</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/stretched-link.html">Stretched link</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/text-truncation.html">Text truncation</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/vertical-rule.html">Vertical rule</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/visually-hidden.html">Visually hidden</a></li>
+    </ul>
+  </li>
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Utilities</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/api.html">API</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/background.html">Background</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/borders.html">Borders</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/colors.html">Colors</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/display.html">Display</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/flex.html">Flex</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/float.html">Float</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/interactions.html">Interactions</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/link.html">Link</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/object-fit.html">Object fit</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/opacity.html">Opacity</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/overflow.html">Overflow</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/position.html">Position</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/shadows.html">Shadows</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/sizing.html">Sizing</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/spacing.html">Spacing</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/text.html">Text</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/vertical-alignment.html">Vertical alignment</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/visibility.html">Visibility</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/z-index.html">Z-index</a></li>
+    </ul>
+  </li>
+</ul>
+
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main class="bd-main" id="content">
+      <div class="bd-intro">
+        <div class="bd-intro-inner">
+          <h1 class="bd-title">Popovers</h1>
+          <p class="bd-lead">Documentation and examples for adding Bootstrap popovers, like those found in iOS, to any element on your site.</p>
+        </div>
+        <nav class="bd-toc" aria-label="On this page">
+          <strong>On this page</strong>
+          <ul>
+  <li><a href="#overview">Overview</a>
+  </li>
+  <li><a href="#examples">Examples</a>
+  </li>
+  <li><a href="#four-directions">Four directions</a>
+  </li>
+  <li><a href="#dismiss-on-next-click">Dismiss on next click</a>
+  </li>
+  <li><a href="#disabled-elements">Disabled elements</a>
+  </li>
+  <li><a href="#css">CSS</a>
+    <ul>
+      <li><a href="#variables">Variables</a></li>
+    </ul>
+  </li>
+</ul>
+
+        </nav>
+      </div>
+
+      <div class="bd-content">
+        <h2 id="overview">Overview <a class="anchor" href="#overview">#</a></h2>
+<p>
+  Things to know when using the popover plugin:
+</p>
+<ul>
+  <li>Popovers rely on the third party library <a href="https://popper.js.org/docs/v2/" target="_blank" rel="noopener">Popper</a> for positioning. You must include <a href="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js">popper.min.js</a> before <code>bootstrap.js</code>, or use <code>bootstrap.bundle.min.js</code> which contains Popper.</li>
+  <li>Popovers require the popover plugin as a dependency.</li>
+  <li>Popovers are opt-in for performance reasons, so <strong>you must initialize them yourself</strong>.</li>
+  <li>Zero-length <code>title</code> and <code>content</code> values will never show a popover.</li>
+  <li>Specify <code>container: 'body'</code> to avoid rendering problems in more complex components (like our input groups, button groups, etc.).</li>
+  <li>Triggering popovers on hidden elements will not work.</li>
+</ul>
+<div class="bd-callout bd-callout-info">
+  <h5>The <code>animation</code> option</h5>
+  <p class="mb-0">The popover’s fade transition is driven by the <code>.fade</code> class (translated by WindStrap), which Bootstrap’s popover plugin toggles via JavaScript. The popovers on this page are initialized automatically by <code>docs/js/docs.js</code>.</p>
+</div>
+
+<h2 id="examples">Examples <a class="anchor" href="#examples">#</a></h2>
+<p>
+  Enable popovers anywhere on your page by initializing them. Popover content is
+  provided with the <code>data-bs-content</code> attribute.
+</p>
+<div class="bd-example">
+  <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;button type=&quot;button&quot; class=&quot;btn btn-lg btn-danger&quot; data-bs-toggle=&quot;popover&quot; data-bs-title=&quot;Popover title&quot; data-bs-content=&quot;And here&#39;s some amazing content. It&#39;s very engaging. Right?&quot;&gt;Click to toggle popover&lt;/button&gt;</code></pre>
+</div>
+
+<h2 id="four-directions">Four directions <a class="anchor" href="#four-directions">#</a></h2>
+<p>
+  Four options are available: top, right, bottom, and left. Aligned to the
+  <code>end</code>/<code>start</code> of the popover by default.
+</p>
+<div class="bd-example">
+  <div class="d-flex flex-wrap gap-2">
+    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">Popover on top</button>
+    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover">Popover on right</button>
+    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">Popover on bottom</button>
+    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Left popover">Popover on left</button>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot; data-bs-container=&quot;body&quot; data-bs-toggle=&quot;popover&quot; data-bs-placement=&quot;top&quot; data-bs-content=&quot;Top popover&quot;&gt;
+  Popover on top
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot; data-bs-container=&quot;body&quot; data-bs-toggle=&quot;popover&quot; data-bs-placement=&quot;right&quot; data-bs-content=&quot;Right popover&quot;&gt;
+  Popover on right
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot; data-bs-container=&quot;body&quot; data-bs-toggle=&quot;popover&quot; data-bs-placement=&quot;bottom&quot; data-bs-content=&quot;Bottom popover&quot;&gt;
+  Popover on bottom
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot; data-bs-container=&quot;body&quot; data-bs-toggle=&quot;popover&quot; data-bs-placement=&quot;left&quot; data-bs-content=&quot;Left popover&quot;&gt;
+  Popover on left
+&lt;/button&gt;</code></pre>
+</div>
+
+<h2 id="dismiss-on-next-click">Dismiss on next click <a class="anchor" href="#dismiss-on-next-click">#</a></h2>
+<p>
+  Use the <code>focus</code> trigger to dismiss popovers on the user’s next click of
+  a different element than the toggle element.
+</p>
+<div class="bd-example">
+  <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="Dismissible popover" data-bs-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;a tabindex=&quot;0&quot; class=&quot;btn btn-lg btn-danger&quot; role=&quot;button&quot; data-bs-toggle=&quot;popover&quot; data-bs-trigger=&quot;focus&quot; data-bs-title=&quot;Dismissible popover&quot; data-bs-content=&quot;And here&#39;s some amazing content. It&#39;s very engaging. Right?&quot;&gt;Dismissible popover&lt;/a&gt;</code></pre>
+</div>
+
+<h2 id="disabled-elements">Disabled elements <a class="anchor" href="#disabled-elements">#</a></h2>
+<p>
+  Elements with the <code>disabled</code> attribute aren’t interactive, meaning
+  users cannot hover or click them to trigger a popover. As a workaround, you’ll
+  want to trigger the popover from a wrapper <code>&lt;div&gt;</code> or
+  <code>&lt;span&gt;</code>.
+</p>
+<div class="bd-example">
+  <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover">
+    <button class="btn btn-primary" type="button" disabled>Disabled button</button>
+  </span>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;span class=&quot;d-inline-block&quot; tabindex=&quot;0&quot; data-bs-toggle=&quot;popover&quot; data-bs-trigger=&quot;hover focus&quot; data-bs-content=&quot;Disabled popover&quot;&gt;
+  &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot; disabled&gt;Disabled button&lt;/button&gt;
+&lt;/span&gt;</code></pre>
+</div>
+
+<h2 id="css">CSS <a class="anchor" href="#css">#</a></h2>
+<h3 id="variables">Variables <a class="anchor" href="#variables">#</a></h3>
+<p>
+  Popover CSS variables — <code>--bs-popover-zindex</code>, <code>--bs-popover-max-width</code>,
+  <code>--bs-popover-bg</code>, <code>--bs-popover-border-color</code>,
+  <code>--bs-popover-header-bg</code>, <code>--bs-popover-body-*</code>,
+  <code>--bs-popover-arrow-*</code> — are kept in <code>src/sections/overlays.css</code>.
+</p>
+
+      </div>
+
+      <!-- Prev / Next -->
+      <nav class="bd-prev-next" aria-label="Previous and next pages">
+        <a class="bd-prev" href="../components/placeholders.html"><span class="bd-prev-next-label">Previous</span><span class="bd-prev-next-title">Placeholders</span></a><a class="bd-next text-end" href="../components/progress.html"><span class="bd-prev-next-label">Next</span><span class="bd-prev-next-title">Progress</span></a>
+      </nav>
+    </main>
+  </div>
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="bd-footer py-5 mt-5">
+    <div class="container-xl">
+      <div class="row">
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="../index.html">Docs</a></li>
+            <li></li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+            <li></li><a href="https://www.npmjs.com/" target="_blank" rel="noopener">npm</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Guides</h5>
+          <ul class="list-unstyled">
+            <li><a href="../index.html">Getting started</a></li>
+            <li><a href="../components/buttons.html">Buttons</a></li>
+            <li><a href="../components/card.html">Cards</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Components</h5>
+          <ul class="list-unstyled">
+            <li><a href="../components/accordion.html">Accordion</a></li>
+            <li><a href="../components/navbar.html">Navbar</a></li>
+            <li><a href="../components/modal.html">Modal</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Community</h5>
+          <ul class="list-unstyled">
+            <li><a href="https://github.com/" target="_blank" rel="noopener">Issues</a></li>
+            <li><a href="https://stackoverflow.com/questions/tagged/bootstrap-5" target="_blank" rel="noopener">Stack Overflow</a></li>
+            <li><a href="https://discord.gg/bZUvakRU3M" target="_blank" rel="noopener">Discord</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-lg-4 mb-3">
+          <p class="small text-body-secondary mb-0">WindStrap — Bootstrap 5.3.8 translated 1:1 into Tailwind CSS via the <code>@apply</code> directive. This documentation mirrors <a href="https://getbootstrap.com/docs/5.3/">getbootstrap.com/docs/5.3</a>. Docs content licensed <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a>.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (for interactive demos: dropdowns, collapse, modals…).
+       The WindStrap translation covers the CSS; the JS behaviors are
+       Bootstrap's own and are intentionally not re-implemented here. -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="../js/docs.js"></script>
+</body>
+</html>

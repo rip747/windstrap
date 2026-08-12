@@ -1,0 +1,47 @@
+<h2 id="example">Example <a class="anchor" href="#example">#</a></h2>
+<p>
+  Adjust the <code>overflow</code> property on the fly with the
+  <code>.overflow-*</code> utilities.
+</p>
+<div class="bd-example d-flex flex-row gap-3">
+  <div class="overflow-auto p-3 mb-3 bg-body-secondary border rounded-2" style="max-width: 260px; max-height: 100px;">
+    This is an example of using <code>.overflow-auto</code> on an element with set width and height dimensions. By design, this content will vertically scroll.
+  </div>
+  <div class="overflow-hidden p-3 mb-3 bg-body-secondary border rounded-2" style="max-width: 260px; max-height: 100px;">
+    This is an example of using <code>.overflow-hidden</code> on an element with set width and height dimensions.
+  </div>
+</div>
+<div class="bd-example d-flex flex-row gap-3">
+  <div class="overflow-visible p-3 mb-3 bg-body-secondary border rounded-2" style="max-width: 260px; max-height: 100px;">
+    This is an example of using <code>.overflow-visible</code> on an element with set width and height dimensions.
+  </div>
+  <div class="overflow-scroll p-3 mb-3 bg-body-secondary border rounded-2" style="max-width: 260px; max-height: 100px;">
+    This is an example of using <code>.overflow-scroll</code> on an element with set width and height dimensions.
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="overflow-auto" style="max-width: 260px; max-height: 100px;">…</div>
+<div class="overflow-hidden" style="max-width: 260px; max-height: 100px;">…</div>
+<div class="overflow-visible" style="max-width: 260px; max-height: 100px;">…</div>
+<div class="overflow-scroll" style="max-width: 260px; max-height: 100px;">…</div>
+  </code></pre>
+</div>
+
+<h2 id="horizontal-and-vertical">Horizontal and vertical <a class="anchor" href="#horizontal-and-vertical">#</a></h2>
+<div class="bd-example d-flex flex-row gap-3">
+  <div class="overflow-x-auto p-3 bg-body-secondary border rounded-2" style="max-width: 260px; max-height: 100px; white-space: nowrap;">
+    This is an example of using <code>.overflow-x-auto</code> with a wide amount of content.
+  </div>
+  <div class="overflow-y-auto p-3 bg-body-secondary border rounded-2" style="max-width: 260px; max-height: 100px;">
+    This is an example of using <code>.overflow-y-auto</code> with a long amount of content.
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="overflow-x-auto" style="max-width: 260px; max-height: 100px; white-space: nowrap;">…</div>
+<div class="overflow-y-auto" style="max-width: 260px; max-height: 100px;">…</div>
+  </code></pre>
+</div>

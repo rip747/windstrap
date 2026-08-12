@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Progress · WindStrap v5.3.8</title>
+  <link rel="stylesheet" href="../../dist/windstrap.css">
+  <link rel="stylesheet" href="../css/docs.css">
+</head>
+<body class="d-flex flex-column h-100">
+
+  <a class="visually-hidden-focusable" href="#content">Skip to main content</a>
+  <a class="visually-hidden-focusable" href="#bd-docs-nav">Skip to docs navigation</a>
+
+  <!-- ===================== Navbar ===================== -->
+  <header class="navbar navbar-expand-lg navbar-dark bd-navbar sticky-top">
+    <div class="container-xl">
+      <a class="navbar-brand" href="../index.html">WindStrap<span class="bd-badge">v5.3.8</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bd-navbar" aria-controls="bd-navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="bd-navbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Docs</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://getbootstrap.com/docs/5.3/" target="_blank" rel="noopener">Bootstrap docs</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== Layout ===================== -->
+  <div class="bd-layout container-xl" id="bd-docs-nav">
+
+    <!-- Left sidebar navigation -->
+    <aside class="bd-sidebar">
+      <nav class="bd-links" aria-label="Docs navigation">
+        <ul class="bd-links-nav list-unstyled mb-0 pb-lg-3 pb-4">
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Customize</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/overview.html">Overview</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/sass.html">Sass</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/color.html">Color</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/components.html">Components</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/css-variables.html">CSS variables</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/optimize.html">Optimize</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/dark-mode.html">Dark mode</a></li>
+    </ul>
+  </li>
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Layout</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/breakpoints.html">Breakpoints</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/containers.html">Containers</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/grid.html">Grid</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/columns.html">Columns</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/gutters.html">Gutters</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/utilities.html">Utilities</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/z-index.html">Z-index</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/css-grid.html">CSS grid</a></li>
+    </ul>
+  </li>
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Content</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="../content/reboot.html">Reboot</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../content/typography.html">Typography</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../content/images.html">Images</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../content/tables.html">Tables</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../content/figures.html">Figures</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../content/syntax-highlighting.html">Syntax highlighting</a></li>
+    </ul>
+  </li>
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Forms</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/overview.html">Overview</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/form-control.html">Form control</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/select.html">Select</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/checks-radios.html">Checks & radios</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/range.html">Range</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/input-group.html">Input group</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/floating-labels.html">Floating labels</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/layout.html">Layout</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/validation.html">Validation</a></li>
+    </ul>
+  </li>
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Components</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="accordion.html">Accordion</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="alerts.html">Alerts</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="badge.html">Badge</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="breadcrumb.html">Breadcrumb</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="buttons.html">Buttons</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="button-group.html">Button group</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="card.html">Card</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="carousel.html">Carousel</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="collapse.html">Collapse</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="dropdowns.html">Dropdowns</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="list-group.html">List group</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="modal.html">Modal</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="navs-tabs.html">Navs & tabs</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="navbar.html">Navbar</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="offcanvas.html">Offcanvas</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="pagination.html">Pagination</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="placeholders.html">Placeholders</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="popovers.html">Popovers</a></li>
+      <li><a class="bd-links-link d-inline-block rounded active" href="progress.html">Progress</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="scrollspy.html">Scrollspy</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="spinners.html">Spinners</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="toasts.html">Toasts</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="tooltips.html">Tooltips</a></li>
+    </ul>
+  </li>
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Helpers</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/clearfix.html">Clearfix</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/color-background.html">Color & background</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/colored-links.html">Colored links</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/focus-ring.html">Focus ring</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/icon-link.html">Icon link</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/position.html">Position</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/ratio.html">Ratio</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/stacks.html">Stacks</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/stretched-link.html">Stretched link</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/text-truncation.html">Text truncation</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/vertical-rule.html">Vertical rule</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/visually-hidden.html">Visually hidden</a></li>
+    </ul>
+  </li>
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Utilities</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/api.html">API</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/background.html">Background</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/borders.html">Borders</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/colors.html">Colors</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/display.html">Display</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/flex.html">Flex</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/float.html">Float</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/interactions.html">Interactions</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/link.html">Link</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/object-fit.html">Object fit</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/opacity.html">Opacity</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/overflow.html">Overflow</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/position.html">Position</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/shadows.html">Shadows</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/sizing.html">Sizing</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/spacing.html">Spacing</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/text.html">Text</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/vertical-alignment.html">Vertical alignment</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/visibility.html">Visibility</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/z-index.html">Z-index</a></li>
+    </ul>
+  </li>
+</ul>
+
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main class="bd-main" id="content">
+      <div class="bd-intro">
+        <div class="bd-intro-inner">
+          <h1 class="bd-title">Progress</h1>
+          <p class="bd-lead">Documentation and examples for using Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.</p>
+        </div>
+        <nav class="bd-toc" aria-label="On this page">
+          <strong>On this page</strong>
+          <ul>
+  <li><a href="#how-it-works">How it works</a>
+  </li>
+  <li><a href="#labels">Labels</a>
+  </li>
+  <li><a href="#height">Height</a>
+  </li>
+  <li><a href="#backgrounds">Backgrounds</a>
+  </li>
+  <li><a href="#multiple-bars">Multiple bars</a>
+  </li>
+  <li><a href="#striped">Striped</a>
+  </li>
+  <li><a href="#animated-stripes">Animated stripes</a>
+  </li>
+</ul>
+
+        </nav>
+      </div>
+
+      <div class="bd-content">
+        <h2 id="how-it-works">How it works <a class="anchor" href="#how-it-works">#</a></h2>
+<p>
+  Progress components are built with two HTML elements, some CSS to set the width,
+  and a few attributes.
+</p>
+<ul>
+  <li>We use the <code>.progress</code> as a wrapper to indicate the max value of the progress bar.</li>
+  <li>We use the inner <code>.progress-bar</code> to indicate the progress so far.</li>
+  <li>The <code>.progress-bar</code> requires an inline style, utility class, or custom CSS to set its width.</li>
+  <li>The <code>.progress-bar</code> also requires some <code>role</code> and <code>aria</code> attributes to make it accessible, including an accessible name (using <code>aria-label</code>, <code>aria-labelledby</code>, or similar).</li>
+</ul>
+<div class="bd-example">
+  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar" style="width: 0%"></div>
+  </div>
+  <div class="progress mt-2" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar" style="width: 25%"></div>
+  </div>
+  <div class="progress mt-2" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar" style="width: 50%"></div>
+  </div>
+  <div class="progress mt-2" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar" style="width: 75%"></div>
+  </div>
+  <div class="progress mt-2" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar" style="width: 100%"></div>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;div class=&quot;progress&quot; role=&quot;progressbar&quot; aria-label=&quot;Basic example&quot; aria-valuenow=&quot;0&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+  &lt;div class=&quot;progress-bar&quot; style=&quot;width: 0%&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;progress&quot; role=&quot;progressbar&quot; aria-label=&quot;Basic example&quot; aria-valuenow=&quot;25&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+  &lt;div class=&quot;progress-bar&quot; style=&quot;width: 25%&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;progress&quot; role=&quot;progressbar&quot; aria-label=&quot;Basic example&quot; aria-valuenow=&quot;50&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+  &lt;div class=&quot;progress-bar&quot; style=&quot;width: 50%&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;progress&quot; role=&quot;progressbar&quot; aria-label=&quot;Basic example&quot; aria-valuenow=&quot;75&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+  &lt;div class=&quot;progress-bar&quot; style=&quot;width: 75%&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;progress&quot; role=&quot;progressbar&quot; aria-label=&quot;Basic example&quot; aria-valuenow=&quot;100&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+  &lt;div class=&quot;progress-bar&quot; style=&quot;width: 100%&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<h2 id="labels">Labels <a class="anchor" href="#labels">#</a></h2>
+<p>
+  Add labels to your progress bars by placing text within the
+  <code>.progress-bar</code>.
+</p>
+<div class="bd-example">
+  <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar" style="width: 25%">25%</div>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;div class=&quot;progress&quot; role=&quot;progressbar&quot; aria-label=&quot;Example with label&quot; aria-valuenow=&quot;25&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+  &lt;div class=&quot;progress-bar&quot; style=&quot;width: 25%&quot;&gt;25%&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<h2 id="height">Height <a class="anchor" href="#height">#</a></h2>
+<p>
+  We only set a <code>height</code> value on the <code>.progress</code>, so if you
+  change that value the inner <code>.progress-bar</code> will automatically resize
+  accordingly.
+</p>
+<div class="bd-example">
+  <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 1px">
+    <div class="progress-bar" style="width: 25%"></div>
+  </div>
+  <div class="progress mt-2" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+    <div class="progress-bar" style="width: 25%"></div>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;div class=&quot;progress&quot; role=&quot;progressbar&quot; aria-label=&quot;Example 1px high&quot; aria-valuenow=&quot;25&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;height: 1px&quot;&gt;
+  &lt;div class=&quot;progress-bar&quot; style=&quot;width: 25%&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;progress&quot; role=&quot;progressbar&quot; aria-label=&quot;Example 20px high&quot; aria-valuenow=&quot;25&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;height: 20px&quot;&gt;
+  &lt;div class=&quot;progress-bar&quot; style=&quot;width: 25%&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<h2 id="backgrounds">Backgrounds <a class="anchor" href="#backgrounds">#</a></h2>
+<p>
+  Use background utility classes to change the appearance of individual progress
+  bars.
+</p>
+<div class="bd-example">
+  <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-success" style="width: 25%"></div>
+  </div>
+  <div class="progress mt-2" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-info" style="width: 50%"></div>
+  </div>
+  <div class="progress mt-2" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-warning" style="width: 75%"></div>
+  </div>
+  <div class="progress mt-2" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-danger" style="width: 100%"></div>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;div class=&quot;progress&quot; role=&quot;progressbar&quot; aria-label=&quot;Success example&quot; aria-valuenow=&quot;25&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+  &lt;div class=&quot;progress-bar bg-success&quot; style=&quot;width: 25%&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;progress&quot; role=&quot;progressbar&quot; aria-label=&quot;Info example&quot; aria-valuenow=&quot;50&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+  &lt;div class=&quot;progress-bar bg-info&quot; style=&quot;width: 50%&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;progress&quot; role=&quot;progressbar&quot; aria-label=&quot;Warning example&quot; aria-valuenow=&quot;75&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+  &lt;div class=&quot;progress-bar bg-warning&quot; style=&quot;width: 75%&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;progress&quot; role=&quot;progressbar&quot; aria-label=&quot;Danger example&quot; aria-valuenow=&quot;100&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+  &lt;div class=&quot;progress-bar bg-danger&quot; style=&quot;width: 100%&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<h2 id="multiple-bars">Multiple bars <a class="anchor" href="#multiple-bars">#</a></h2>
+<p>
+  Include multiple progress bars in a progress component if you need.
+</p>
+<div class="bd-example">
+  <div class="progress" role="progressbar" aria-label="Segment one" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+    <div class="progress-bar" style="width: 15%">15%</div>
+    <div class="progress-bar bg-success" style="width: 30%">30%</div>
+    <div class="progress-bar bg-info" style="width: 20%">20%</div>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;div class=&quot;progress&quot; role=&quot;progressbar&quot; aria-label=&quot;Segment one&quot; aria-valuenow=&quot;15&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;height: 20px&quot;&gt;
+  &lt;div class=&quot;progress-bar&quot; style=&quot;width: 15%&quot;&gt;15%&lt;/div&gt;
+  &lt;div class=&quot;progress-bar bg-success&quot; style=&quot;width: 30%&quot;&gt;30%&lt;/div&gt;
+  &lt;div class=&quot;progress-bar bg-info&quot; style=&quot;width: 20%&quot;&gt;20%&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<h2 id="striped">Striped <a class="anchor" href="#striped">#</a></h2>
+<p>
+  Add <code>.progress-bar-striped</code> to any <code>.progress-bar</code> to apply
+  a stripe via CSS gradient over the progress bar’s background color.
+</p>
+<div class="bd-example">
+  <div class="progress" role="progressbar" aria-label="Default striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar progress-bar-striped" style="width: 10%"></div>
+  </div>
+  <div class="progress mt-2" role="progressbar" aria-label="Success striped example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar progress-bar-striped bg-success" style="width: 25%"></div>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;div class=&quot;progress&quot; role=&quot;progressbar&quot; aria-label=&quot;Default striped example&quot; aria-valuenow=&quot;10&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+  &lt;div class=&quot;progress-bar progress-bar-striped&quot; style=&quot;width: 10%&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;progress&quot; role=&quot;progressbar&quot; aria-label=&quot;Success striped example&quot; aria-valuenow=&quot;25&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+  &lt;div class=&quot;progress-bar progress-bar-striped bg-success&quot; style=&quot;width: 25%&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<h2 id="animated-stripes">Animated stripes <a class="anchor" href="#animated-stripes">#</a></h2>
+<p>
+  The striped gradient can also be animated. Add <code>.progress-bar-animated</code>
+  to <code>.progress-bar</code> to animate the stripes right to left via CSS3
+  animations.
+</p>
+<div class="bd-example">
+  <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;div class=&quot;progress&quot; role=&quot;progressbar&quot; aria-label=&quot;Animated striped example&quot; aria-valuenow=&quot;75&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+  &lt;div class=&quot;progress-bar progress-bar-striped progress-bar-animated&quot; style=&quot;width: 75%&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+      </div>
+
+      <!-- Prev / Next -->
+      <nav class="bd-prev-next" aria-label="Previous and next pages">
+        <a class="bd-prev" href="../components/popovers.html"><span class="bd-prev-next-label">Previous</span><span class="bd-prev-next-title">Popovers</span></a><a class="bd-next text-end" href="../components/scrollspy.html"><span class="bd-prev-next-label">Next</span><span class="bd-prev-next-title">Scrollspy</span></a>
+      </nav>
+    </main>
+  </div>
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="bd-footer py-5 mt-5">
+    <div class="container-xl">
+      <div class="row">
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="../index.html">Docs</a></li>
+            <li></li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+            <li></li><a href="https://www.npmjs.com/" target="_blank" rel="noopener">npm</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Guides</h5>
+          <ul class="list-unstyled">
+            <li><a href="../index.html">Getting started</a></li>
+            <li><a href="../components/buttons.html">Buttons</a></li>
+            <li><a href="../components/card.html">Cards</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Components</h5>
+          <ul class="list-unstyled">
+            <li><a href="../components/accordion.html">Accordion</a></li>
+            <li><a href="../components/navbar.html">Navbar</a></li>
+            <li><a href="../components/modal.html">Modal</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Community</h5>
+          <ul class="list-unstyled">
+            <li><a href="https://github.com/" target="_blank" rel="noopener">Issues</a></li>
+            <li><a href="https://stackoverflow.com/questions/tagged/bootstrap-5" target="_blank" rel="noopener">Stack Overflow</a></li>
+            <li><a href="https://discord.gg/bZUvakRU3M" target="_blank" rel="noopener">Discord</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-lg-4 mb-3">
+          <p class="small text-body-secondary mb-0">WindStrap — Bootstrap 5.3.8 translated 1:1 into Tailwind CSS via the <code>@apply</code> directive. This documentation mirrors <a href="https://getbootstrap.com/docs/5.3/">getbootstrap.com/docs/5.3</a>. Docs content licensed <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a>.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (for interactive demos: dropdowns, collapse, modals…).
+       The WindStrap translation covers the CSS; the JS behaviors are
+       Bootstrap's own and are intentionally not re-implemented here. -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="../js/docs.js"></script>
+</body>
+</html>

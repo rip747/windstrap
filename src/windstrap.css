@@ -1,0 +1,26 @@
+/* ==========================================================================
+   WindStrap — Bootstrap 5.3.8  →  Tailwind CSS
+   A 1:1 translation of Bootstrap's class list into Tailwind utilities,
+   composed with the `@apply` directive.
+   ========================================================================== */
+
+/* Tailwind's base, components and utilities layers (so @apply can resolve). */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Sections: variables/reboot, layout, content, forms, components, helpers */
+@import "./sections/root.css";
+@import "./sections/layout.css";
+@import "./sections/content.css";
+@import "./sections/forms.css";
+@import "./sections/buttons.css";
+@import "./sections/nav.css";
+@import "./sections/components.css";
+@import "./sections/overlays.css";
+@import "./sections/helpers.css";
+
+/* Machine-generated: grid + utilities + responsive utility variants */
+@import "./generated/grid.css";
+@import "./generated/utilities.css";
+@import "./generated/responsive.css";

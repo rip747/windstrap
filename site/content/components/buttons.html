@@ -1,0 +1,385 @@
+<h2 id="base-class">Base class <a class="anchor" href="#base-class">#</a></h2>
+<p>
+  Bootstrap has a base <code>.btn</code> class that sets up basic styles such
+  as padding and content alignment. By default, <code>.btn</code> controls have
+  a transparent border and background color, and lack any explicit focus and
+  hover styles.
+</p>
+<div class="bd-example">
+  <button type="button" class="btn">Base class</button>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<button type="button" class="btn">Base class</button>
+  </code></pre>
+</div>
+<p>
+  The <code>.btn</code> class is intended to be used in conjunction with our
+  button variants, or to serve as a basis for your own custom styles.
+</p>
+<p>
+  If you are using the <code>.btn</code> class on its own, remember to at least
+  define some explicit <code>:focus</code> and/or <code>:focus-visible</code> styles.
+</p>
+
+<h2 id="variants">Variants <a class="anchor" href="#variants">#</a></h2>
+<p>
+  Bootstrap includes several button variants, each serving its own semantic
+  purpose, with a few extras thrown in for more control.
+</p>
+<div class="bd-example">
+  <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-secondary">Secondary</button>
+  <button type="button" class="btn btn-success">Success</button>
+  <button type="button" class="btn btn-danger">Danger</button>
+  <button type="button" class="btn btn-warning">Warning</button>
+  <button type="button" class="btn btn-info">Info</button>
+  <button type="button" class="btn btn-light">Light</button>
+  <button type="button" class="btn btn-dark">Dark</button>
+  <button type="button" class="btn btn-link">Link</button>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+<button type="button" class="btn btn-link">Link</button>
+  </code></pre>
+</div>
+<div class="bd-callout bd-callout-warning">
+  <h5>Conveying meaning to assistive technologies</h5>
+  <p class="mb-0">Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies like screen readers. Please ensure that the meaning is obvious from the content itself, or is included through alternative means, such as additional text hidden with the <code>.visually-hidden</code> class.</p>
+</div>
+
+<h2 id="disable-text-wrapping">Disable text wrapping <a class="anchor" href="#disable-text-wrapping">#</a></h2>
+<p>
+  If you don’t want the button text to wrap, you can add the
+  <code>.text-nowrap</code> class to the button.
+</p>
+<div class="bd-example">
+  <div class="d-grid gap-2">
+    <button type="button" class="btn btn-primary text-nowrap">This button text should not wrap</button>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<button type="button" class="btn btn-primary text-nowrap">This button text should not wrap</button>
+  </code></pre>
+</div>
+
+<h2 id="button-tags">Button tags <a class="anchor" href="#button-tags">#</a></h2>
+<p>
+  The <code>.btn</code> classes are designed to be used with the
+  <code>&lt;button&gt;</code> element. However, you can also use these classes on
+  <code>&lt;a&gt;</code> or <code>&lt;input&gt;</code> elements (though some browsers
+  may apply a slightly different rendering).
+</p>
+<p>
+  When using button classes on <code>&lt;a&gt;</code> elements that are used to
+  trigger in-page functionality (like collapsing content), rather than linking to
+  new pages or sections within the current page, these links should be given a
+  <code>role="button"</code> to appropriately convey their purpose to assistive
+  technologies such as screen readers.
+</p>
+<div class="bd-example">
+  <a class="btn btn-primary" href="#" role="button">Link</a>
+  <button class="btn btn-primary" type="submit">Button</button>
+  <input class="btn btn-primary" type="button" value="Input">
+  <input class="btn btn-primary" type="submit" value="Submit">
+  <input class="btn btn-primary" type="reset" value="Reset">
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<a class="btn btn-primary" href="#" role="button">Link</a>
+<button class="btn btn-primary" type="submit">Button</button>
+<input class="btn btn-primary" type="button" value="Input">
+<input class="btn btn-primary" type="submit" value="Submit">
+<input class="btn btn-primary" type="reset" value="Reset">
+  </code></pre>
+</div>
+
+<h2 id="outline-buttons">Outline buttons <a class="anchor" href="#outline-buttons">#</a></h2>
+<p>
+  In need of a button, but not the hefty background colors they bring? Replace
+  the default modifier classes with the <code>.btn-outline-*</code> ones to remove
+  all background images and colors on any button.
+</p>
+<div class="bd-example">
+  <button type="button" class="btn btn-outline-primary">Primary</button>
+  <button type="button" class="btn btn-outline-secondary">Secondary</button>
+  <button type="button" class="btn btn-outline-success">Success</button>
+  <button type="button" class="btn btn-outline-danger">Danger</button>
+  <button type="button" class="btn btn-outline-warning">Warning</button>
+  <button type="button" class="btn btn-outline-info">Info</button>
+  <button type="button" class="btn btn-outline-light">Light</button>
+  <button type="button" class="btn btn-outline-dark">Dark</button>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<button type="button" class="btn btn-outline-primary">Primary</button>
+<button type="button" class="btn btn-outline-secondary">Secondary</button>
+<button type="button" class="btn btn-outline-success">Success</button>
+<button type="button" class="btn btn-outline-danger">Danger</button>
+<button type="button" class="btn btn-outline-warning">Warning</button>
+<button type="button" class="btn btn-outline-info">Info</button>
+<button type="button" class="btn btn-outline-light">Light</button>
+<button type="button" class="btn btn-outline-dark">Dark</button>
+  </code></pre>
+</div>
+<div class="bd-callout bd-callout-info">
+  <h5>Some of the button styles use a relatively light foreground color</h5>
+  <p class="mb-0">…and should only be used on a dark background in order to have sufficient contrast.</p>
+</div>
+
+<h2 id="sizes">Sizes <a class="anchor" href="#sizes">#</a></h2>
+<p>
+  Fancy larger or smaller buttons? Add <code>.btn-lg</code> or <code>.btn-sm</code>
+  for additional sizes.
+</p>
+<div class="bd-example">
+  <button type="button" class="btn btn-primary btn-lg">Large button</button>
+  <button type="button" class="btn btn-secondary btn-lg">Large button</button>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<button type="button" class="btn btn-primary btn-lg">Large button</button>
+<button type="button" class="btn btn-secondary btn-lg">Large button</button>
+  </code></pre>
+</div>
+<div class="bd-example">
+  <button type="button" class="btn btn-primary btn-sm">Small button</button>
+  <button type="button" class="btn btn-secondary btn-sm">Small button</button>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<button type="button" class="btn btn-primary btn-sm">Small button</button>
+<button type="button" class="btn btn-secondary btn-sm">Small button</button>
+  </code></pre>
+</div>
+<p>You can even roll your own custom sizing with CSS variables:</p>
+<div class="bd-example">
+  <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Custom button</button>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<button type="button" class="btn btn-primary"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+  Custom button
+</button>
+  </code></pre>
+</div>
+
+<h2 id="disabled-state">Disabled state <a class="anchor" href="#disabled-state">#</a></h2>
+<p>
+  Make buttons look inactive by adding the <code>disabled</code> boolean
+  attribute to any <code>&lt;button&gt;</code> element. Disabled buttons have
+  <code>pointer-events: none</code> applied to, preventing hover and active states
+  from triggering.
+</p>
+<div class="bd-example">
+  <button type="button" class="btn btn-primary" disabled>Primary button</button>
+  <button type="button" class="btn btn-secondary" disabled>Button</button>
+  <button type="button" class="btn btn-outline-primary" disabled>Primary button</button>
+  <button type="button" class="btn btn-outline-secondary" disabled>Button</button>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<button type="button" class="btn btn-primary" disabled>Primary button</button>
+<button type="button" class="btn btn-secondary" disabled>Button</button>
+<button type="button" class="btn btn-outline-primary" disabled>Primary button</button>
+<button type="button" class="btn btn-outline-secondary" disabled>Button</button>
+  </code></pre>
+</div>
+<p>
+  Disabled buttons using the <code>&lt;a&gt;</code> element behave a bit different:
+</p>
+<ul>
+  <li><code>&lt;a&gt;</code>s don’t support the <code>disabled</code> attribute, so you must add the <code>.disabled</code> class to make it visually appear disabled.</li>
+  <li>Some future-friendly styles are included to disable all <code>pointer-events</code> on anchor buttons.</li>
+  <li>Disabled buttons using <code>&lt;a&gt;</code> should include the <code>aria-disabled="true"</code> attribute to indicate the state of the element to assistive technologies.</li>
+  <li>Disabled buttons using <code>&lt;a&gt;</code> should not include the <code>href</code> attribute.</li>
+</ul>
+<div class="bd-example">
+  <a class="btn btn-primary disabled" role="button" aria-disabled="true">Primary link</a>
+  <a class="btn btn-secondary disabled" role="button" aria-disabled="true">Link</a>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<a class="btn btn-primary disabled" role="button" aria-disabled="true">Primary link</a>
+<a class="btn btn-secondary disabled" role="button" aria-disabled="true">Link</a>
+  </code></pre>
+</div>
+
+<h3 id="link-functionality-caveat">Link functionality caveat <a class="anchor" href="#link-functionality-caveat">#</a></h3>
+<p>
+  To cover cases where you have to keep the <code>href</code> attribute on a
+  disabled link, the <code>.disabled</code> class uses <code>pointer-events: none</code>
+  to try to disable the link functionality of <code>&lt;a&gt;</code>s. Note that this CSS
+  property is not yet standardized for HTML, but all modern browsers support it.
+  In addition, even in browsers that do support <code>pointer-events: none</code>,
+  keyboard navigation remains unaffected, meaning that sighted keyboard users and
+  users of assistive technologies will still be able to activate these links. So to
+  be safe, in addition to <code>aria-disabled="true"</code>, also include a
+  <code>tabindex="-1"</code> attribute on these links to prevent them from receiving
+  keyboard focus, and use custom JavaScript to disable their functionality altogether.
+</p>
+<div class="bd-example">
+  <a href="#" class="btn btn-primary disabled" tabindex="-1" role="button" aria-disabled="true">Primary link</a>
+  <a href="#" class="btn btn-secondary disabled" tabindex="-1" role="button" aria-disabled="true">Link</a>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<a href="#" class="btn btn-primary disabled" tabindex="-1" role="button" aria-disabled="true">Primary link</a>
+<a href="#" class="btn btn-secondary disabled" tabindex="-1" role="button" aria-disabled="true">Link</a>
+  </code></pre>
+</div>
+
+<h2 id="block-buttons">Block buttons <a class="anchor" href="#block-buttons">#</a></h2>
+<p>
+  Create responsive stacks of full-width, “block buttons” with a mix of our
+  display and gap utilities.
+</p>
+<div class="bd-example">
+  <div class="d-grid gap-2">
+    <button class="btn btn-primary" type="button">Button</button>
+    <button class="btn btn-primary" type="button">Button</button>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="d-grid gap-2">
+  <button class="btn btn-primary" type="button">Button</button>
+  <button class="btn btn-primary" type="button">Button</button>
+</div>
+  </code></pre>
+</div>
+<p>
+  Here we create a responsive variation, starting with vertically stacked buttons
+  until the <code>md</code> breakpoint, where <code>.d-md-block</code> replaces the
+  <code>.d-grid</code> class, thus nullifying the <code>gap-2</code> utility.
+  Resize your browser to see them change.
+</p>
+<div class="bd-example">
+  <div class="d-grid gap-2 d-md-block">
+    <button class="btn btn-primary" type="button">Button</button>
+    <button class="btn btn-primary" type="button">Button</button>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="d-grid gap-2 d-md-block">
+  <button class="btn btn-primary" type="button">Button</button>
+  <button class="btn btn-primary" type="button">Button</button>
+</div>
+  </code></pre>
+</div>
+<p>
+  You can adjust the width of your block buttons with grid column width classes.
+  For example, for a half-width “block button”, use <code>.col-6</code>. Center it
+  horizontally with <code>.mx-auto</code>, too.
+</p>
+<div class="bd-example">
+  <div class="d-grid gap-2 col-6 mx-auto">
+    <button class="btn btn-primary" type="button">Button</button>
+    <button class="btn btn-primary" type="button">Button</button>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="d-grid gap-2 col-6 mx-auto">
+  <button class="btn btn-primary" type="button">Button</button>
+  <button class="btn btn-primary" type="button">Button</button>
+</div>
+  </code></pre>
+</div>
+<p>
+  Additional utilities can be used to adjust the alignment of buttons when
+  horizontal. Here we’ve taken our previous responsive example and added some
+  flex utilities and a margin utility on the button to right-align the buttons
+  when they’re no longer stacked.
+</p>
+<div class="bd-example">
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <button class="btn btn-primary me-md-2" type="button">Button</button>
+    <button class="btn btn-primary" type="button">Button</button>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <button class="btn btn-primary me-md-2" type="button">Button</button>
+  <button class="btn btn-primary" type="button">Button</button>
+</div>
+  </code></pre>
+</div>
+
+<h2 id="button-plugin">Button plugin <a class="anchor" href="#button-plugin">#</a></h2>
+<p>
+  The button plugin allows you to create simple on/off toggle buttons.
+</p>
+<h3 id="toggle-states">Toggle states <a class="anchor" href="#toggle-states">#</a></h3>
+<p>
+  Add <code>data-bs-toggle="button"</code> to toggle a button’s <code>active</code>
+  state. If you’re pre-toggling a button, you must manually add the
+  <code>.active</code> class and <code>aria-pressed="true"</code>.
+</p>
+<div class="bd-example">
+  <p class="d-inline-flex gap-1">
+    <button type="button" class="btn" data-bs-toggle="button">Toggle button</button>
+    <button type="button" class="btn active" data-bs-toggle="button" aria-pressed="true">Active toggle button</button>
+    <button type="button" class="btn" disabled data-bs-toggle="button">Disabled toggle button</button>
+  </p>
+  <p class="d-inline-flex gap-1">
+    <button type="button" class="btn btn-primary" data-bs-toggle="button">Toggle button</button>
+    <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Active toggle button</button>
+    <button type="button" class="btn btn-primary" disabled data-bs-toggle="button">Disabled toggle button</button>
+  </p>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<p class="d-inline-flex gap-1">
+  <button type="button" class="btn" data-bs-toggle="button">Toggle button</button>
+  <button type="button" class="btn active" data-bs-toggle="button" aria-pressed="true">Active toggle button</button>
+  <button type="button" class="btn" disabled data-bs-toggle="button">Disabled toggle button</button>
+</p>
+<p class="d-inline-flex gap-1">
+  <button type="button" class="btn btn-primary" data-bs-toggle="button">Toggle button</button>
+  <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Active toggle button</button>
+  <button type="button" class="btn btn-primary" disabled data-bs-toggle="button">Disabled toggle button</button>
+</p>
+  </code></pre>
+</div>
+
+<h2 id="css">CSS <a class="anchor" href="#css">#</a></h2>
+<h3 id="variables">Variables <a class="anchor" href="#variables">#</a></h3>
+<p>
+  Buttons use local CSS variables on <code>.btn</code> for enhanced real-time
+  customization. WindStrap keeps the same variable names —
+  <code>--bs-btn-padding-x</code>, <code>--bs-btn-padding-y</code>,
+  <code>--bs-btn-color</code>, <code>--bs-btn-bg</code>,
+  <code>--bs-btn-border-color</code>, <code>--bs-btn-hover-*</code>,
+  <code>--bs-btn-active-*</code>, <code>--bs-btn-disabled-*</code>,
+  <code>--bs-btn-focus-box-shadow</code> — defined in
+  <code>src/sections/buttons.css</code>, so the same customization patterns work.
+</p>

@@ -1,0 +1,42 @@
+<h2 id="example">Example <a class="anchor" href="#example">#</a></h2>
+<p>
+  Use the <code>.visually-hidden</code> class to hide an element from the visual
+  viewport while keeping it available to assistive technologies (like screen
+  readers). Use <code>.visually-hidden-focusable</code> for elements that should
+  become visible when focused (e.g., skip links).
+</p>
+<div class="bd-example">
+  <h2 class="visually-hidden">Title for screen readers</h2>
+  <a class="visually-hidden-focusable" href="#content">Skip to main content</a>
+  <div class="d-flex gap-2">
+    <div class="p-2 bg-body-secondary border rounded-2">Visible text</div>
+    <div class="visually-hidden p-2 bg-body-secondary border rounded-2">Hidden text</div>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<h2 class="visually-hidden">Title for screen readers</h2>
+<a class="visually-hidden-focusable" href="#content">Skip to main content</a>
+  </code></pre>
+</div>
+
+<h2 id="example-2">Example 2 <a class="anchor" href="#example-2">#</a></h2>
+<p>
+  The <code>.visually-hidden-focusable</code> class can also be used on a wrapper
+  around interactive elements, so they become visible when any child receives
+  focus.
+</p>
+<div class="bd-example">
+  <div class="visually-hidden-focusable p-3 bg-body-secondary border rounded-2">
+    <a href="#">This link becomes visible when focused</a>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="visually-hidden-focusable p-3 bg-body-secondary border rounded-2">
+  <a href="#">This link becomes visible when focused</a>
+</div>
+  </code></pre>
+</div>

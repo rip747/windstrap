@@ -1,0 +1,27 @@
+{
+  "name": "windstrap",
+  "version": "1.0.0",
+  "description": "Bootstrap 5.3.8 translated 1:1 into Tailwind CSS via @apply directives",
+  "keywords": [
+    "bootstrap",
+    "tailwind",
+    "css",
+    "windstrap",
+    "@apply"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "generate": "node scripts/generate-utilities.js",
+    "build": "npm run generate && postcss src/windstrap.css -o dist/windstrap.css",
+    "docs": "node scripts/build-docs.js",
+    "build:all": "npm run build && npm run docs",
+    "watch": "npm run generate && postcss src/windstrap.css -o dist/windstrap.css --watch"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.1.0",
+    "tailwindcss": "^3.4.4"
+  }
+}

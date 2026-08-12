@@ -1,0 +1,48 @@
+# WindStrap — containerized build toolchain
+#
+# Lets you run the project's npm scripts through Docker so Node.js/npm are
+# never needed on your host machine.
+#
+#   docker compose build             # build the image once
+#   docker compose run --rm build    # npm run build  -> dist/windstrap.css
+#   docker compose run --rm docs     # npm run docs   -> docs/ pages
+#   docker compose run --rm build-all # npm run build && npm run docs
+#   docker compose up watch          # watch mode (foreground; Ctrl+C to stop)
+#
+# The project folder is bind-mounted at /app and node_modules lives in a named
+# volume, so generated files (dist/, docs/) are written straight to your host
+# while the container keeps its own Linux-installed dependencies.
+
+x-windstrap: &windstrap
+  image: windstrap:latest
+  build:
+    context: .
+    dockerfile: Dockerfile
+  volumes:
+    - .:/app
+    - node_modules:/app/node_modules
+
+services:
+  # Run any npm script against the mounted project: docker compose run --rm windstrap npm run <script>
+  windstrap:
+    <<: *windstrap
+    command: ["npm", "run", "build:all"]
+
+  build:
+    <<: *windstrap
+    command: ["npm", "run", "build"]
+
+  docs:
+    <<: *windstrap
+    command: ["npm", "run", "docs"]
+
+  build-all:
+    <<: *windstrap
+    command: ["npm", "run", "build:all"]
+
+  watch:
+    <<: *windstrap
+    command: ["npm", "run", "watch"]
+
+volumes:
+  node_modules:

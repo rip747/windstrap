@@ -1,0 +1,53 @@
+<h2 id="how-it-works">How it works <a class="anchor" href="#how-it-works">#</a></h2>
+<p>
+  The Bootstrap utility API is a Sass-based tool to generate utility classes. In
+  WindStrap, those utility classes are rebuilt as Tailwind CSS rules via
+  <code>@apply</code>, giving you the same class names and behavior.
+</p>
+<p>
+  All Bootstrap utility classes — like <code>.m-*</code>, <code>.p-*</code>,
+  <code>.d-*</code>, <code>.text-*</code>, <code>.bg-*</code>, and the responsive
+  <code>d-sm-flex</code> / <code>mt-lg-3</code> variants — are available with the
+  exact Bootstrap naming, generated in <code>src/generated/</code>.
+</p>
+<div class="bd-callout bd-callout-info">
+  <h5>Customizing the utilities</h5>
+  <p class="mb-0">
+    Because WindStrap maps Bootstrap utilities onto Tailwind, you can also use
+    Tailwind’s own <code>@apply</code> in your markup if you prefer. But the docs
+    here always show the Bootstrap class names for a one-to-one translation.
+  </p>
+</div>
+
+<h2 id="overview">Overview of utility groups <a class="anchor" href="#overview">#</a></h2>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Group</th>
+        <th>Example classes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><a href="background.html">Background</a></td><td><code>.bg-primary</code>, <code>.bg-opacity-50</code></td></tr>
+      <tr><td><a href="borders.html">Borders</a></td><td><code>.border</code>, <code>.rounded-3</code></td></tr>
+      <tr><td><a href="colors.html">Colors</a></td><td><code>.text-primary</code>, <code>.text-opacity-75</code></td></tr>
+      <tr><td><a href="display.html">Display</a></td><td><code>.d-flex</code>, <code>.d-sm-none</code></td></tr>
+      <tr><td><a href="flex.html">Flex</a></td><td><code>.justify-content-center</code>, <code>.flex-grow-1</code></td></tr>
+      <tr><td><a href="float.html">Float</a></td><td><code>.float-start</code>, <code>.float-sm-end</code></td></tr>
+      <tr><td><a href="interactions.html">Interactions</a></td><td><code>.user-select-all</code>, <code>.pe-none</code></td></tr>
+      <tr><td><a href="link.html">Link</a></td><td><code>.link-primary</code>, <code>.link-underline-opacity-25</code></td></tr>
+      <tr><td><a href="object-fit.html">Object fit</a></td><td><code>.object-fit-cover</code>, <code>.object-fit-sm-contain</code></td></tr>
+      <tr><td><a href="opacity.html">Opacity</a></td><td><code>.opacity-75</code>, <code>.opacity-50</code></td></tr>
+      <tr><td><a href="overflow.html">Overflow</a></td><td><code>.overflow-auto</code>, <code>.overflow-hidden</code></td></tr>
+      <tr><td><a href="position.html">Position</a></td><td><code>.position-absolute</code>, <code>.top-0</code></td></tr>
+      <tr><td><a href="shadows.html">Shadows</a></td><td><code>.shadow-sm</code>, <code>.shadow-lg</code></td></tr>
+      <tr><td><a href="sizing.html">Sizing</a></td><td><code>.w-100</code>, <code>.mw-100</code></td></tr>
+      <tr><td><a href="spacing.html">Spacing</a></td><td><code>.mt-3</code>, <code>.px-sm-2</code></td></tr>
+      <tr><td><a href="text.html">Text</a></td><td><code>.text-center</code>, <code>.fw-bold</code></td></tr>
+      <tr><td><a href="vertical-alignment.html">Vertical alignment</a></td><td><code>.align-middle</code>, <code>.align-baseline</code></td></tr>
+      <tr><td><a href="visibility.html">Visibility</a></td><td><code>.visible</code>, <code>.invisible</code></td></tr>
+      <tr><td><a href="z-index.html">Z-index</a></td><td><code>.z-1</code>, <code>.z-3</code></td></tr>
+    </tbody>
+  </table>
+</div>

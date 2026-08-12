@@ -1,0 +1,60 @@
+/* ==========================================================================
+   SECTION: layout.css — containers, rows and the column base.
+   (The full 12-column grid / offsets / gutters across all breakpoints is
+   machine-generated into src/generated/grid.css.)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Containers
+   -------------------------------------------------------------------------- */
+
+.container,
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  @apply px-[0.75rem] mx-auto;
+}
+
+/*
+ * Breakpoint-specific max-widths. Tailwind's responsive variants (sm:…xxl:)
+ * are configured to fire at Bootstrap's breakpoints, so these are the 1:1
+ * equivalent of Bootstrap's @media (min-width: …) { … max-width … } rules.
+ */
+.container-sm, .container {
+  @apply sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] xxl:max-w-[1320px];
+}
+.container-md {
+  @apply md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] xxl:max-w-[1320px];
+}
+.container-lg {
+  @apply lg:max-w-[960px] xl:max-w-[1140px] xxl:max-w-[1320px];
+}
+.container-xl {
+  @apply xl:max-w-[1140px] xxl:max-w-[1320px];
+}
+.container-xxl {
+  @apply xxl:max-w-[1320px];
+}
+
+/* --------------------------------------------------------------------------
+   Rows & column base
+   -------------------------------------------------------------------------- */
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  @apply flex flex-wrap -mx-[calc(var(--bs-gutter-x)*0.5)] -mt-[var(--bs-gutter-y)];
+}
+
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  @apply px-[calc(var(--bs-gutter-x)*0.5)] mt-[var(--bs-gutter-y)];
+}

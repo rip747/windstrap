@@ -1,0 +1,66 @@
+<h2 id="responsive-images">Responsive images <a class="anchor" href="#responsive-images">#</a></h2>
+<p>
+  Images in Bootstrap are made responsive with <code>.img-fluid</code>. This applies
+  <code>max-width: 100%</code> and <code>height: auto</code> so the image scales with
+  the parent width.
+</p>
+<div class="bd-example">
+  <svg class="bd-placeholder-img img-fluid" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Responsive image</text></svg>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<img src="..." class="img-fluid" alt="Responsive image">
+  </code></pre>
+</div>
+
+<h2 id="image-thumbnails">Image thumbnails <a class="anchor" href="#image-thumbnails">#</a></h2>
+<p>
+  In addition to our <a href="../utilities/borders.html">border-radius utilities</a>,
+  you can use <code>.img-thumbnail</code> to give an image a rounded 1px border
+  appearance.
+</p>
+<div class="bd-example">
+  <svg class="bd-placeholder-img img-thumbnail" width="200" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A generic square placeholder image with a white border around it" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Thumbnail</text></svg>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<img src="..." class="img-thumbnail" alt="...">
+  </code></pre>
+</div>
+
+<h2 id="aligning-images">Aligning images <a class="anchor" href="#aligning-images">#</a></h2>
+<p>
+  Align images with the <a href="../utilities/float.html">float utility classes</a>
+  or <a href="../utilities/text.html">text alignment classes</a>.
+</p>
+<div class="bd-example">
+  <svg class="bd-placeholder-img rounded float-start" width="200" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image align left" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image align left</text></svg>
+  <svg class="bd-placeholder-img rounded float-end" width="200" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image align right" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image align right</text></svg>
+  <div class="clearfix"></div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<img src="..." class="rounded float-start" alt="...">
+<img src="..." class="rounded float-end" alt="...">
+  </code></pre>
+</div>
+
+<h2 id="picture">Picture <a class="anchor" href="#picture">#</a></h2>
+<p>
+  If you are using the <code>&lt;picture&gt;</code> element to specify multiple
+  <code>&lt;source&gt;</code> elements for a specific <code>&lt;img&gt;</code>, make
+  sure to add the <code>.img-fluid</code> class to the <code>&lt;img&gt;</code> and
+  <code>&lt;source&gt;</code> elements.
+</p>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<picture>
+  <source srcset="..." type="image/svg+xml">
+  <img src="..." class="img-fluid img-thumbnail" alt="...">
+</picture>
+  </code></pre>
+</div>

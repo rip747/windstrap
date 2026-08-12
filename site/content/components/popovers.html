@@ -1,0 +1,107 @@
+<h2 id="overview">Overview <a class="anchor" href="#overview">#</a></h2>
+<p>
+  Things to know when using the popover plugin:
+</p>
+<ul>
+  <li>Popovers rely on the third party library <a href="https://popper.js.org/docs/v2/" target="_blank" rel="noopener">Popper</a> for positioning. You must include <a href="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js">popper.min.js</a> before <code>bootstrap.js</code>, or use <code>bootstrap.bundle.min.js</code> which contains Popper.</li>
+  <li>Popovers require the popover plugin as a dependency.</li>
+  <li>Popovers are opt-in for performance reasons, so <strong>you must initialize them yourself</strong>.</li>
+  <li>Zero-length <code>title</code> and <code>content</code> values will never show a popover.</li>
+  <li>Specify <code>container: 'body'</code> to avoid rendering problems in more complex components (like our input groups, button groups, etc.).</li>
+  <li>Triggering popovers on hidden elements will not work.</li>
+</ul>
+<div class="bd-callout bd-callout-info">
+  <h5>The <code>animation</code> option</h5>
+  <p class="mb-0">The popover’s fade transition is driven by the <code>.fade</code> class (translated by WindStrap), which Bootstrap’s popover plugin toggles via JavaScript. The popovers on this page are initialized automatically by <code>docs/js/docs.js</code>.</p>
+</div>
+
+<h2 id="examples">Examples <a class="anchor" href="#examples">#</a></h2>
+<p>
+  Enable popovers anywhere on your page by initializing them. Popover content is
+  provided with the <code>data-bs-content</code> attribute.
+</p>
+<div class="bd-example">
+  <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+  </code></pre>
+</div>
+
+<h2 id="four-directions">Four directions <a class="anchor" href="#four-directions">#</a></h2>
+<p>
+  Four options are available: top, right, bottom, and left. Aligned to the
+  <code>end</code>/<code>start</code> of the popover by default.
+</p>
+<div class="bd-example">
+  <div class="d-flex flex-wrap gap-2">
+    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">Popover on top</button>
+    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover">Popover on right</button>
+    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">Popover on bottom</button>
+    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Left popover">Popover on left</button>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+  Popover on top
+</button>
+<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover">
+  Popover on right
+</button>
+<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
+  Popover on bottom
+</button>
+<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Left popover">
+  Popover on left
+</button>
+  </code></pre>
+</div>
+
+<h2 id="dismiss-on-next-click">Dismiss on next click <a class="anchor" href="#dismiss-on-next-click">#</a></h2>
+<p>
+  Use the <code>focus</code> trigger to dismiss popovers on the user’s next click of
+  a different element than the toggle element.
+</p>
+<div class="bd-example">
+  <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="Dismissible popover" data-bs-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="Dismissible popover" data-bs-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>
+  </code></pre>
+</div>
+
+<h2 id="disabled-elements">Disabled elements <a class="anchor" href="#disabled-elements">#</a></h2>
+<p>
+  Elements with the <code>disabled</code> attribute aren’t interactive, meaning
+  users cannot hover or click them to trigger a popover. As a workaround, you’ll
+  want to trigger the popover from a wrapper <code>&lt;div&gt;</code> or
+  <code>&lt;span&gt;</code>.
+</p>
+<div class="bd-example">
+  <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover">
+    <button class="btn btn-primary" type="button" disabled>Disabled button</button>
+  </span>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover">
+  <button class="btn btn-primary" type="button" disabled>Disabled button</button>
+</span>
+  </code></pre>
+</div>
+
+<h2 id="css">CSS <a class="anchor" href="#css">#</a></h2>
+<h3 id="variables">Variables <a class="anchor" href="#variables">#</a></h3>
+<p>
+  Popover CSS variables — <code>--bs-popover-zindex</code>, <code>--bs-popover-max-width</code>,
+  <code>--bs-popover-bg</code>, <code>--bs-popover-border-color</code>,
+  <code>--bs-popover-header-bg</code>, <code>--bs-popover-body-*</code>,
+  <code>--bs-popover-arrow-*</code> — are kept in <code>src/sections/overlays.css</code>.
+</p>

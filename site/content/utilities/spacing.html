@@ -1,0 +1,84 @@
+<h2 id="margin-and-padding">Margin and padding <a class="anchor" href="#margin-and-padding">#</a></h2>
+<p>
+  Assign responsive-friendly <code>margin</code> or <code>padding</code> values to
+  an element with the <code>m-*</code> and <code>p-*</code> utilities. Spacing
+  scale runs from <code>0</code> through <code>5</code>, plus <code>auto</code>.
+</p>
+<div class="bd-example">
+  <div class="p-3 mb-2 bg-body-secondary border rounded-2">
+    <div class="mx-auto p-2 bg-primary text-white rounded-2" style="width: 200px;">Centered element (mx-auto)</div>
+  </div>
+  <div class="p-4 mb-2 bg-body-secondary border rounded-2">
+    <span class="me-2 p-2 bg-primary text-white rounded-2">Margin end 2 (me-2)</span>
+    <span class="ms-3 p-2 bg-primary text-white rounded-2">Margin start 3 (ms-3)</span>
+  </div>
+  <div class="p-5 bg-body-secondary border rounded-2">
+    <div class="py-2 px-4 bg-primary text-white rounded-2">Padding y 2, x 4 (py-2 px-4)</div>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="mx-auto" style="width: 200px;">Centered element</div>
+<span class="me-2">Margin end 2</span>
+<span class="ms-3">Margin start 3</span>
+<div class="py-2 px-4">Padding y 2, x 4</div>
+  </code></pre>
+</div>
+
+<h2 id="horizontal-centering">Horizontal centering <a class="anchor" href="#horizontal-centering">#</a></h2>
+<p>
+  Use <code>.mx-auto</code> to horizontally center block-level content.
+</p>
+<div class="bd-example">
+  <div class="mx-auto p-3 bg-body-secondary border rounded-2" style="width: 200px;">Centered element</div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="mx-auto p-3" style="width: 200px;">Centered element</div>
+  </code></pre>
+</div>
+
+<h2 id="negative-margin">Negative margin <a class="anchor" href="#negative-margin">#</a></h2>
+<p>
+  Negative margin utilities are prefixed with <code>n</code>.
+</p>
+<div class="bd-example">
+  <div class="overflow-hidden p-3 bg-body-secondary border rounded-2">
+    <div class="row">
+      <div class="col">
+        <div class="mx-n5 p-3 bg-primary text-white rounded-2">Negative margin (mx-n5)</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="mx-n5">Negative margin</div>
+  </code></pre>
+</div>
+
+<h2 id="gap">Gap <a class="anchor" href="#gap">#</a></h2>
+<p>
+  Use the <code>gap-*</code> utilities to control the space between flex or grid
+  items.
+</p>
+<div class="bd-example">
+  <div class="d-flex gap-3 bg-body-secondary border rounded-2 p-2">
+    <div class="p-2 bg-primary text-white rounded-2">Gap item</div>
+    <div class="p-2 bg-primary text-white rounded-2">Gap item</div>
+    <div class="p-2 bg-primary text-white rounded-2">Gap item</div>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="d-flex gap-3">
+  <div class="p-2">Gap item</div>
+  <div class="p-2">Gap item</div>
+  <div class="p-2">Gap item</div>
+</div>
+  </code></pre>
+</div>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WindStrap — Bootstrap 5.3.8 rebuilt on Tailwind @apply</title>
+  <link rel="stylesheet" href="dist/windstrap.css">
+  <style>
+    /* tiny page scaffolding — NOT part of the translation */
+    body { padding: 0 0 4rem; }
+    .demo-section { border-bottom: 1px dashed #dee2e6; padding: 2rem 0; }
+    .demo-title { margin-bottom: 1rem; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-3">
+  <div class="container">
+    <a class="navbar-brand" href="#">WindStrap</a>
+    <button class="navbar-toggler" type="button"><span class="navbar-toggler-icon"></span></button>
+    <div class="navbar-collapse">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+      </ul>
+      <button class="btn btn-outline-light" type="button">Sign up</button>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <!-- Grid -->
+  <div class="demo-section">
+    <h2 class="demo-title">Grid</h2>
+    <div class="row g-3">
+      <div class="col-12 col-md-6 col-lg-3"><div class="p-3 bg-primary-subtle border border-primary-subtle rounded">col-12 col-md-6 col-lg-3</div></div>
+      <div class="col-12 col-md-6 col-lg-3"><div class="p-3 bg-success-subtle border border-success-subtle rounded">col-12 col-md-6 col-lg-3</div></div>
+      <div class="col-12 col-md-6 col-lg-3"><div class="p-3 bg-warning-subtle border border-warning-subtle rounded">col-12 col-md-6 col-lg-3</div></div>
+      <div class="col-12 col-md-6 col-lg-3"><div class="p-3 bg-danger-subtle border border-danger-subtle rounded">col-12 col-md-6 col-lg-3</div></div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-4 offset-4 text-center">offset-4 / col-4</div>
+      <div class="col-4">col-4</div>
+    </div>
+  </div>
+
+  <!-- Typography -->
+  <div class="demo-section">
+    <h2 class="demo-title">Typography</h2>
+    <p class="display-1">display-1</p>
+    <p class="display-4">display-4</p>
+    <p class="lead">lead — a larger, lighter paragraph.</p>
+    <h3>Heading <small class="text-body-secondary">with muted small text</small></h3>
+    <ul class="list-unstyled">list-unstyled
+      <li>item</li>
+    </ul>
+    <blockquote class="blockquote">
+      <p>Blockquote text.</p>
+      <footer class="blockquote-footer">Someone famous</footer>
+    </blockquote>
+    <p class="fw-bold">fw-bold</p>
+    <p class="fst-italic">fst-italic</p>
+    <p class="text-uppercase">text-uppercase</p>
+    <p class="text-truncate" style="max-width: 200px;">text-truncate with a really long line that should be truncated at the edge of its box.</p>
+  </div>
+
+  <!-- Buttons -->
+  <div class="demo-section">
+    <h2 class="demo-title">Buttons</h2>
+    <button class="btn btn-primary">Primary</button>
+    <button class="btn btn-secondary">Secondary</button>
+    <button class="btn btn-success">Success</button>
+    <button class="btn btn-info">Info</button>
+    <button class="btn btn-warning">Warning</button>
+    <button class="btn btn-danger">Danger</button>
+    <button class="btn btn-light">Light</button>
+    <button class="btn btn-dark">Dark</button>
+    <button class="btn btn-link">Link</button>
+    <hr>
+    <button class="btn btn-outline-primary">Outline primary</button>
+    <button class="btn btn-outline-success">Outline success</button>
+    <button class="btn btn-outline-danger">Outline danger</button>
+    <hr>
+    <button class="btn btn-primary btn-lg">Large</button>
+    <button class="btn btn-primary">Normal</button>
+    <button class="btn btn-primary btn-sm">Small</button>
+    <button class="btn btn-primary disabled">Disabled</button>
+    <hr>
+    <div class="btn-group" role="group">
+      <button class="btn btn-primary">Left</button>
+      <button class="btn btn-primary">Middle</button>
+      <button class="btn btn-primary active">Active</button>
+    </div>
+    <div class="btn-group-vertical ms-2">
+      <button class="btn btn-secondary">Top</button>
+      <button class="btn btn-secondary">Bottom</button>
+    </div>
+  </div>
+
+  <!-- Badges / alerts -->
+  <div class="demo-section">
+    <h2 class="demo-title">Badges &amp; Alerts</h2>
+    <h5>Badges <span class="badge bg-primary">Primary</span> <span class="badge bg-danger rounded-pill">Rounded pill</span></h5>
+    <div class="alert alert-primary">alert-primary</div>
+    <div class="alert alert-success">alert-success</div>
+    <div class="alert alert-warning alert-dismissible">alert-warning <button class="btn-close"></button></div>
+  </div>
+
+  <!-- Cards -->
+  <div class="demo-section">
+    <h2 class="demo-title">Cards</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header">Card header</div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-bg-dark">
+          <div class="card-body">
+            <h5 class="card-title">text-bg-dark</h5>
+            <p class="card-text">Card with dark background via text-bg-dark.</p>
+          </div>
+          <div class="card-footer">Card footer</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item active">Active item</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Accordion / nav -->
+  <div class="demo-section">
+    <h2 class="demo-title">Accordion &amp; Nav</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="accordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button" type="button">Accordion item #1</button></h2>
+            <div class="accordion-body">This is the first item's accordion body.</div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button">Accordion item #2</button></h2>
+            <div class="accordion-body">Second body.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <ul class="nav nav-tabs">
+          <li class="nav-item"><a class="nav-link active" href="#">Active</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+          <li class="nav-item"><a class="nav-link disabled" href="#">Disabled</a></li>
+        </ul>
+        <ul class="nav nav-pills mt-3">
+          <li class="nav-item"><a class="nav-link active" href="#">Pill</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Pill</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tables / forms -->
+  <div class="demo-section">
+    <h2 class="demo-title">Tables &amp; Forms</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <table class="table table-striped table-hover">
+          <thead><tr><th>#</th><th>Name</th><th>Role</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Ada</td><td>Engineer</td></tr>
+            <tr><td>2</td><td>Grace</td><td>Admiral</td></tr>
+            <tr><td>3</td><td>Linus</td><td>Maintainer</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-6">
+        <form>
+          <label class="form-label" for="name">Name</label>
+          <input class="form-control mb-2" id="name" placeholder="Jane Doe">
+          <label class="form-label" for="select">Select</label>
+          <select class="form-select mb-2" id="select">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+          </select>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="cb" checked>
+            <label class="form-check-label" for="cb">Checkbox</label>
+          </div>
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="sw">
+            <label class="form-check-label" for="sw">Switch</label>
+          </div>
+          <div class="input-group mt-2">
+            <span class="input-group-text">@</span>
+            <input class="form-control" placeholder="username">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Progress / list-group / pagination / breadcrumb -->
+  <div class="demo-section">
+    <h2 class="demo-title">Progress, List group, Pagination, Breadcrumb</h2>
+    <div class="progress mb-2"><div class="progress-bar" style="width: 65%">65%</div></div>
+    <div class="progress mb-2"><div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width: 45%"></div></div>
+    <div class="row">
+      <div class="col-md-4">
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-primary">list-group-item-primary</li>
+          <li class="list-group-item list-group-item-success">list-group-item-success</li>
+          <li class="list-group-item list-group-item-danger">list-group-item-danger</li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <nav aria-label="Pagination"><ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item active"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul></nav>
+      </div>
+      <div class="col-md-4">
+        <nav aria-label="breadcrumb"><ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">Library</a></li>
+          <li class="breadcrumb-item active">Data</li>
+        </ol></nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- Utilities -->
+  <div class="demo-section">
+    <h2 class="demo-title">Utilities</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="border border-primary rounded-3 p-3 mb-2">border border-primary rounded-3</div>
+        <div class="bg-primary text-white rounded-circle text-center d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">circle</div>
+      </div>
+      <div class="col-md-4">
+        <p class="text-primary">text-primary</p>
+        <p class="text-success">text-success</p>
+        <p class="text-muted">text-muted</p>
+        <p><span class="badge text-bg-info">text-bg-info</span> <span class="badge text-bg-warning">text-bg-warning</span></p>
+      </div>
+      <div class="col-md-4">
+        <div class="d-flex justify-content-between align-items-center bg-light p-3 rounded">
+          <span>d-flex</span>
+          <span class="spinner-border spinner-border-sm text-primary"></span>
+          <span class="spinner-grow spinner-grow-sm text-danger"></span>
+        </div>
+        <div class="d-none d-md-block mt-2 text-success">d-none d-md-block (visible ≥768px)</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

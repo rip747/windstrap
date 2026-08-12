@@ -1,0 +1,178 @@
+<h2 id="checks">Checks <a class="anchor" href="#checks">#</a></h2>
+<p>
+  Native checkbox and radio inputs are recreated with
+  <code>.form-check-input</code> and paired with <code>.form-check-label</code>.
+</p>
+<div class="bd-example">
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+    <label class="form-check-label" for="flexCheckDefault">Default checkbox</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+    <label class="form-check-label" for="flexCheckChecked">Checked checkbox</label>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  <label class="form-check-label" for="flexCheckDefault">Default checkbox</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+  <label class="form-check-label" for="flexCheckChecked">Checked checkbox</label>
+</div>
+  </code></pre>
+</div>
+
+<h2 id="radios">Radios <a class="anchor" href="#radios">#</a></h2>
+<div class="bd-example">
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+    <label class="form-check-label" for="flexRadioDefault1">Default radio</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+    <label class="form-check-label" for="flexRadioDefault2">Default checked radio</label>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <label class="form-check-label" for="flexRadioDefault1">Default radio</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+  <label class="form-check-label" for="flexRadioDefault2">Default checked radio</label>
+</div>
+  </code></pre>
+</div>
+
+<h2 id="disabled">Disabled <a class="anchor" href="#disabled">#</a></h2>
+<p>
+  Add the <code>disabled</code> attribute and the associated
+  <code>&lt;label&gt;</code>s are automatically styled to match with a lighter color.
+</p>
+<div class="bd-example">
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
+    <label class="form-check-label" for="flexCheckDisabled">Disabled checkbox</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled" checked disabled>
+    <label class="form-check-label" for="flexCheckCheckedDisabled">Disabled checked checkbox</label>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
+  <label class="form-check-label" for="flexCheckDisabled">Disabled checkbox</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled" checked disabled>
+  <label class="form-check-label" for="flexCheckCheckedDisabled">Disabled checked checkbox</label>
+</div>
+  </code></pre>
+</div>
+
+<h2 id="switches">Switches <a class="anchor" href="#switches">#</a></h2>
+<p>
+  A switch has the markup of a custom checkbox but uses the
+  <code>.form-switch</code> class to render a toggle switch.
+</p>
+<div class="bd-example">
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+    <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+    <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+  <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+</div>
+<div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+  <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+</div>
+  </code></pre>
+</div>
+
+<h2 id="inline">Inline <a class="anchor" href="#inline">#</a></h2>
+<p>
+  Group checkboxes or radios on the same horizontal row by adding
+  <code>.form-check-inline</code> to any <code>.form-check</code>.
+</p>
+<div class="bd-example">
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+    <label class="form-check-label" for="inlineCheckbox1">1</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+    <label class="form-check-label" for="inlineCheckbox2">2</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+    <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+  <label class="form-check-label" for="inlineCheckbox1">1</label>
+</div>
+  </code></pre>
+</div>
+
+<h2 id="without-labels">Without labels <a class="anchor" href="#without-labels">#</a></h2>
+<p>
+  Omit the <code>&lt;label&gt;</code> (or hide it with the <code>.visually-hidden</code>
+  class) — remember to still provide an accessible name via
+  <code>aria-label</code>.
+</p>
+<div class="bd-example">
+  <div>
+    <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+  </div>
+  <div>
+    <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="...">
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+  </code></pre>
+</div>
+
+<h2 id="toggle-buttons">Toggle buttons <a class="anchor" href="#toggle-buttons">#</a></h2>
+<p>
+  Create button-like checkboxes and radio buttons by using <code>.btn-check</code>
+  styles with the <code>.btn</code> styles.
+</p>
+<div class="bd-example">
+  <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+  <label class="btn btn-outline-primary" for="btn-check">Single toggle</label>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+<label class="btn btn-outline-primary" for="btn-check">Single toggle</label>
+  </code></pre>
+</div>

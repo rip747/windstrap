@@ -1,0 +1,454 @@
+<h2 id="overview">Overview <a class="anchor" href="#overview">#</a></h2>
+<p>
+  Dropdowns are toggleable, contextual overlays for displaying lists of links and
+  more. They’re made interactive with the included Bootstrap dropdown plugin and
+  are triggered by clicking, not by hovering.
+</p>
+<div class="bd-callout bd-callout-warning">
+  <h5>Requires the dropdown plugin</h5>
+  <p class="mb-0">The <code>data-bs-toggle="dropdown"</code> behavior is driven by Bootstrap’s JavaScript dropdown plugin, included on these pages via the JS bundle.</p>
+</div>
+
+<h2 id="single-button">Single button <a class="anchor" href="#single-button">#</a></h2>
+<p>
+  Any single <code>.btn</code> can be turned into a dropdown toggle with some
+  markup changes.
+</p>
+<div class="bd-example">
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropdown button
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+</div>
+  </code></pre>
+</div>
+
+<h2 id="split-button">Split button <a class="anchor" href="#split-button">#</a></h2>
+<p>
+  Similarly, create split button dropdowns with virtually the same markup as
+  single button dropdowns, but with the addition of <code>.dropdown-toggle-split</code>
+  for proper spacing around the caret.
+</p>
+<div class="bd-example">
+  <div class="btn-group">
+    <button type="button" class="btn btn-primary">Action</button>
+    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+      <span class="visually-hidden">Toggle Dropdown</span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#">Separated link</a></li>
+    </ul>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="btn-group">
+  <button type="button" class="btn btn-primary">Action</button>
+  <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="visually-hidden">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
+  </ul>
+</div>
+  </code></pre>
+</div>
+
+<h2 id="sizing">Sizing <a class="anchor" href="#sizing">#</a></h2>
+<p>
+  Button dropdowns work with buttons of all sizes, including default and split
+  dropdown buttons.
+</p>
+<div class="bd-example">
+  <div class="btn-group">
+    <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Large button
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+    </ul>
+  </div>
+  <div class="btn-group">
+    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Small button
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+    </ul>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="btn-group">
+  <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Large button
+  </button>
+  <ul class="dropdown-menu">…</ul>
+</div>
+<div class="btn-group">
+  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Small button
+  </button>
+  <ul class="dropdown-menu">…</ul>
+</div>
+  </code></pre>
+</div>
+
+<h2 id="dark-dropdowns">Dark dropdowns <a class="anchor" href="#dark-dropdowns">#</a></h2>
+<p>
+  Opt into darker dropdowns to do away with white backgrounds and add some extra
+  contrast. Add <code>.dropdown-menu-dark</code> onto an existing
+  <code>.dropdown-menu</code>. You can also use <code>.dropend</code> and
+  <code>.dropstart</code> with the same modifier.
+</p>
+<div class="bd-example">
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropdown button
+    </button>
+    <ul class="dropdown-menu dropdown-menu-dark">
+      <li><a class="dropdown-item active" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#">Separated link</a></li>
+    </ul>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu dropdown-menu-dark">
+    <li><a class="dropdown-item active" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
+  </ul>
+</div>
+  </code></pre>
+</div>
+
+<h2 id="menu-items">Menu items <a class="anchor" href="#menu-items">#</a></h2>
+<p>
+  You can use <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> elements as
+  dropdown items.
+</p>
+<h3 id="active">Active <a class="anchor" href="#active">#</a></h3>
+<p>
+  Add <code>.active</code> to items in the dropdown to <strong>style them as active</strong>.
+  To convey the active state to assistive technologies, use the
+  <code>aria-current</code> attribute.
+</p>
+<div class="bd-example">
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropdown button
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item active" href="#" aria-current="true">Regular link</a></li>
+      <li><a class="dropdown-item" href="#">Another link</a></li>
+    </ul>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<ul class="dropdown-menu">
+  <li><a class="dropdown-item active" href="#" aria-current="true">Regular link</a></li>
+  <li><a class="dropdown-item" href="#">Another link</a></li>
+</ul>
+  </code></pre>
+</div>
+<h3 id="disabled">Disabled <a class="anchor" href="#disabled">#</a></h3>
+<p>
+  Add <code>.disabled</code> to items in the dropdown to <strong>style them as disabled</strong>.
+</p>
+<div class="bd-example">
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropdown button
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Regular link</a></li>
+      <li><a class="dropdown-item disabled" aria-disabled="true">Disabled link</a></li>
+    </ul>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<ul class="dropdown-menu">
+  <li><a class="dropdown-item" href="#">Regular link</a></li>
+  <li><a class="dropdown-item disabled" aria-disabled="true">Disabled link</a></li>
+</ul>
+  </code></pre>
+</div>
+
+<h2 id="menu-alignment">Menu alignment <a class="anchor" href="#menu-alignment">#</a></h2>
+<p>
+  By default, a dropdown menu is automatically positioned 100% from the top and
+  along the left side of its parent. Add <code>.dropdown-menu-end</code> to a
+  <code>.dropdown-menu</code> to right align the dropdown menu.
+</p>
+<div class="bd-example">
+  <div class="btn-group">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      This dropdown's menu is right-aligned
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+    </ul>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="btn-group">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    This dropdown's menu is right-aligned
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+  </ul>
+</div>
+  </code></pre>
+</div>
+
+<h2 id="menu-content">Menu content <a class="anchor" href="#menu-content">#</a></h2>
+<h3 id="headers">Headers <a class="anchor" href="#headers">#</a></h3>
+<p>
+  Add a header to label sections of actions in any dropdown menu.
+</p>
+<div class="bd-example">
+  <div class="dropdown-menu">
+    <h6 class="dropdown-header">Dropdown header</h6>
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="dropdown-menu">
+  <h6 class="dropdown-header">Dropdown header</h6>
+  <a class="dropdown-item" href="#">Action</a>
+  <a class="dropdown-item" href="#">Another action</a>
+</div>
+  </code></pre>
+</div>
+<h3 id="dividers">Dividers <a class="anchor" href="#dividers">#</a></h3>
+<p>
+  Separate groups of related menu items with a divider.
+</p>
+<div class="bd-example">
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <hr class="dropdown-divider">
+    <a class="dropdown-item" href="#">Separated link</a>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="dropdown-menu">
+  <a class="dropdown-item" href="#">Action</a>
+  <a class="dropdown-item" href="#">Another action</a>
+  <hr class="dropdown-divider">
+  <a class="dropdown-item" href="#">Separated link</a>
+</div>
+  </code></pre>
+</div>
+<h3 id="text">Text <a class="anchor" href="#text">#</a></h3>
+<p>
+  Place any freeform text within a dropdown menu with text and use spacing
+  utilities.
+</p>
+<div class="bd-example">
+  <div class="dropdown-menu p-4 text-body-secondary" style="max-width: 200px;">
+    <p>Some example text that's free-flowing within the dropdown menu.</p>
+    <p class="mb-0">And this is more example text.</p>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="dropdown-menu p-4 text-body-secondary" style="max-width: 200px;">
+  <p>Some example text that's free-flowing within the dropdown menu.</p>
+  <p class="mb-0">And this is more example text.</p>
+</div>
+  </code></pre>
+</div>
+<h3 id="forms">Forms <a class="anchor" href="#forms">#</a></h3>
+<p>
+  Put a form within a dropdown menu, or make it into a dropdown menu, and use
+  margin or padding utilities to give it the negative space you require.
+</p>
+<div class="bd-example">
+  <div class="dropdown-menu">
+    <form class="px-4 py-3">
+      <div class="mb-3">
+        <label for="exampleDropdownFormEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+      </div>
+      <div class="mb-3">
+        <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+      </div>
+      <div class="mb-3">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="dropdownCheck">
+          <label class="form-check-label" for="dropdownCheck">Remember me</label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Sign in</button>
+    </form>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">New around here? Sign up</a>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="dropdown-menu">
+  <form class="px-4 py-3">
+    <div class="mb-3">
+      <label for="exampleDropdownFormEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+    </div>
+    <div class="mb-3">
+      <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+    </div>
+    <div class="mb-3">
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="dropdownCheck">
+        <label class="form-check-label" for="dropdownCheck">Remember me</label>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </form>
+  <div class="dropdown-divider"></div>
+  <a class="dropdown-item" href="#">New around here? Sign up</a>
+</div>
+  </code></pre>
+</div>
+
+<h2 id="menu-options">Menu options <a class="anchor" href="#menu-options">#</a></h2>
+<h3 id="dropup">Dropup <a class="anchor" href="#dropup">#</a></h3>
+<p>
+  Trigger dropdown menus above elements by adding <code>.dropup</code> to the
+  parent element.
+</p>
+<div class="bd-example">
+  <div class="btn-group dropup">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropup
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+    </ul>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="btn-group dropup">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropup
+  </button>
+  <ul class="dropdown-menu">…</ul>
+</div>
+  </code></pre>
+</div>
+<h3 id="dropend">Dropend <a class="anchor" href="#dropend">#</a></h3>
+<p>
+  Trigger dropdown menus at the far right of the elements by adding
+  <code>.dropend</code> to the parent element.
+</p>
+<div class="bd-example">
+  <div class="btn-group dropend">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropright
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+    </ul>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="btn-group dropend">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropright
+  </button>
+  <ul class="dropdown-menu">…</ul>
+</div>
+  </code></pre>
+</div>
+<h3 id="dropstart">Dropstart <a class="anchor" href="#dropstart">#</a></h3>
+<p>
+  Trigger dropdown menus at the far left of the elements by adding
+  <code>.dropstart</code> to the parent element.
+</p>
+<div class="bd-example">
+  <div class="btn-group dropstart">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropleft
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+    </ul>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="btn-group dropstart">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropleft
+  </button>
+  <ul class="dropdown-menu">…</ul>
+</div>
+  </code></pre>
+</div>

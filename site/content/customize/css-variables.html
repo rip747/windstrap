@@ -1,0 +1,78 @@
+<h2 id="root">The <code>:root</code> variables <a class="anchor" href="#root">#</a></h2>
+<p>
+  Bootstrap exposes most of its Sass variables as CSS custom properties on
+  <code>:root</code>. WindStrap keeps this layer intact — it’s how the translated
+  classes stay themeable at runtime. See
+  <code>src/sections/root.css</code> for the full list.
+</p>
+<div class="bd-example">
+  <div class="row g-3">
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-body-secondary">Color</h6>
+          <p class="mb-1"><code>--bs-primary</code> <span class="float-end">#0d6efd</span></p>
+          <p class="mb-1"><code>--bs-primary-rgb</code> <span class="float-end">13, 110, 253</span></p>
+          <p class="mb-0"><code>--bs-body-color</code> <span class="float-end">#212529</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-body-secondary">Typography</h6>
+          <p class="mb-1"><code>--bs-body-font-family</code></p>
+          <p class="mb-1"><code>--bs-body-font-size</code> <span class="float-end">1rem</span></p>
+          <p class="mb-0"><code>--bs-body-line-height</code> <span class="float-end">1.5</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-body-secondary">Borders &amp; shadows</h6>
+          <p class="mb-1"><code>--bs-border-width</code> <span class="float-end">1px</span></p>
+          <p class="mb-1"><code>--bs-border-radius</code> <span class="float-end">0.375rem</span></p>
+          <p class="mb-0"><code>--bs-box-shadow</code></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2 id="component-variables">Component variables <a class="anchor" href="#component-variables">#</a></h2>
+<p>
+  Most components also carry their own local variables on their base class. Override
+  them on the element to customize it in place. A few examples from the translation:
+</p>
+<table class="table table-striped">
+  <thead>
+    <tr><th>Component</th><th>Key variables</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><code>.btn</code></td><td><code>--bs-btn-padding-x/y</code>, <code>--bs-btn-color</code>, <code>--bs-btn-bg</code>, <code>--bs-btn-border-color</code>, <code>--bs-btn-hover-*</code>, <code>--bs-btn-active-*</code></td></tr>
+    <tr><td><code>.card</code></td><td><code>--bs-card-spacer-x/y</code>, <code>--bs-card-border-radius</code>, <code>--bs-card-bg</code>, <code>--bs-card-cap-bg</code></td></tr>
+    <tr><td><code>.alert</code></td><td><code>--bs-alert-bg</code>, <code>--bs-alert-border-color</code>, <code>--bs-alert-color</code></td></tr>
+    <tr><td><code>.modal</code></td><td><code>--bs-modal-width</code>, <code>--bs-modal-padding</code>, <code>--bs-modal-bg</code>, <code>--bs-modal-box-shadow</code></td></tr>
+    <tr><td><code>.dropdown-menu</code></td><td><code>--bs-dropdown-min-width</code>, <code>--bs-dropdown-bg</code>, <code>--bs-dropdown-link-*</code></td></tr>
+    <tr><td><code>.accordion</code></td><td><code>--bs-accordion-btn-icon</code>, <code>--bs-accordion-active-bg</code>, <code>--bs-accordion-active-color</code></td></tr>
+  </tbody>
+</table>
+
+<h2 id="example">Customizing a card <a class="anchor" href="#example">#</a></h2>
+<div class="bd-example">
+  <div class="card" style="--bs-card-border-radius: 1rem; --bs-card-border-color: #6f42c1; --bs-card-cap-bg: #f1eafb;">
+    <div class="card-header">Card header</div>
+    <div class="card-body">Card body with custom border-radius, border-color and header background.</div>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<div class="card"
+     style="--bs-card-border-radius: 1rem; --bs-card-border-color: #6f42c1; --bs-card-cap-bg: #f1eafb;">
+  <div class="card-header">Card header</div>
+  <div class="card-body">Card body with custom border-radius, border-color and header background.</div>
+</div>
+  </code></pre>
+</div>

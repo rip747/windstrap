@@ -1,0 +1,63 @@
+<h2 id="per-component">Per-component customization <a class="anchor" href="#per-component">#</a></h2>
+<p>
+  Every WindStrap component keeps Bootstrap’s local CSS variables on its class, so
+  the same per-component customization Bootstrap supports works at runtime. For
+  example, the button component exposes <code>--bs-btn-*</code> variables that you
+  can override without touching the source.
+</p>
+<div class="bd-example">
+  <button type="button" class="btn btn-primary"
+          style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+    Custom button
+  </button>
+  <button type="button" class="btn btn-primary" style="--bs-btn-bg: #6f42c1; --bs-btn-border-color: #6f42c1;">Custom colors</button>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<button type="button" class="btn btn-primary"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+  Custom button
+</button>
+<button type="button" class="btn btn-primary"
+        style="--bs-btn-bg: #6f42c1; --bs-btn-border-color: #6f42c1;">
+  Custom colors
+</button>
+  </code></pre>
+</div>
+
+<h2 id="editing-the-source">Editing the source <a class="anchor" href="#editing-the-source">#</a></h2>
+<p>
+  For compile-time changes, edit the <code>@apply</code> translations in
+  <code>src/sections/</code>. The component files map to Bootstrap’s component
+  styles:
+</p>
+<table class="table table-striped">
+  <thead>
+    <tr><th>Component</th><th>File</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Buttons &amp; button groups</td><td><code>src/sections/buttons.css</code></td></tr>
+    <tr><td>Nav &amp; navbar</td><td><code>src/sections/nav.css</code></td></tr>
+    <tr><td>Cards, alerts, list-groups, dropdowns, accordion…</td><td><code>src/sections/components.css</code></td></tr>
+    <tr><td>Modal, tooltip, popover, carousel, spinner, offcanvas…</td><td><code>src/sections/overlays.css</code></td></tr>
+    <tr><td>Forms</td><td><code>src/sections/forms.css</code></td></tr>
+    <tr><td>Helpers &amp; utilities</td><td><code>src/sections/helpers.css</code>, <code>scripts/generate-utilities.js</code></td></tr>
+  </tbody>
+</table>
+<p>
+  Each rule reads like Bootstrap’s final CSS, but composed from Tailwind utilities:
+</p>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+/* src/sections/buttons.css — .btn-primary */
+.btn-primary {
+  @apply bg-primary text-white border-primary
+    hover:bg-[#0b5ed7] hover:border-[#0a58ca]
+    active:bg-[#0a58ca] active:border-[#0a53be]
+    active:shadow-[inset_0_3px_5px_rgba(0,0,0,0.125)];
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+}
+  </code></pre>
+</div>

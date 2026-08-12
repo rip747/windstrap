@@ -1,0 +1,32 @@
+<h2 id="example">Example <a class="anchor" href="#example">#</a></h2>
+<p>
+  Add the <code>.text-truncate</code> class to truncate text with an ellipsis.
+  Requires <code>display: inline-block</code> or <code>display: block</code> to
+  work.
+</p>
+<div class="bd-example">
+  <div class="row">
+    <div class="col-2 text-truncate">
+      This text is quite long, and will be truncated once displayed.
+    </div>
+  </div>
+  <span class="d-inline-block text-truncate" style="max-width: 150px;">
+    This text is quite long, and will be truncated once displayed.
+  </span>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight" data-escape><code>
+<!-- Block level -->
+<div class="row">
+  <div class="col-2 text-truncate">
+    This text is quite long, and will be truncated once displayed.
+  </div>
+</div>
+
+<!-- Inline level -->
+<span class="d-inline-block text-truncate" style="max-width: 150px;">
+  This text is quite long, and will be truncated once displayed.
+</span>
+  </code></pre>
+</div>

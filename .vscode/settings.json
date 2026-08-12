@@ -1,0 +1,6 @@
+{
+  // `@apply` is a Tailwind build-time directive resolved by PostCSS.
+  // The CSS language server doesn't know it, so silence the false positives.
+  "css.lint.unknownAtRules": "ignore",
+  "css.lint.unknownProperties": "ignore"
+}

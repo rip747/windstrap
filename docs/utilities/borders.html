@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Borders · WindStrap v5.3.8</title>
+  <link rel="stylesheet" href="../../dist/windstrap.css">
+  <link rel="stylesheet" href="../css/docs.css">
+</head>
+<body class="d-flex flex-column h-100">
+
+  <a class="visually-hidden-focusable" href="#content">Skip to main content</a>
+  <a class="visually-hidden-focusable" href="#bd-docs-nav">Skip to docs navigation</a>
+
+  <!-- ===================== Navbar ===================== -->
+  <header class="navbar navbar-expand-lg navbar-dark bd-navbar sticky-top">
+    <div class="container-xl">
+      <a class="navbar-brand" href="../index.html">WindStrap<span class="bd-badge">v5.3.8</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bd-navbar" aria-controls="bd-navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="bd-navbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Docs</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://getbootstrap.com/docs/5.3/" target="_blank" rel="noopener">Bootstrap docs</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== Layout ===================== -->
+  <div class="bd-layout container-xl" id="bd-docs-nav">
+
+    <!-- Left sidebar navigation -->
+    <aside class="bd-sidebar">
+      <nav class="bd-links" aria-label="Docs navigation">
+        <ul class="bd-links-nav list-unstyled mb-0 pb-lg-3 pb-4">
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Customize</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/overview.html">Overview</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/sass.html">Sass</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/color.html">Color</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/components.html">Components</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/css-variables.html">CSS variables</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/optimize.html">Optimize</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/dark-mode.html">Dark mode</a></li>
+    </ul>
+  </li>
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Layout</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/breakpoints.html">Breakpoints</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/containers.html">Containers</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/grid.html">Grid</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/columns.html">Columns</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/gutters.html">Gutters</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/utilities.html">Utilities</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/z-index.html">Z-index</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/css-grid.html">CSS grid</a></li>
+    </ul>
+  </li>
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Content</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="../content/reboot.html">Reboot</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../content/typography.html">Typography</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../content/images.html">Images</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../content/tables.html">Tables</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../content/figures.html">Figures</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../content/syntax-highlighting.html">Syntax highlighting</a></li>
+    </ul>
+  </li>
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Forms</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/overview.html">Overview</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/form-control.html">Form control</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/select.html">Select</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/checks-radios.html">Checks & radios</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/range.html">Range</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/input-group.html">Input group</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/floating-labels.html">Floating labels</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/layout.html">Layout</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/validation.html">Validation</a></li>
+    </ul>
+  </li>
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Components</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="../components/accordion.html">Accordion</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../components/alerts.html">Alerts</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../components/badge.html">Badge</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../components/breadcrumb.html">Breadcrumb</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../components/buttons.html">Buttons</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../components/button-group.html">Button group</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../components/card.html">Card</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../components/carousel.html">Carousel</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../components/collapse.html">Collapse</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../components/dropdowns.html">Dropdowns</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../components/list-group.html">List group</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../components/modal.html">Modal</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../components/navs-tabs.html">Navs & tabs</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../components/navbar.html">Navbar</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../components/offcanvas.html">Offcanvas</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../components/pagination.html">Pagination</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../components/placeholders.html">Placeholders</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../components/popovers.html">Popovers</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../components/progress.html">Progress</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../components/scrollspy.html">Scrollspy</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../components/spinners.html">Spinners</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../components/toasts.html">Toasts</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../components/tooltips.html">Tooltips</a></li>
+    </ul>
+  </li>
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Helpers</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/clearfix.html">Clearfix</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/color-background.html">Color & background</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/colored-links.html">Colored links</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/focus-ring.html">Focus ring</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/icon-link.html">Icon link</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/position.html">Position</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/ratio.html">Ratio</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/stacks.html">Stacks</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/stretched-link.html">Stretched link</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/text-truncation.html">Text truncation</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/vertical-rule.html">Vertical rule</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/visually-hidden.html">Visually hidden</a></li>
+    </ul>
+  </li>
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Utilities</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="api.html">API</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="background.html">Background</a></li>
+      <li><a class="bd-links-link d-inline-block rounded active" href="borders.html">Borders</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="colors.html">Colors</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="display.html">Display</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="flex.html">Flex</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="float.html">Float</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="interactions.html">Interactions</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="link.html">Link</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="object-fit.html">Object fit</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="opacity.html">Opacity</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="overflow.html">Overflow</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="position.html">Position</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="shadows.html">Shadows</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="sizing.html">Sizing</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="spacing.html">Spacing</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="text.html">Text</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="vertical-alignment.html">Vertical alignment</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="visibility.html">Visibility</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="z-index.html">Z-index</a></li>
+    </ul>
+  </li>
+</ul>
+
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main class="bd-main" id="content">
+      <div class="bd-intro">
+        <div class="bd-intro-inner">
+          <h1 class="bd-title">Borders</h1>
+          <p class="bd-lead">Use border utilities to quickly style the border and border-radius of an element.</p>
+        </div>
+        <nav class="bd-toc" aria-label="On this page">
+          <strong>On this page</strong>
+          <ul>
+  <li><a href="#border">Border</a>
+  </li>
+  <li><a href="#border-color">Border color</a>
+  </li>
+  <li><a href="#border-width">Border width</a>
+  </li>
+  <li><a href="#border-opacity">Border opacity</a>
+  </li>
+  <li><a href="#border-radius">Border radius</a>
+  </li>
+</ul>
+
+        </nav>
+      </div>
+
+      <div class="bd-content">
+        <h2 id="border">Border <a class="anchor" href="#border">#</a></h2>
+<p>
+  Use the <code>.border</code> class to set the <code>border</code> property on an
+  element.
+</p>
+<div class="bd-example">
+  <span class="border"></span>
+  <span class="border-top"></span>
+  <span class="border-end"></span>
+  <span class="border-bottom"></span>
+  <span class="border-start"></span>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;span class=&quot;border&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border-top&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border-end&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border-bottom&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border-start&quot;&gt;&lt;/span&gt;</code></pre>
+</div>
+
+<h2 id="border-color">Border color <a class="anchor" href="#border-color">#</a></h2>
+<p>
+  Change the border color with the <code>.border-*</code> utilities.
+</p>
+<div class="bd-example">
+  <span class="border border-primary"></span>
+  <span class="border border-primary-subtle"></span>
+  <span class="border border-secondary"></span>
+  <span class="border border-success"></span>
+  <span class="border border-danger"></span>
+  <span class="border border-warning"></span>
+  <span class="border border-info"></span>
+  <span class="border border-light"></span>
+  <span class="border border-dark"></span>
+  <span class="border border-white"></span>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;span class=&quot;border border-primary&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border border-secondary&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border border-success&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border border-danger&quot;&gt;&lt;/span&gt;</code></pre>
+</div>
+
+<h2 id="border-width">Border width <a class="anchor" href="#border-width">#</a></h2>
+<p>
+  Change the border width with the <code>.border-1</code> through
+  <code>.border-5</code> utilities.
+</p>
+<div class="bd-example">
+  <span class="border border-1"></span>
+  <span class="border border-2"></span>
+  <span class="border border-3"></span>
+  <span class="border border-4"></span>
+  <span class="border border-5"></span>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;span class=&quot;border border-1&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border border-2&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border border-3&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border border-4&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border border-5&quot;&gt;&lt;/span&gt;</code></pre>
+</div>
+
+<h2 id="border-opacity">Border opacity <a class="anchor" href="#border-opacity">#</a></h2>
+<div class="bd-example">
+  <span class="border border-success"></span>
+  <span class="border border-success border-opacity-75"></span>
+  <span class="border border-success border-opacity-50"></span>
+  <span class="border border-success border-opacity-25"></span>
+  <span class="border border-success border-opacity-10"></span>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;span class=&quot;border border-success&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border border-success border-opacity-75&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border border-success border-opacity-50&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border border-success border-opacity-25&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border border-success border-opacity-10&quot;&gt;&lt;/span&gt;</code></pre>
+</div>
+
+<h2 id="border-radius">Border radius <a class="anchor" href="#border-radius">#</a></h2>
+<p>
+  Use the <code>.rounded-*</code> utilities to quickly style the border-radius.
+</p>
+<div class="bd-example">
+  <span class="rounded"></span>
+  <span class="rounded-top"></span>
+  <span class="rounded-end"></span>
+  <span class="rounded-bottom"></span>
+  <span class="rounded-start"></span>
+  <span class="rounded-circle"></span>
+  <span class="rounded-pill"></span>
+  <span class="rounded-0"></span>
+  <span class="rounded-1"></span>
+  <span class="rounded-2"></span>
+  <span class="rounded-3"></span>
+  <span class="rounded-4"></span>
+  <span class="rounded-5"></span>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;span class=&quot;rounded&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;rounded-top&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;rounded-end&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;rounded-bottom&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;rounded-start&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;rounded-circle&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;rounded-pill&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;rounded-0&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;rounded-1&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;rounded-2&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;rounded-3&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;rounded-4&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;rounded-5&quot;&gt;&lt;/span&gt;</code></pre>
+</div>
+
+      </div>
+
+      <!-- Prev / Next -->
+      <nav class="bd-prev-next" aria-label="Previous and next pages">
+        <a class="bd-prev" href="../utilities/background.html"><span class="bd-prev-next-label">Previous</span><span class="bd-prev-next-title">Background</span></a><a class="bd-next text-end" href="../utilities/colors.html"><span class="bd-prev-next-label">Next</span><span class="bd-prev-next-title">Colors</span></a>
+      </nav>
+    </main>
+  </div>
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="bd-footer py-5 mt-5">
+    <div class="container-xl">
+      <div class="row">
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="../index.html">Docs</a></li>
+            <li></li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+            <li></li><a href="https://www.npmjs.com/" target="_blank" rel="noopener">npm</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Guides</h5>
+          <ul class="list-unstyled">
+            <li><a href="../index.html">Getting started</a></li>
+            <li><a href="../components/buttons.html">Buttons</a></li>
+            <li><a href="../components/card.html">Cards</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Components</h5>
+          <ul class="list-unstyled">
+            <li><a href="../components/accordion.html">Accordion</a></li>
+            <li><a href="../components/navbar.html">Navbar</a></li>
+            <li><a href="../components/modal.html">Modal</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Community</h5>
+          <ul class="list-unstyled">
+            <li><a href="https://github.com/" target="_blank" rel="noopener">Issues</a></li>
+            <li><a href="https://stackoverflow.com/questions/tagged/bootstrap-5" target="_blank" rel="noopener">Stack Overflow</a></li>
+            <li><a href="https://discord.gg/bZUvakRU3M" target="_blank" rel="noopener">Discord</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-lg-4 mb-3">
+          <p class="small text-body-secondary mb-0">WindStrap — Bootstrap 5.3.8 translated 1:1 into Tailwind CSS via the <code>@apply</code> directive. This documentation mirrors <a href="https://getbootstrap.com/docs/5.3/">getbootstrap.com/docs/5.3</a>. Docs content licensed <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a>.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (for interactive demos: dropdowns, collapse, modals…).
+       The WindStrap translation covers the CSS; the JS behaviors are
+       Bootstrap's own and are intentionally not re-implemented here. -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="../js/docs.js"></script>
+</body>
+</html>

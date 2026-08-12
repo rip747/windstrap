@@ -1,0 +1,11 @@
+# Host-only artifacts that should not be copied into the Docker build context.
+# Everything is regenerated inside the container from the source in src/, site/, scripts/.
+node_modules
+dist
+docs
+.git
+.gitignore
+.vscode
+*.log
+.DS_Store
+Thumbs.db

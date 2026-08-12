@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Button group · WindStrap v5.3.8</title>
+  <link rel="stylesheet" href="../../dist/windstrap.css">
+  <link rel="stylesheet" href="../css/docs.css">
+</head>
+<body class="d-flex flex-column h-100">
+
+  <a class="visually-hidden-focusable" href="#content">Skip to main content</a>
+  <a class="visually-hidden-focusable" href="#bd-docs-nav">Skip to docs navigation</a>
+
+  <!-- ===================== Navbar ===================== -->
+  <header class="navbar navbar-expand-lg navbar-dark bd-navbar sticky-top">
+    <div class="container-xl">
+      <a class="navbar-brand" href="../index.html">WindStrap<span class="bd-badge">v5.3.8</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bd-navbar" aria-controls="bd-navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="bd-navbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Docs</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://getbootstrap.com/docs/5.3/" target="_blank" rel="noopener">Bootstrap docs</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== Layout ===================== -->
+  <div class="bd-layout container-xl" id="bd-docs-nav">
+
+    <!-- Left sidebar navigation -->
+    <aside class="bd-sidebar">
+      <nav class="bd-links" aria-label="Docs navigation">
+        <ul class="bd-links-nav list-unstyled mb-0 pb-lg-3 pb-4">
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Customize</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/overview.html">Overview</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/sass.html">Sass</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/color.html">Color</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/components.html">Components</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/css-variables.html">CSS variables</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/optimize.html">Optimize</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/dark-mode.html">Dark mode</a></li>
+    </ul>
+  </li>
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Layout</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/breakpoints.html">Breakpoints</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/containers.html">Containers</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/grid.html">Grid</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/columns.html">Columns</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/gutters.html">Gutters</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/utilities.html">Utilities</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/z-index.html">Z-index</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/css-grid.html">CSS grid</a></li>
+    </ul>
+  </li>
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Content</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="../content/reboot.html">Reboot</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../content/typography.html">Typography</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../content/images.html">Images</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../content/tables.html">Tables</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../content/figures.html">Figures</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../content/syntax-highlighting.html">Syntax highlighting</a></li>
+    </ul>
+  </li>
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Forms</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/overview.html">Overview</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/form-control.html">Form control</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/select.html">Select</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/checks-radios.html">Checks & radios</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/range.html">Range</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/input-group.html">Input group</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/floating-labels.html">Floating labels</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/layout.html">Layout</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/validation.html">Validation</a></li>
+    </ul>
+  </li>
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Components</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="accordion.html">Accordion</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="alerts.html">Alerts</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="badge.html">Badge</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="breadcrumb.html">Breadcrumb</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="buttons.html">Buttons</a></li>
+      <li><a class="bd-links-link d-inline-block rounded active" href="button-group.html">Button group</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="card.html">Card</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="carousel.html">Carousel</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="collapse.html">Collapse</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="dropdowns.html">Dropdowns</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="list-group.html">List group</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="modal.html">Modal</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="navs-tabs.html">Navs & tabs</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="navbar.html">Navbar</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="offcanvas.html">Offcanvas</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="pagination.html">Pagination</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="placeholders.html">Placeholders</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="popovers.html">Popovers</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="progress.html">Progress</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="scrollspy.html">Scrollspy</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="spinners.html">Spinners</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="toasts.html">Toasts</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="tooltips.html">Tooltips</a></li>
+    </ul>
+  </li>
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Helpers</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/clearfix.html">Clearfix</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/color-background.html">Color & background</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/colored-links.html">Colored links</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/focus-ring.html">Focus ring</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/icon-link.html">Icon link</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/position.html">Position</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/ratio.html">Ratio</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/stacks.html">Stacks</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/stretched-link.html">Stretched link</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/text-truncation.html">Text truncation</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/vertical-rule.html">Vertical rule</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/visually-hidden.html">Visually hidden</a></li>
+    </ul>
+  </li>
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Utilities</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/api.html">API</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/background.html">Background</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/borders.html">Borders</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/colors.html">Colors</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/display.html">Display</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/flex.html">Flex</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/float.html">Float</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/interactions.html">Interactions</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/link.html">Link</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/object-fit.html">Object fit</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/opacity.html">Opacity</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/overflow.html">Overflow</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/position.html">Position</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/shadows.html">Shadows</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/sizing.html">Sizing</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/spacing.html">Spacing</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/text.html">Text</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/vertical-alignment.html">Vertical alignment</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/visibility.html">Visibility</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/z-index.html">Z-index</a></li>
+    </ul>
+  </li>
+</ul>
+
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main class="bd-main" id="content">
+      <div class="bd-intro">
+        <div class="bd-intro-inner">
+          <h1 class="bd-title">Button group</h1>
+          <p class="bd-lead">Group a series of buttons together on a single line or stacked in a vertical column.</p>
+        </div>
+        <nav class="bd-toc" aria-label="On this page">
+          <strong>On this page</strong>
+          <ul>
+  <li><a href="#basic-example">Basic example</a>
+  </li>
+  <li><a href="#mixed-styles">Mixed styles</a>
+  </li>
+  <li><a href="#outlined-styles">Outlined styles</a>
+  </li>
+  <li><a href="#checkbox-radio-button-groups">Checkbox and radio button groups</a>
+  </li>
+  <li><a href="#button-toolbar">Button toolbar</a>
+  </li>
+  <li><a href="#sizing">Sizing</a>
+  </li>
+  <li><a href="#nesting">Nesting</a>
+  </li>
+  <li><a href="#vertical-variation">Vertical variation</a>
+  </li>
+</ul>
+
+        </nav>
+      </div>
+
+      <div class="bd-content">
+        <h2 id="basic-example">Basic example <a class="anchor" href="#basic-example">#</a></h2>
+<p>
+  Wrap a series of buttons with <code>.btn</code> in <code>.btn-group</code>.
+</p>
+<div class="bd-example">
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <button type="button" class="btn btn-primary">Left</button>
+    <button type="button" class="btn btn-primary">Middle</button>
+    <button type="button" class="btn btn-primary">Right</button>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;div class=&quot;btn-group&quot; role=&quot;group&quot; aria-label=&quot;Basic example&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Left&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Middle&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Right&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<div class="bd-callout bd-callout-info">
+  <h5>Ensure correct <code>role</code> and provide a label</h5>
+  <p class="mb-0">In order for assistive technologies (such as screen readers) to convey that a series of buttons is grouped, an appropriate <code>role</code> attribute needs to be provided. For button groups, this should be <code>role="group"</code>, while toolbars should have a <code>role="toolbar"</code>. In addition, groups and toolbars should be given an explicit label, as most assistive technologies will otherwise not announce them.</p>
+</div>
+
+<h2 id="mixed-styles">Mixed styles <a class="anchor" href="#mixed-styles">#</a></h2>
+<div class="bd-example">
+  <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+    <button type="button" class="btn btn-danger">Left</button>
+    <button type="button" class="btn btn-warning">Middle</button>
+    <button type="button" class="btn btn-success">Right</button>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;div class=&quot;btn-group&quot; role=&quot;group&quot; aria-label=&quot;Basic mixed styles example&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot;&gt;Left&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-warning&quot;&gt;Middle&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot;&gt;Right&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<h2 id="outlined-styles">Outlined styles <a class="anchor" href="#outlined-styles">#</a></h2>
+<div class="bd-example">
+  <div class="btn-group" role="group" aria-label="Basic outlined example">
+    <button type="button" class="btn btn-outline-primary">Left</button>
+    <button type="button" class="btn btn-outline-primary">Middle</button>
+    <button type="button" class="btn btn-outline-primary">Right</button>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;div class=&quot;btn-group&quot; role=&quot;group&quot; aria-label=&quot;Basic outlined example&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-primary&quot;&gt;Left&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-primary&quot;&gt;Middle&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-primary&quot;&gt;Right&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<h2 id="checkbox-radio-button-groups">Checkbox and radio button groups <a class="anchor" href="#checkbox-radio-button-groups">#</a></h2>
+<p>
+  Combine button-like checkbox and radio toggle buttons into a seamless button
+  group. Use <code>.btn-check</code> for the input and the classes below.
+</p>
+<div class="bd-example">
+  <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+    <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" checked>
+    <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
+    <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2</label>
+    <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;div class=&quot;btn-group&quot; role=&quot;group&quot; aria-label=&quot;Basic checkbox toggle button group&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; class=&quot;btn-check&quot; id=&quot;btncheck1&quot; autocomplete=&quot;off&quot; checked&gt;
+  &lt;label class=&quot;btn btn-outline-primary&quot; for=&quot;btncheck1&quot;&gt;Checkbox 1&lt;/label&gt;
+  &lt;input type=&quot;checkbox&quot; class=&quot;btn-check&quot; id=&quot;btncheck2&quot; autocomplete=&quot;off&quot;&gt;
+  &lt;label class=&quot;btn btn-outline-primary&quot; for=&quot;btncheck2&quot;&gt;Checkbox 2&lt;/label&gt;
+  &lt;input type=&quot;checkbox&quot; class=&quot;btn-check&quot; id=&quot;btncheck3&quot; autocomplete=&quot;off&quot;&gt;
+  &lt;label class=&quot;btn btn-outline-primary&quot; for=&quot;btncheck3&quot;&gt;Checkbox 3&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<div class="bd-example">
+  <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+    <label class="btn btn-outline-primary" for="btnradio1">Radio 1</label>
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btnradio2">Radio 2</label>
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btnradio3">Radio 3</label>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;div class=&quot;btn-group&quot; role=&quot;group&quot; aria-label=&quot;Basic radio toggle button group&quot;&gt;
+  &lt;input type=&quot;radio&quot; class=&quot;btn-check&quot; name=&quot;btnradio&quot; id=&quot;btnradio1&quot; autocomplete=&quot;off&quot; checked&gt;
+  &lt;label class=&quot;btn btn-outline-primary&quot; for=&quot;btnradio1&quot;&gt;Radio 1&lt;/label&gt;
+  &lt;input type=&quot;radio&quot; class=&quot;btn-check&quot; name=&quot;btnradio&quot; id=&quot;btnradio2&quot; autocomplete=&quot;off&quot;&gt;
+  &lt;label class=&quot;btn btn-outline-primary&quot; for=&quot;btnradio2&quot;&gt;Radio 2&lt;/label&gt;
+  &lt;input type=&quot;radio&quot; class=&quot;btn-check&quot; name=&quot;btnradio&quot; id=&quot;btnradio3&quot; autocomplete=&quot;off&quot;&gt;
+  &lt;label class=&quot;btn btn-outline-primary&quot; for=&quot;btnradio3&quot;&gt;Radio 3&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<h2 id="button-toolbar">Button toolbar <a class="anchor" href="#button-toolbar">#</a></h2>
+<p>
+  Combine sets of button groups into button toolbars for more complex components.
+</p>
+<div class="bd-example">
+  <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+    <div class="btn-group me-2" role="group" aria-label="First group">
+      <button type="button" class="btn btn-primary">1</button>
+      <button type="button" class="btn btn-primary">2</button>
+      <button type="button" class="btn btn-primary">3</button>
+      <button type="button" class="btn btn-primary">4</button>
+    </div>
+    <div class="btn-group me-2" role="group" aria-label="Second group">
+      <button type="button" class="btn btn-secondary">5</button>
+      <button type="button" class="btn btn-secondary">6</button>
+      <button type="button" class="btn btn-secondary">7</button>
+    </div>
+    <div class="btn-group" role="group" aria-label="Third group">
+      <button type="button" class="btn btn-info">8</button>
+    </div>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;div class=&quot;btn-toolbar&quot; role=&quot;toolbar&quot; aria-label=&quot;Toolbar with button groups&quot;&gt;
+  &lt;div class=&quot;btn-group me-2&quot; role=&quot;group&quot; aria-label=&quot;First group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;1&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;2&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;3&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;4&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;btn-group me-2&quot; role=&quot;group&quot; aria-label=&quot;Second group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;5&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;6&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;7&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;btn-group&quot; role=&quot;group&quot; aria-label=&quot;Third group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-info&quot;&gt;8&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<h2 id="sizing">Sizing <a class="anchor" href="#sizing">#</a></h2>
+<p>
+  Instead of applying button sizing classes to every button in a group, just add
+  <code>.btn-group-*</code> to each <code>.btn-group</code>, including each one when nesting multiple groups.
+</p>
+<div class="bd-example">
+  <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
+    <button type="button" class="btn btn-outline-primary">Left</button>
+    <button type="button" class="btn btn-outline-primary">Middle</button>
+    <button type="button" class="btn btn-outline-primary">Right</button>
+  </div>
+  <br>
+  <div class="btn-group" role="group" aria-label="Default button group">
+    <button type="button" class="btn btn-outline-primary">Left</button>
+    <button type="button" class="btn btn-outline-primary">Middle</button>
+    <button type="button" class="btn btn-outline-primary">Right</button>
+  </div>
+  <br>
+  <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+    <button type="button" class="btn btn-outline-primary">Left</button>
+    <button type="button" class="btn btn-outline-primary">Middle</button>
+    <button type="button" class="btn btn-outline-primary">Right</button>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;div class=&quot;btn-group btn-group-lg&quot; role=&quot;group&quot; aria-label=&quot;Large button group&quot;&gt;…&lt;/div&gt;
+&lt;div class=&quot;btn-group&quot; role=&quot;group&quot; aria-label=&quot;Default button group&quot;&gt;…&lt;/div&gt;
+&lt;div class=&quot;btn-group btn-group-sm&quot; role=&quot;group&quot; aria-label=&quot;Small button group&quot;&gt;…&lt;/div&gt;</code></pre>
+</div>
+
+<h2 id="nesting">Nesting <a class="anchor" href="#nesting">#</a></h2>
+<p>
+  Place a <code>.btn-group</code> within another <code>.btn-group</code> when you
+  want dropdown menus mixed with a series of buttons.
+</p>
+<div class="bd-example">
+  <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+    <button type="button" class="btn btn-primary">1</button>
+    <button type="button" class="btn btn-primary">2</button>
+    <div class="btn-group" role="group">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+        <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;div class=&quot;btn-group&quot; role=&quot;group&quot; aria-label=&quot;Button group with nested dropdown&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;1&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;2&lt;/button&gt;
+  &lt;div class=&quot;btn-group&quot; role=&quot;group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-primary dropdown-toggle&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;Dropdown&lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Dropdown link&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Dropdown link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<h2 id="vertical-variation">Vertical variation <a class="anchor" href="#vertical-variation">#</a></h2>
+<p>
+  Make a set of buttons appear vertically stacked rather than horizontally.
+  <strong>Split button dropdowns are not supported here.</strong>
+</p>
+<div class="bd-example">
+  <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+    <button type="button" class="btn btn-primary">Button</button>
+    <button type="button" class="btn btn-primary">Button</button>
+    <div class="btn-group" role="group">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+        <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+      </ul>
+    </div>
+    <button type="button" class="btn btn-primary">Button</button>
+    <button type="button" class="btn btn-primary">Button</button>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;div class=&quot;btn-group-vertical&quot; role=&quot;group&quot; aria-label=&quot;Vertical button group&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Button&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Button&lt;/button&gt;
+  &lt;div class=&quot;btn-group&quot; role=&quot;group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-primary dropdown-toggle&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;Dropdown&lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Dropdown link&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Dropdown link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Button&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Button&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+      </div>
+
+      <!-- Prev / Next -->
+      <nav class="bd-prev-next" aria-label="Previous and next pages">
+        <a class="bd-prev" href="../components/buttons.html"><span class="bd-prev-next-label">Previous</span><span class="bd-prev-next-title">Buttons</span></a><a class="bd-next text-end" href="../components/card.html"><span class="bd-prev-next-label">Next</span><span class="bd-prev-next-title">Card</span></a>
+      </nav>
+    </main>
+  </div>
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="bd-footer py-5 mt-5">
+    <div class="container-xl">
+      <div class="row">
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="../index.html">Docs</a></li>
+            <li></li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+            <li></li><a href="https://www.npmjs.com/" target="_blank" rel="noopener">npm</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Guides</h5>
+          <ul class="list-unstyled">
+            <li><a href="../index.html">Getting started</a></li>
+            <li><a href="../components/buttons.html">Buttons</a></li>
+            <li><a href="../components/card.html">Cards</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Components</h5>
+          <ul class="list-unstyled">
+            <li><a href="../components/accordion.html">Accordion</a></li>
+            <li><a href="../components/navbar.html">Navbar</a></li>
+            <li><a href="../components/modal.html">Modal</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Community</h5>
+          <ul class="list-unstyled">
+            <li><a href="https://github.com/" target="_blank" rel="noopener">Issues</a></li>
+            <li><a href="https://stackoverflow.com/questions/tagged/bootstrap-5" target="_blank" rel="noopener">Stack Overflow</a></li>
+            <li><a href="https://discord.gg/bZUvakRU3M" target="_blank" rel="noopener">Discord</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-lg-4 mb-3">
+          <p class="small text-body-secondary mb-0">WindStrap — Bootstrap 5.3.8 translated 1:1 into Tailwind CSS via the <code>@apply</code> directive. This documentation mirrors <a href="https://getbootstrap.com/docs/5.3/">getbootstrap.com/docs/5.3</a>. Docs content licensed <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a>.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (for interactive demos: dropdowns, collapse, modals…).
+       The WindStrap translation covers the CSS; the JS behaviors are
+       Bootstrap's own and are intentionally not re-implemented here. -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="../js/docs.js"></script>
+</body>
+</html>

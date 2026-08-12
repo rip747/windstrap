@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buttons · WindStrap v5.3.8</title>
+  <link rel="stylesheet" href="../../dist/windstrap.css">
+  <link rel="stylesheet" href="../css/docs.css">
+</head>
+<body class="d-flex flex-column h-100">
+
+  <a class="visually-hidden-focusable" href="#content">Skip to main content</a>
+  <a class="visually-hidden-focusable" href="#bd-docs-nav">Skip to docs navigation</a>
+
+  <!-- ===================== Navbar ===================== -->
+  <header class="navbar navbar-expand-lg navbar-dark bd-navbar sticky-top">
+    <div class="container-xl">
+      <a class="navbar-brand" href="../index.html">WindStrap<span class="bd-badge">v5.3.8</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bd-navbar" aria-controls="bd-navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="bd-navbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Docs</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://getbootstrap.com/docs/5.3/" target="_blank" rel="noopener">Bootstrap docs</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== Layout ===================== -->
+  <div class="bd-layout container-xl" id="bd-docs-nav">
+
+    <!-- Left sidebar navigation -->
+    <aside class="bd-sidebar">
+      <nav class="bd-links" aria-label="Docs navigation">
+        <ul class="bd-links-nav list-unstyled mb-0 pb-lg-3 pb-4">
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Customize</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/overview.html">Overview</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/sass.html">Sass</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/color.html">Color</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/components.html">Components</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/css-variables.html">CSS variables</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/optimize.html">Optimize</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../customize/dark-mode.html">Dark mode</a></li>
+    </ul>
+  </li>
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Layout</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/breakpoints.html">Breakpoints</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/containers.html">Containers</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/grid.html">Grid</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/columns.html">Columns</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/gutters.html">Gutters</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/utilities.html">Utilities</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/z-index.html">Z-index</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../layout/css-grid.html">CSS grid</a></li>
+    </ul>
+  </li>
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Content</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="../content/reboot.html">Reboot</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../content/typography.html">Typography</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../content/images.html">Images</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../content/tables.html">Tables</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../content/figures.html">Figures</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../content/syntax-highlighting.html">Syntax highlighting</a></li>
+    </ul>
+  </li>
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Forms</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/overview.html">Overview</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/form-control.html">Form control</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/select.html">Select</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/checks-radios.html">Checks & radios</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/range.html">Range</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/input-group.html">Input group</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/floating-labels.html">Floating labels</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/layout.html">Layout</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../forms/validation.html">Validation</a></li>
+    </ul>
+  </li>
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Components</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="accordion.html">Accordion</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="alerts.html">Alerts</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="badge.html">Badge</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="breadcrumb.html">Breadcrumb</a></li>
+      <li><a class="bd-links-link d-inline-block rounded active" href="buttons.html">Buttons</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="button-group.html">Button group</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="card.html">Card</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="carousel.html">Carousel</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="collapse.html">Collapse</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="dropdowns.html">Dropdowns</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="list-group.html">List group</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="modal.html">Modal</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="navs-tabs.html">Navs & tabs</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="navbar.html">Navbar</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="offcanvas.html">Offcanvas</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="pagination.html">Pagination</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="placeholders.html">Placeholders</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="popovers.html">Popovers</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="progress.html">Progress</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="scrollspy.html">Scrollspy</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="spinners.html">Spinners</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="toasts.html">Toasts</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="tooltips.html">Tooltips</a></li>
+    </ul>
+  </li>
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Helpers</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/clearfix.html">Clearfix</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/color-background.html">Color & background</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/colored-links.html">Colored links</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/focus-ring.html">Focus ring</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/icon-link.html">Icon link</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/position.html">Position</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/ratio.html">Ratio</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/stacks.html">Stacks</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/stretched-link.html">Stretched link</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/text-truncation.html">Text truncation</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/vertical-rule.html">Vertical rule</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/visually-hidden.html">Visually hidden</a></li>
+    </ul>
+  </li>
+  <li class="bd-links-group py-2">
+    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Utilities</strong>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/api.html">API</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/background.html">Background</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/borders.html">Borders</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/colors.html">Colors</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/display.html">Display</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/flex.html">Flex</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/float.html">Float</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/interactions.html">Interactions</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/link.html">Link</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/object-fit.html">Object fit</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/opacity.html">Opacity</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/overflow.html">Overflow</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/position.html">Position</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/shadows.html">Shadows</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/sizing.html">Sizing</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/spacing.html">Spacing</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/text.html">Text</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/vertical-alignment.html">Vertical alignment</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/visibility.html">Visibility</a></li>
+      <li><a class="bd-links-link d-inline-block rounded" href="../utilities/z-index.html">Z-index</a></li>
+    </ul>
+  </li>
+</ul>
+
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main class="bd-main" id="content">
+      <div class="bd-intro">
+        <div class="bd-intro-inner">
+          <h1 class="bd-title">Buttons</h1>
+          <p class="bd-lead">Use Bootstrap’s custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.</p>
+        </div>
+        <nav class="bd-toc" aria-label="On this page">
+          <strong>On this page</strong>
+          <ul>
+  <li><a href="#base-class">Base class</a>
+  </li>
+  <li><a href="#variants">Variants</a>
+  </li>
+  <li><a href="#disable-text-wrapping">Disable text wrapping</a>
+  </li>
+  <li><a href="#button-tags">Button tags</a>
+  </li>
+  <li><a href="#outline-buttons">Outline buttons</a>
+  </li>
+  <li><a href="#sizes">Sizes</a>
+  </li>
+  <li><a href="#disabled-state">Disabled state</a>
+    <ul>
+      <li><a href="#link-functionality-caveat">Link functionality caveat</a></li>
+    </ul>
+  </li>
+  <li><a href="#block-buttons">Block buttons</a>
+  </li>
+  <li><a href="#button-plugin">Button plugin</a>
+    <ul>
+      <li><a href="#toggle-states">Toggle states</a></li>
+    </ul>
+  </li>
+  <li><a href="#css">CSS</a>
+    <ul>
+      <li><a href="#variables">Variables</a></li>
+    </ul>
+  </li>
+</ul>
+
+        </nav>
+      </div>
+
+      <div class="bd-content">
+        <h2 id="base-class">Base class <a class="anchor" href="#base-class">#</a></h2>
+<p>
+  Bootstrap has a base <code>.btn</code> class that sets up basic styles such
+  as padding and content alignment. By default, <code>.btn</code> controls have
+  a transparent border and background color, and lack any explicit focus and
+  hover styles.
+</p>
+<div class="bd-example">
+  <button type="button" class="btn">Base class</button>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;button type=&quot;button&quot; class=&quot;btn&quot;&gt;Base class&lt;/button&gt;</code></pre>
+</div>
+<p>
+  The <code>.btn</code> class is intended to be used in conjunction with our
+  button variants, or to serve as a basis for your own custom styles.
+</p>
+<p>
+  If you are using the <code>.btn</code> class on its own, remember to at least
+  define some explicit <code>:focus</code> and/or <code>:focus-visible</code> styles.
+</p>
+
+<h2 id="variants">Variants <a class="anchor" href="#variants">#</a></h2>
+<p>
+  Bootstrap includes several button variants, each serving its own semantic
+  purpose, with a few extras thrown in for more control.
+</p>
+<div class="bd-example">
+  <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-secondary">Secondary</button>
+  <button type="button" class="btn btn-success">Success</button>
+  <button type="button" class="btn btn-danger">Danger</button>
+  <button type="button" class="btn btn-warning">Warning</button>
+  <button type="button" class="btn btn-info">Info</button>
+  <button type="button" class="btn btn-light">Light</button>
+  <button type="button" class="btn btn-dark">Dark</button>
+  <button type="button" class="btn btn-link">Link</button>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Primary&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;Secondary&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot;&gt;Success&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot;&gt;Danger&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-warning&quot;&gt;Warning&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-info&quot;&gt;Info&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-light&quot;&gt;Light&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-dark&quot;&gt;Dark&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;Link&lt;/button&gt;</code></pre>
+</div>
+<div class="bd-callout bd-callout-warning">
+  <h5>Conveying meaning to assistive technologies</h5>
+  <p class="mb-0">Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies like screen readers. Please ensure that the meaning is obvious from the content itself, or is included through alternative means, such as additional text hidden with the <code>.visually-hidden</code> class.</p>
+</div>
+
+<h2 id="disable-text-wrapping">Disable text wrapping <a class="anchor" href="#disable-text-wrapping">#</a></h2>
+<p>
+  If you don’t want the button text to wrap, you can add the
+  <code>.text-nowrap</code> class to the button.
+</p>
+<div class="bd-example">
+  <div class="d-grid gap-2">
+    <button type="button" class="btn btn-primary text-nowrap">This button text should not wrap</button>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;button type=&quot;button&quot; class=&quot;btn btn-primary text-nowrap&quot;&gt;This button text should not wrap&lt;/button&gt;</code></pre>
+</div>
+
+<h2 id="button-tags">Button tags <a class="anchor" href="#button-tags">#</a></h2>
+<p>
+  The <code>.btn</code> classes are designed to be used with the
+  <code>&lt;button&gt;</code> element. However, you can also use these classes on
+  <code>&lt;a&gt;</code> or <code>&lt;input&gt;</code> elements (though some browsers
+  may apply a slightly different rendering).
+</p>
+<p>
+  When using button classes on <code>&lt;a&gt;</code> elements that are used to
+  trigger in-page functionality (like collapsing content), rather than linking to
+  new pages or sections within the current page, these links should be given a
+  <code>role="button"</code> to appropriately convey their purpose to assistive
+  technologies such as screen readers.
+</p>
+<div class="bd-example">
+  <a class="btn btn-primary" href="#" role="button">Link</a>
+  <button class="btn btn-primary" type="submit">Button</button>
+  <input class="btn btn-primary" type="button" value="Input">
+  <input class="btn btn-primary" type="submit" value="Submit">
+  <input class="btn btn-primary" type="reset" value="Reset">
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;a class=&quot;btn btn-primary&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Link&lt;/a&gt;
+&lt;button class=&quot;btn btn-primary&quot; type=&quot;submit&quot;&gt;Button&lt;/button&gt;
+&lt;input class=&quot;btn btn-primary&quot; type=&quot;button&quot; value=&quot;Input&quot;&gt;
+&lt;input class=&quot;btn btn-primary&quot; type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;input class=&quot;btn btn-primary&quot; type=&quot;reset&quot; value=&quot;Reset&quot;&gt;</code></pre>
+</div>
+
+<h2 id="outline-buttons">Outline buttons <a class="anchor" href="#outline-buttons">#</a></h2>
+<p>
+  In need of a button, but not the hefty background colors they bring? Replace
+  the default modifier classes with the <code>.btn-outline-*</code> ones to remove
+  all background images and colors on any button.
+</p>
+<div class="bd-example">
+  <button type="button" class="btn btn-outline-primary">Primary</button>
+  <button type="button" class="btn btn-outline-secondary">Secondary</button>
+  <button type="button" class="btn btn-outline-success">Success</button>
+  <button type="button" class="btn btn-outline-danger">Danger</button>
+  <button type="button" class="btn btn-outline-warning">Warning</button>
+  <button type="button" class="btn btn-outline-info">Info</button>
+  <button type="button" class="btn btn-outline-light">Light</button>
+  <button type="button" class="btn btn-outline-dark">Dark</button>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-primary&quot;&gt;Primary&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-secondary&quot;&gt;Secondary&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-success&quot;&gt;Success&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-danger&quot;&gt;Danger&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-warning&quot;&gt;Warning&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-info&quot;&gt;Info&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-light&quot;&gt;Light&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-dark&quot;&gt;Dark&lt;/button&gt;</code></pre>
+</div>
+<div class="bd-callout bd-callout-info">
+  <h5>Some of the button styles use a relatively light foreground color</h5>
+  <p class="mb-0">…and should only be used on a dark background in order to have sufficient contrast.</p>
+</div>
+
+<h2 id="sizes">Sizes <a class="anchor" href="#sizes">#</a></h2>
+<p>
+  Fancy larger or smaller buttons? Add <code>.btn-lg</code> or <code>.btn-sm</code>
+  for additional sizes.
+</p>
+<div class="bd-example">
+  <button type="button" class="btn btn-primary btn-lg">Large button</button>
+  <button type="button" class="btn btn-secondary btn-lg">Large button</button>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-lg&quot;&gt;Large button&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-secondary btn-lg&quot;&gt;Large button&lt;/button&gt;</code></pre>
+</div>
+<div class="bd-example">
+  <button type="button" class="btn btn-primary btn-sm">Small button</button>
+  <button type="button" class="btn btn-secondary btn-sm">Small button</button>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-sm&quot;&gt;Small button&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-secondary btn-sm&quot;&gt;Small button&lt;/button&gt;</code></pre>
+</div>
+<p>You can even roll your own custom sizing with CSS variables:</p>
+<div class="bd-example">
+  <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Custom button</button>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;
+        style=&quot;--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;&quot;&gt;
+  Custom button
+&lt;/button&gt;</code></pre>
+</div>
+
+<h2 id="disabled-state">Disabled state <a class="anchor" href="#disabled-state">#</a></h2>
+<p>
+  Make buttons look inactive by adding the <code>disabled</code> boolean
+  attribute to any <code>&lt;button&gt;</code> element. Disabled buttons have
+  <code>pointer-events: none</code> applied to, preventing hover and active states
+  from triggering.
+</p>
+<div class="bd-example">
+  <button type="button" class="btn btn-primary" disabled>Primary button</button>
+  <button type="button" class="btn btn-secondary" disabled>Button</button>
+  <button type="button" class="btn btn-outline-primary" disabled>Primary button</button>
+  <button type="button" class="btn btn-outline-secondary" disabled>Button</button>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; disabled&gt;Primary button&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot; disabled&gt;Button&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-primary&quot; disabled&gt;Primary button&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-secondary&quot; disabled&gt;Button&lt;/button&gt;</code></pre>
+</div>
+<p>
+  Disabled buttons using the <code>&lt;a&gt;</code> element behave a bit different:
+</p>
+<ul>
+  <li><code>&lt;a&gt;</code>s don’t support the <code>disabled</code> attribute, so you must add the <code>.disabled</code> class to make it visually appear disabled.</li>
+  <li>Some future-friendly styles are included to disable all <code>pointer-events</code> on anchor buttons.</li>
+  <li>Disabled buttons using <code>&lt;a&gt;</code> should include the <code>aria-disabled="true"</code> attribute to indicate the state of the element to assistive technologies.</li>
+  <li>Disabled buttons using <code>&lt;a&gt;</code> should not include the <code>href</code> attribute.</li>
+</ul>
+<div class="bd-example">
+  <a class="btn btn-primary disabled" role="button" aria-disabled="true">Primary link</a>
+  <a class="btn btn-secondary disabled" role="button" aria-disabled="true">Link</a>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;a class=&quot;btn btn-primary disabled&quot; role=&quot;button&quot; aria-disabled=&quot;true&quot;&gt;Primary link&lt;/a&gt;
+&lt;a class=&quot;btn btn-secondary disabled&quot; role=&quot;button&quot; aria-disabled=&quot;true&quot;&gt;Link&lt;/a&gt;</code></pre>
+</div>
+
+<h3 id="link-functionality-caveat">Link functionality caveat <a class="anchor" href="#link-functionality-caveat">#</a></h3>
+<p>
+  To cover cases where you have to keep the <code>href</code> attribute on a
+  disabled link, the <code>.disabled</code> class uses <code>pointer-events: none</code>
+  to try to disable the link functionality of <code>&lt;a&gt;</code>s. Note that this CSS
+  property is not yet standardized for HTML, but all modern browsers support it.
+  In addition, even in browsers that do support <code>pointer-events: none</code>,
+  keyboard navigation remains unaffected, meaning that sighted keyboard users and
+  users of assistive technologies will still be able to activate these links. So to
+  be safe, in addition to <code>aria-disabled="true"</code>, also include a
+  <code>tabindex="-1"</code> attribute on these links to prevent them from receiving
+  keyboard focus, and use custom JavaScript to disable their functionality altogether.
+</p>
+<div class="bd-example">
+  <a href="#" class="btn btn-primary disabled" tabindex="-1" role="button" aria-disabled="true">Primary link</a>
+  <a href="#" class="btn btn-secondary disabled" tabindex="-1" role="button" aria-disabled="true">Link</a>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;a href=&quot;#&quot; class=&quot;btn btn-primary disabled&quot; tabindex=&quot;-1&quot; role=&quot;button&quot; aria-disabled=&quot;true&quot;&gt;Primary link&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn-secondary disabled&quot; tabindex=&quot;-1&quot; role=&quot;button&quot; aria-disabled=&quot;true&quot;&gt;Link&lt;/a&gt;</code></pre>
+</div>
+
+<h2 id="block-buttons">Block buttons <a class="anchor" href="#block-buttons">#</a></h2>
+<p>
+  Create responsive stacks of full-width, “block buttons” with a mix of our
+  display and gap utilities.
+</p>
+<div class="bd-example">
+  <div class="d-grid gap-2">
+    <button class="btn btn-primary" type="button">Button</button>
+    <button class="btn btn-primary" type="button">Button</button>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;div class=&quot;d-grid gap-2&quot;&gt;
+  &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot;&gt;Button&lt;/button&gt;
+  &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot;&gt;Button&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<p>
+  Here we create a responsive variation, starting with vertically stacked buttons
+  until the <code>md</code> breakpoint, where <code>.d-md-block</code> replaces the
+  <code>.d-grid</code> class, thus nullifying the <code>gap-2</code> utility.
+  Resize your browser to see them change.
+</p>
+<div class="bd-example">
+  <div class="d-grid gap-2 d-md-block">
+    <button class="btn btn-primary" type="button">Button</button>
+    <button class="btn btn-primary" type="button">Button</button>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;div class=&quot;d-grid gap-2 d-md-block&quot;&gt;
+  &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot;&gt;Button&lt;/button&gt;
+  &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot;&gt;Button&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<p>
+  You can adjust the width of your block buttons with grid column width classes.
+  For example, for a half-width “block button”, use <code>.col-6</code>. Center it
+  horizontally with <code>.mx-auto</code>, too.
+</p>
+<div class="bd-example">
+  <div class="d-grid gap-2 col-6 mx-auto">
+    <button class="btn btn-primary" type="button">Button</button>
+    <button class="btn btn-primary" type="button">Button</button>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;div class=&quot;d-grid gap-2 col-6 mx-auto&quot;&gt;
+  &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot;&gt;Button&lt;/button&gt;
+  &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot;&gt;Button&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<p>
+  Additional utilities can be used to adjust the alignment of buttons when
+  horizontal. Here we’ve taken our previous responsive example and added some
+  flex utilities and a margin utility on the button to right-align the buttons
+  when they’re no longer stacked.
+</p>
+<div class="bd-example">
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <button class="btn btn-primary me-md-2" type="button">Button</button>
+    <button class="btn btn-primary" type="button">Button</button>
+  </div>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;div class=&quot;d-grid gap-2 d-md-flex justify-content-md-end&quot;&gt;
+  &lt;button class=&quot;btn btn-primary me-md-2&quot; type=&quot;button&quot;&gt;Button&lt;/button&gt;
+  &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot;&gt;Button&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<h2 id="button-plugin">Button plugin <a class="anchor" href="#button-plugin">#</a></h2>
+<p>
+  The button plugin allows you to create simple on/off toggle buttons.
+</p>
+<h3 id="toggle-states">Toggle states <a class="anchor" href="#toggle-states">#</a></h3>
+<p>
+  Add <code>data-bs-toggle="button"</code> to toggle a button’s <code>active</code>
+  state. If you’re pre-toggling a button, you must manually add the
+  <code>.active</code> class and <code>aria-pressed="true"</code>.
+</p>
+<div class="bd-example">
+  <p class="d-inline-flex gap-1">
+    <button type="button" class="btn" data-bs-toggle="button">Toggle button</button>
+    <button type="button" class="btn active" data-bs-toggle="button" aria-pressed="true">Active toggle button</button>
+    <button type="button" class="btn" disabled data-bs-toggle="button">Disabled toggle button</button>
+  </p>
+  <p class="d-inline-flex gap-1">
+    <button type="button" class="btn btn-primary" data-bs-toggle="button">Toggle button</button>
+    <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Active toggle button</button>
+    <button type="button" class="btn btn-primary" disabled data-bs-toggle="button">Disabled toggle button</button>
+  </p>
+</div>
+<div class="bd-example-snippet">
+  <div class="bd-clipboard"><button class="btn-clipboard" type="button">Copy</button></div>
+  <pre class="highlight"><code>&lt;p class=&quot;d-inline-flex gap-1&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn&quot; data-bs-toggle=&quot;button&quot;&gt;Toggle button&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn active&quot; data-bs-toggle=&quot;button&quot; aria-pressed=&quot;true&quot;&gt;Active toggle button&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn&quot; disabled data-bs-toggle=&quot;button&quot;&gt;Disabled toggle button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p class=&quot;d-inline-flex gap-1&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-bs-toggle=&quot;button&quot;&gt;Toggle button&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-primary active&quot; data-bs-toggle=&quot;button&quot; aria-pressed=&quot;true&quot;&gt;Active toggle button&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; disabled data-bs-toggle=&quot;button&quot;&gt;Disabled toggle button&lt;/button&gt;
+&lt;/p&gt;</code></pre>
+</div>
+
+<h2 id="css">CSS <a class="anchor" href="#css">#</a></h2>
+<h3 id="variables">Variables <a class="anchor" href="#variables">#</a></h3>
+<p>
+  Buttons use local CSS variables on <code>.btn</code> for enhanced real-time
+  customization. WindStrap keeps the same variable names —
+  <code>--bs-btn-padding-x</code>, <code>--bs-btn-padding-y</code>,
+  <code>--bs-btn-color</code>, <code>--bs-btn-bg</code>,
+  <code>--bs-btn-border-color</code>, <code>--bs-btn-hover-*</code>,
+  <code>--bs-btn-active-*</code>, <code>--bs-btn-disabled-*</code>,
+  <code>--bs-btn-focus-box-shadow</code> — defined in
+  <code>src/sections/buttons.css</code>, so the same customization patterns work.
+</p>
+
+      </div>
+
+      <!-- Prev / Next -->
+      <nav class="bd-prev-next" aria-label="Previous and next pages">
+        <a class="bd-prev" href="../components/breadcrumb.html"><span class="bd-prev-next-label">Previous</span><span class="bd-prev-next-title">Breadcrumb</span></a><a class="bd-next text-end" href="../components/button-group.html"><span class="bd-prev-next-label">Next</span><span class="bd-prev-next-title">Button group</span></a>
+      </nav>
+    </main>
+  </div>
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="bd-footer py-5 mt-5">
+    <div class="container-xl">
+      <div class="row">
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="../index.html">Docs</a></li>
+            <li></li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+            <li></li><a href="https://www.npmjs.com/" target="_blank" rel="noopener">npm</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Guides</h5>
+          <ul class="list-unstyled">
+            <li><a href="../index.html">Getting started</a></li>
+            <li><a href="../components/buttons.html">Buttons</a></li>
+            <li><a href="../components/card.html">Cards</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Components</h5>
+          <ul class="list-unstyled">
+            <li><a href="../components/accordion.html">Accordion</a></li>
+            <li><a href="../components/navbar.html">Navbar</a></li>
+            <li><a href="../components/modal.html">Modal</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Community</h5>
+          <ul class="list-unstyled">
+            <li><a href="https://github.com/" target="_blank" rel="noopener">Issues</a></li>
+            <li><a href="https://stackoverflow.com/questions/tagged/bootstrap-5" target="_blank" rel="noopener">Stack Overflow</a></li>
+            <li><a href="https://discord.gg/bZUvakRU3M" target="_blank" rel="noopener">Discord</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-lg-4 mb-3">
+          <p class="small text-body-secondary mb-0">WindStrap — Bootstrap 5.3.8 translated 1:1 into Tailwind CSS via the <code>@apply</code> directive. This documentation mirrors <a href="https://getbootstrap.com/docs/5.3/">getbootstrap.com/docs/5.3</a>. Docs content licensed <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a>.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (for interactive demos: dropdowns, collapse, modals…).
+       The WindStrap translation covers the CSS; the JS behaviors are
+       Bootstrap's own and are intentionally not re-implemented here. -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="../js/docs.js"></script>
+</body>
+</html>
