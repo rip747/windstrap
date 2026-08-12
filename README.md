@@ -180,6 +180,12 @@ intentionally not translated.
 - Pseudo-elements, keyframes, and child-targeting selectors (e.g. `.row-cols-2 > *`) are written as plain CSS — `@apply` cannot express those.
 - The `docs/` site is the official docs layout rebuilt on WindStrap. It includes Bootstrap's JS bundle (and Popper) so interactive demos (dropdowns, modals, collapse, carousel…) work — the WindStrap translation itself covers the CSS layer only.
 
+## Built with AI
+
+This project was built with assistance from AI, using **DeepSeek V4 Flash** as the coding model. Current cost of the project is $0.39.
+
+![DeepSeek V4 Flash](deepseek-v4-flash.jpg)
+
 ## License
 
 MIT
