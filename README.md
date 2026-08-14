@@ -4,6 +4,30 @@
 
 WindStrap is a drop-in stylesheet that gives you Bootstrap's exact class names (`.btn-primary`, `.col-md-6`, `.d-flex`, `.text-bg-success`, …) built on top of Tailwind's utility engine — so you get Bootstrap's API with Tailwind's pipeline (JIT output, PurgeCSS-style tree-shaking, familiar utility syntax for custom tweaks).
 
+## Quick start
+
+Install from npm:
+
+```bash
+npm install @rip747/windstrap
+```
+
+Or link the compiled stylesheet straight from a CDN (jsDelivr mirrors npm automatically):
+
+```html
+<!-- Minified -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@rip747/windstrap@1.0.0/dist/windstrap.min.css">
+
+<!-- Unminified -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@rip747/windstrap@1.0.0/dist/windstrap.css">
+```
+
+unpkg serves the same files:
+
+```html
+<link rel="stylesheet" href="https://unpkg.com/@rip747/windstrap@1.0.0/dist/windstrap.min.css">
+```
+
 ## How it works
 
 Every Bootstrap class is re-declared as plain CSS that pulls in Tailwind utilities via `@apply`:
