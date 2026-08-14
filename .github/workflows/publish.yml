@@ -1,0 +1,39 @@
+# Publishes WindStrap to the npm registry when a v* tag is pushed.
+# jsDelivr and unpkg mirror npm automatically, so publishing here is what
+# makes the framework available on those CDNs.
+#
+#   git tag v1.0.0 && git push origin v1.0.0
+#
+# Requires an npm automation token stored as a repository secret named NPM_TOKEN.
+name: Publish to npm
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write # needed for `npm publish --provenance`
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build dist (full + minified)
+        run: npm run build
+
+      - name: Publish to npm
+        run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

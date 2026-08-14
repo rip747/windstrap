@@ -10,15 +10,33 @@
     "@apply"
   ],
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/windstrap.min.css",
+  "style": "dist/windstrap.min.css",
+  "unpkg": "dist/windstrap.min.css",
+  "jsdelivr": "dist/windstrap.min.css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rip747/windstrap.git"
+  },
+  "homepage": "https://github.com/rip747/windstrap",
+  "bugs": {
+    "url": "https://github.com/rip747/windstrap/issues"
+  },
   "scripts": {
     "generate": "node scripts/generate-utilities.js",
-    "build": "npm run generate && postcss src/windstrap.css -o dist/windstrap.css",
+    "build": "npm run generate && postcss src/windstrap.css -o dist/windstrap.css && postcss src/windstrap.css -o dist/windstrap.min.css --env production",
+    "build:min": "postcss src/windstrap.css -o dist/windstrap.min.css --env production",
     "docs": "node scripts/build-docs.js",
     "build:all": "npm run build && npm run docs",
-    "watch": "npm run generate && postcss src/windstrap.css -o dist/windstrap.css --watch"
+    "watch": "npm run generate && postcss src/windstrap.css -o dist/windstrap.css --watch",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
+    "cssnano": "^7.0.6",
     "postcss": "^8.4.38",
     "postcss-cli": "^11.0.0",
     "postcss-import": "^16.1.0",
