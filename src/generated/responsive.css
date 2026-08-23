@@ -22,8 +22,8 @@
 .flex-sm-fill { @apply sm:flex-[1_1_auto] !important; }
 .flex-sm-row { @apply sm:flex-row !important; }
 .flex-sm-column { @apply sm:flex-col !important; }
-.flex-row-sm-reverse { @apply sm:flex-row-reverse !important; }
-.flex-column-sm-reverse { @apply sm:flex-col-reverse !important; }
+.flex-sm-row-reverse { @apply sm:flex-row-reverse !important; }
+.flex-sm-column-reverse { @apply sm:flex-col-reverse !important; }
 .flex-grow-sm-0 { @apply sm:grow-0 !important; }
 .flex-grow-sm-1 { @apply sm:grow !important; }
 .flex-shrink-sm-0 { @apply sm:shrink-0 !important; }
@@ -197,8 +197,8 @@
 .flex-md-fill { @apply md:flex-[1_1_auto] !important; }
 .flex-md-row { @apply md:flex-row !important; }
 .flex-md-column { @apply md:flex-col !important; }
-.flex-row-md-reverse { @apply md:flex-row-reverse !important; }
-.flex-column-md-reverse { @apply md:flex-col-reverse !important; }
+.flex-md-row-reverse { @apply md:flex-row-reverse !important; }
+.flex-md-column-reverse { @apply md:flex-col-reverse !important; }
 .flex-grow-md-0 { @apply md:grow-0 !important; }
 .flex-grow-md-1 { @apply md:grow !important; }
 .flex-shrink-md-0 { @apply md:shrink-0 !important; }
@@ -372,8 +372,8 @@
 .flex-lg-fill { @apply lg:flex-[1_1_auto] !important; }
 .flex-lg-row { @apply lg:flex-row !important; }
 .flex-lg-column { @apply lg:flex-col !important; }
-.flex-row-lg-reverse { @apply lg:flex-row-reverse !important; }
-.flex-column-lg-reverse { @apply lg:flex-col-reverse !important; }
+.flex-lg-row-reverse { @apply lg:flex-row-reverse !important; }
+.flex-lg-column-reverse { @apply lg:flex-col-reverse !important; }
 .flex-grow-lg-0 { @apply lg:grow-0 !important; }
 .flex-grow-lg-1 { @apply lg:grow !important; }
 .flex-shrink-lg-0 { @apply lg:shrink-0 !important; }
@@ -547,8 +547,8 @@
 .flex-xl-fill { @apply xl:flex-[1_1_auto] !important; }
 .flex-xl-row { @apply xl:flex-row !important; }
 .flex-xl-column { @apply xl:flex-col !important; }
-.flex-row-xl-reverse { @apply xl:flex-row-reverse !important; }
-.flex-column-xl-reverse { @apply xl:flex-col-reverse !important; }
+.flex-xl-row-reverse { @apply xl:flex-row-reverse !important; }
+.flex-xl-column-reverse { @apply xl:flex-col-reverse !important; }
 .flex-grow-xl-0 { @apply xl:grow-0 !important; }
 .flex-grow-xl-1 { @apply xl:grow !important; }
 .flex-shrink-xl-0 { @apply xl:shrink-0 !important; }
@@ -722,8 +722,8 @@
 .flex-xxl-fill { @apply xxl:flex-[1_1_auto] !important; }
 .flex-xxl-row { @apply xxl:flex-row !important; }
 .flex-xxl-column { @apply xxl:flex-col !important; }
-.flex-row-xxl-reverse { @apply xxl:flex-row-reverse !important; }
-.flex-column-xxl-reverse { @apply xxl:flex-col-reverse !important; }
+.flex-xxl-row-reverse { @apply xxl:flex-row-reverse !important; }
+.flex-xxl-column-reverse { @apply xxl:flex-col-reverse !important; }
 .flex-grow-xxl-0 { @apply xxl:grow-0 !important; }
 .flex-grow-xxl-1 { @apply xxl:grow !important; }
 .flex-shrink-xxl-0 { @apply xxl:shrink-0 !important; }
