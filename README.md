@@ -4,6 +4,8 @@
 
 WindStrap is a drop-in stylesheet that gives you Bootstrap's exact class names (`.btn-primary`, `.col-md-6`, `.d-flex`, `.text-bg-success`, …) built on top of Tailwind's utility engine — so you get Bootstrap's API with Tailwind's pipeline (JIT output, PurgeCSS-style tree-shaking, familiar utility syntax for custom tweaks).
 
+**Live docs:** [https://rip747.github.io/windstrap/](https://rip747.github.io/windstrap/)
+
 ## Versioning
 
 WindStrap mirrors Bootstrap's version and appends its own patch as a semver
@@ -206,7 +208,7 @@ and publishes them to GitHub Pages on every push to `main`.
    **“GitHub Actions”** (do **not** pick “Deploy from a branch” — the
    workflow handles the build and deploy itself).
 3. The first deploy publishes the site to
-   `https://<user>.github.io/<repo>/`.
+   [https://rip747.github.io/windstrap/](https://rip747.github.io/windstrap/).
 
 How it's served: the workflow stages `index.html`, `demo.html`, `dist/` and
 `docs/` into the Pages root, mirroring the repo layout. `index.html` redirects

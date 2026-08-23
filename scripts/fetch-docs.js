@@ -18,7 +18,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const VERSION = '5.3.8';
+const VERSION = '5.3.8'; // Bootstrap base version the docs track
+const RELEASE = '5.3.8-1'; // WindStrap's own published npm version (Bootstrap + WindStrap patch)
 const DOCS_PATH = '5.3';
 const BASE = `https://getbootstrap.com/docs/${DOCS_PATH}`;
 const OUT_DIR = path.join(__dirname, '..', 'docs');
@@ -195,12 +196,15 @@ function buildIndex() {
     .lead { color: var(--bs-secondary-color); }
     h2 { margin-top: 2rem; font-size: 1.25rem; }
     ul { columns: 3; }
+    pre { background: var(--bs-tertiary-bg); padding: .75rem 1rem; border-radius: var(--bs-border-radius); overflow-x: auto; }
     @media (max-width: 768px) { ul { columns: 2; } }
   </style>
 </head>
 <body>
   <h1>WindStrap docs</h1>
   <p class="lead">Bootstrap ${VERSION} docs pages rendered with <code>dist/windstrap.min.css</code> instead of Bootstrap's CSS. If these pages render like the originals on getbootstrap.com, WindStrap is a drop-in replacement.</p>
+  <p><strong>Current release:</strong> <code>@rip747/windstrap@${RELEASE}</code> <span class="text-body-secondary">(tracks Bootstrap ${VERSION})</span></p>
+  <pre>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@rip747/windstrap@${RELEASE}/dist/windstrap.min.css"&gt;</pre>
 ${links}
 </body>
 </html>
