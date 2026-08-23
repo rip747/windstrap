@@ -1,10 +1,11 @@
 # Deploys the WindStrap docs to GitHub Pages.
 #
 # The docs pages reference assets with repo-root-relative paths
-# (e.g. ../../dist/windstrap.css, ../css/docs.css), so the site must be served
-# from the repo-root layout — NOT just the docs/ folder. This workflow builds
-# from source (site/ + src/) and stages index.html, demo.html, dist/ and docs/
-# into _site/ (mirroring the repo root), then deploys it to Pages.
+# (e.g. ../../dist/windstrap.min.css), so the site must be served
+# from the repo-root layout — NOT just the docs/ folder. This workflow
+# runs npm run build:all (CSS build + scripts/fetch-docs.js) and stages
+# index.html, demo.html, dist/ and docs/ into _site/ (mirroring the repo
+# root), then deploys it to Pages.
 #
 # To enable:
 #   Repo Settings -> Pages -> Source: "GitHub Actions"

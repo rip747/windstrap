@@ -84,7 +84,7 @@ WindStrap/
 ├─ postcss.config.js
 ├─ scripts/
 │  ├─ generate-utilities.js  # generates the repetitive grid/utility/responsive CSS
-│  └─ build-docs.js          # assembles the docs site from site/ fragments
+│  └─ fetch-docs.js          # downloads Bootstrap's docs, swaps in WindStrap CSS
 ├─ src/
 │  ├─ windstrap.css          # entry point (imports Tailwind + sections)
 │  └─ sections/              # hand-authored @apply translations
@@ -101,36 +101,31 @@ WindStrap/
 │     ├─ grid.css
 │     ├─ utilities.css
 │     └─ responsive.css
-├─ site/                     # docs sources (layout shell + content fragments)
-│  ├─ _layout.html
-│  └─ content/               # one folder per section
-│     ├─ customize/          # 7 pages
-│     ├─ layout/             # 8 pages
-│     ├─ content/            # 6 pages
-│     ├─ forms/              # 9 pages
-│     ├─ components/         # 23 pages
-│     ├─ helpers/            # 12 pages
-│     └─ utilities/          # 20 pages
-├─ docs/                     # built docs site (85 pages)
-│  ├─ index.html             # section overview
-│  ├─ css/docs.css           # docs layout (mirrors getbootstrap.com)
-│  ├─ js/docs.js             # copy buttons, TOC scrollspy, demo init
-│  └─ <section>/*.html       # one folder per translated section
+├─ docs/                     # fetched Bootstrap 5.3.8 docs, styled by WindStrap (86 pages)
+│  ├─ index.html             # generated section overview
+│  ├─ js/bootstrap.bundle.min.js  # vendored Bootstrap JS (offline demos, no SRI/CORS)
+│  └─ <section>/*.html       # one folder per section, rendered with dist/windstrap.min.css
 ├─ index.html                # redirects to docs/index.html
 ├─ demo.html                 # demo of the translated classes
 └─ dist/
-   └─ windstrap.css          # compiled output
+   ├─ windstrap.css          # compiled output
+   └─ windstrap.min.css      # minified build (used by docs + CDN)
 ```
 
 ## Build
 
 ```bash
 npm install
-npm run build      # regenerate + compile  →  dist/windstrap.css
-npm run docs       # assemble docs pages   →  docs/
+npm run build      # regenerate + compile  →  dist/windstrap.css + windstrap.min.css
+npm run docs       # fetch Bootstrap 5.3.8 docs, swap in WindStrap CSS  →  docs/
 npm run build:all  # both
 npm run watch      # rebuild CSS on change
 ```
+
+`npm run docs` downloads the official Bootstrap 5.3.8 documentation pages and
+replaces Bootstrap's stylesheet with `dist/windstrap.min.css`. The result is a
+live drop-in compatibility test: if the pages under `docs/` render exactly like
+the originals on getbootstrap.com, WindStrap is a proven drop-in replacement.
 
 Use it by linking the compiled file:
 
@@ -169,12 +164,29 @@ How it works: your project folder is bind-mounted at `/app`, and
 Linux-installed dependencies. The image is `node:20-alpine` (Node 20, matching
 the project's tooling).
 
+## Git co-authoring
+
+This repo ships with a `prepare-commit-msg` hook (in `githooks/`) that appends
+`Co-authored-by: DeepSeek V4 Flash <service@deepseek.com>` to every
+commit, so the coding model (DeepSeek V4 Flash) is credited as a co-author. It
+works from any git client — including the VS Code Source Control panel — with
+nothing extra to type.
+
+Enable it on a fresh clone:
+
+```bash
+git config core.hooksPath githooks
+```
+
+Change the credited identity by editing the `COAUTHOR=` line in
+`githooks/prepare-commit-msg`. On macOS/Linux, also make it executable:
+`chmod +x githooks/prepare-commit-msg`.
+
 ## Publish to GitHub Pages
 
 The repo ships with a GitHub Actions workflow (`.github/workflows/pages.yml`)
-that builds the CSS + docs and publishes them to GitHub Pages on every push to
-`main` (it also builds the docs from source, so `site/` stays the source of
-truth).
+that builds the CSS + docs (`npm run build:all`, i.e. `scripts/fetch-docs.js`)
+and publishes them to GitHub Pages on every push to `main`.
 
 1. Push the repo to GitHub.
 2. In the repo go to **Settings → Pages → Source** and choose
@@ -190,9 +202,9 @@ all the docs pages keep their styling (their `../../dist/windstrap.css`
 relative paths resolve correctly).
 
 Open `docs/index.html` in a browser to browse the translated docs — all of
-**Customize** (7), **Layout** (8), **Content** (6), **Forms** (9),
-**Components** (23), **Helpers** (12) and **Utilities** (20) are translated
-(85 pages, `docs/<section>/<page>.html`). Getting Started, Extend and About are
+**Customize** (8), **Layout** (8), **Content** (5), **Forms** (9),
+**Components** (24), **Helpers** (12) and **Utilities** (20) are translated
+(86 pages, `docs/<section>/<page>.html`). Getting Started, Extend and About are
 intentionally not translated.
 
 > The bundled `dist/windstrap.css` is the full translation. Because every class is defined via `@apply`, Tailwind only emits rules that are actually used — if you want a trimmed build, add your own HTML/JS files to `content` in `tailwind.config.js` (keep the `.css` files out of `content`, see the note there).
@@ -202,7 +214,7 @@ intentionally not translated.
 - Tailwind `screens` are redefined to Bootstrap's breakpoints — this is intentional and scoped to this stylesheet.
 - Component color systems (buttons, alerts, list-groups, `text-bg-*`, links) intentionally reuse Bootstrap's RGB/token CSS variables so `--bs-*-opacity` modifiers and `[data-bs-theme]` dark mode keep working.
 - Pseudo-elements, keyframes, and child-targeting selectors (e.g. `.row-cols-2 > *`) are written as plain CSS — `@apply` cannot express those.
-- The `docs/` site is the official docs layout rebuilt on WindStrap. It includes Bootstrap's JS bundle (and Popper) so interactive demos (dropdowns, modals, collapse, carousel…) work — the WindStrap translation itself covers the CSS layer only.
+- The `docs/` site is Bootstrap's official docs layout, fetched by `scripts/fetch-docs.js` and styled with WindStrap instead of Bootstrap's CSS — a live drop-in compatibility test. Only the framework CSS is WindStrap's; a locally-vendored copy of Bootstrap's JS bundle (`docs/js/bootstrap.bundle.min.js`) powers the interactive demos (dropdowns, modals, offcanvas, carousel…) from `file://` with no SRI/CORS or network issues. Bootstrap's Astro module scripts (DocSearch, clipboard, DocsScripts), the GitHub/StackBlitz buttons, ads, and analytics are all stripped.
 
 ## Built with AI
 

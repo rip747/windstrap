@@ -1,0 +1,25 @@
+#!/bin/sh
+# WindStrap repo hook (prepare-commit-msg)
+#
+# Appends a "Co-authored-by: DeepSeek V4 Flash" trailer to every commit so the
+# coding model is credited as a co-author. git invokes this hook itself before
+# the commit is finalized, so it works from ANY client — including the VS Code
+# Source Control panel — with nothing extra to type.
+#
+# Customize the identity below if you want a different name/email.
+
+COAUTHOR="DeepSeek V4 Flash <service@deepseek.com>"
+MSG_FILE="$1"
+
+# Idempotent: never add the trailer twice (covers amend / re-runs).
+if grep -qi "Co-authored-by: DeepSeek V4 Flash" "$MSG_FILE"; then
+  exit 0
+fi
+
+# Append the trailer at the end of the commit message (after a blank line).
+{
+  printf "\n"
+  printf "Co-authored-by: %s\n" "$COAUTHOR"
+} >> "$MSG_FILE"
+
+exit 0

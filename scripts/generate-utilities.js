@@ -500,11 +500,21 @@ function buildResponsive() {
   //   d-flex      → d-sm-flex
   //   mt-3        → mt-sm-3
   //   justify-content-between → justify-content-sm-between
+  //
+  // EXCEPTION: flex-direction utilities put the tier right after the `flex`
+  // prefix, e.g. flex-row-reverse → flex-sm-row-reverse (NOT flex-row-sm-reverse).
+  // The generic last-hyphen split below would get those wrong, so special-case them.
+  const FLEX_REVERSE = new Set(['flex-row-reverse', 'flex-column-reverse']);
   const seen = new Set();
   for (const t of TIERS.slice(1)) {
     for (const [bs, tw] of families) {
-      const i = bs.lastIndexOf('-');
-      const cls = `.${bs.slice(0, i)}-${t}-${bs.slice(i + 1)}`;
+      let cls;
+      if (FLEX_REVERSE.has(bs)) {
+        cls = `.flex-${t}-${bs.slice('flex-'.length)}`;
+      } else {
+        const i = bs.lastIndexOf('-');
+        cls = `.${bs.slice(0, i)}-${t}-${bs.slice(i + 1)}`;
+      }
       if (seen.has(cls)) continue;
       seen.add(cls);
       lines.push(`${cls} { @apply ${t}:${tw} !important; }`);

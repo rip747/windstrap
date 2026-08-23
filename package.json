@@ -32,7 +32,7 @@
     "generate": "node scripts/generate-utilities.js",
     "build": "npm run generate && postcss src/windstrap.css -o dist/windstrap.css && postcss src/windstrap.css -o dist/windstrap.min.css --env production",
     "build:min": "postcss src/windstrap.css -o dist/windstrap.min.css --env production",
-    "docs": "node scripts/build-docs.js",
+    "docs": "node scripts/fetch-docs.js",
     "build:all": "npm run build && npm run docs",
     "watch": "npm run generate && postcss src/windstrap.css -o dist/windstrap.css --watch",
     "prepublishOnly": "npm run build"

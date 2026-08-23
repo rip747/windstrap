@@ -1,296 +1,561 @@
-<!doctype html>
-<html lang="en" data-bs-theme="light">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>API · WindStrap v5.3.8</title>
-  <link rel="stylesheet" href="../../dist/windstrap.css">
-  <link rel="stylesheet" href="../css/docs.css">
-</head>
-<body class="d-flex flex-column h-100">
+<!DOCTYPE html><html lang="en" data-bs-theme="auto"> <head><script src="../js/bootstrap.bundle.min.js"></script><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="The utility API is a Sass-based tool to generate utility classes."><meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors"><link rel="canonical" href="https://getbootstrap.com/docs/5.3/utilities/api/"><title>Utility API · Bootstrap v5.3</title><link rel="stylesheet" href="../../dist/windstrap.min.css">
+  <link rel="apple-touch-icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180"><link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png"><link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png"><link rel="manifest" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/manifest.json"><link rel="mask-icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9"><link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon.ico"><meta name="theme-color" content="#712cf9"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@getbootstrap"><meta name="twitter:creator" content="@getbootstrap"><meta property="og:url" content="https://getbootstrap.com/docs/5.3/utilities/api/"><meta property="og:title" content="Utility API"><meta property="og:description" content="The utility API is a Sass-based tool to generate utility classes."><meta property="og:type" content="article"><meta property="og:image" content="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="2000"><meta property="og:image:height" content="1000"><link rel="stylesheet" href="https://getbootstrap.com/docs/5.3/assets/_slug_.CJzlHdSW.css"></head> <body data-bs-spy="scroll" data-bs-target="#TableOfContents"> </div> <svg xmlns="http://www.w3.org/2000/svg" class="d-none"> <symbol id="arrow-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path> </symbol> <symbol id="arrow-right-short" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"></path> </symbol> <symbol id="book-half" viewBox="0 0 16 16"> <path d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"></path> </symbol> <symbol id="box-seam" viewBox="0 0 16 16"> <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2l-2.218-.887zm3.564 1.426L5.596 5 8 5.961 14.154 3.5l-2.404-.961zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"></path> </symbol> <symbol id="braces" viewBox="0 0 16 16"> <path d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6zM13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6z"></path> </symbol> <symbol id="braces-asterisk" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C2.25 2 1.49 2.759 1.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6ZM14.886 7.9v.164c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456v-1.3c-1.114 0-1.49-.362-1.49-1.456V4.352C14.51 2.759 13.75 2 12.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6ZM7.5 11.5V9.207l-1.621 1.621-.707-.707L6.792 8.5H4.5v-1h2.293L5.172 5.879l.707-.707L7.5 6.792V4.5h1v2.293l1.621-1.621.707.707L9.208 7.5H11.5v1H9.207l1.621 1.621-.707.707L8.5 9.208V11.5h-1Z"></path> </symbol> <symbol id="check2" viewBox="0 0 16 16"> <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path> </symbol> <symbol id="chevron-expand" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M3.646 9.146a.5.5 0 0 1 .708 0L8 12.793l3.646-3.647a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708zm0-2.292a.5.5 0 0 0 .708 0L8 3.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708z"></path> </symbol> <symbol id="circle-half" viewBox="0 0 16 16"> <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path> </symbol> <symbol id="clipboard" viewBox="0 0 16 16"> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path> <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path> </symbol> <symbol id="code" viewBox="0 0 16 16"> <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"></path> </symbol> <symbol id="file-earmark-richtext" viewBox="0 0 16 16"> <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"></path> <path d="M4.5 12.5A.5.5 0 0 1 5 12h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 10h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm1.639-3.708 1.33.886 1.854-1.855a.25.25 0 0 1 .289-.047l1.888.974V8.5a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V8s1.54-1.274 1.639-1.208zM6.25 6a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5z"></path> </symbol> <symbol id="globe2" viewBox="0 0 16 16"> <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"></path> </symbol> <symbol id="grid-fill" viewBox="0 0 16 16"> <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z"></path> </symbol> <symbol id="lightning-charge-fill" viewBox="0 0 16 16"> <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"></path> </symbol> <symbol id="list" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path> </symbol> <symbol id="magic" viewBox="0 0 16 16"> <path d="M9.5 2.672a.5.5 0 1 0 1 0V.843a.5.5 0 0 0-1 0v1.829Zm4.5.035A.5.5 0 0 0 13.293 2L12 3.293a.5.5 0 1 0 .707.707L14 2.707ZM7.293 4A.5.5 0 1 0 8 3.293L6.707 2A.5.5 0 0 0 6 2.707L7.293 4Zm-.621 2.5a.5.5 0 1 0 0-1H4.843a.5.5 0 1 0 0 1h1.829Zm8.485 0a.5.5 0 1 0 0-1h-1.829a.5.5 0 0 0 0 1h1.829ZM13.293 10A.5.5 0 1 0 14 9.293L12.707 8a.5.5 0 1 0-.707.707L13.293 10ZM9.5 11.157a.5.5 0 0 0 1 0V9.328a.5.5 0 0 0-1 0v1.829Zm1.854-5.097a.5.5 0 0 0 0-.706l-.708-.708a.5.5 0 0 0-.707 0L8.646 5.94a.5.5 0 0 0 0 .707l.708.708a.5.5 0 0 0 .707 0l1.293-1.293Zm-3 3a.5.5 0 0 0 0-.706l-.708-.708a.5.5 0 0 0-.707 0L.646 13.94a.5.5 0 0 0 0 .707l.708.708a.5.5 0 0 0 .707 0L8.354 9.06Z"></path> </symbol> <symbol id="menu-button-wide-fill" viewBox="0 0 16 16"> <path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v2A1.5 1.5 0 0 0 1.5 5h13A1.5 1.5 0 0 0 16 3.5v-2A1.5 1.5 0 0 0 14.5 0h-13zm1 2h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1 0-1zm9.927.427A.25.25 0 0 1 12.604 2h.792a.25.25 0 0 1 .177.427l-.396.396a.25.25 0 0 1-.354 0l-.396-.396zM0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V8zm1 3v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2H1zm14-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2h14zM2 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"></path> </symbol> <symbol id="moon-stars-fill" viewBox="0 0 16 16"> <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path> <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path> </symbol> <symbol id="palette2" viewBox="0 0 16 16"> <path d="M0 .5A.5.5 0 0 1 .5 0h5a.5.5 0 0 1 .5.5v5.277l4.147-4.131a.5.5 0 0 1 .707 0l3.535 3.536a.5.5 0 0 1 0 .708L10.261 10H15.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5H3a2.99 2.99 0 0 1-2.121-.879A2.99 2.99 0 0 1 0 13.044m6-.21 7.328-7.3-2.829-2.828L6 7.188v5.647zM4.5 13a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0zM15 15v-4H9.258l-4.015 4H15zM0 .5v12.495V.5z"></path> <path d="M0 12.995V13a3.07 3.07 0 0 0 0-.005z"></path> </symbol> <symbol id="plugin" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1 8a7 7 0 1 1 2.898 5.673c-.167-.121-.216-.406-.002-.62l1.8-1.8a3.5 3.5 0 0 0 4.572-.328l1.414-1.415a.5.5 0 0 0 0-.707l-.707-.707 1.559-1.563a.5.5 0 1 0-.708-.706l-1.559 1.562-1.414-1.414 1.56-1.562a.5.5 0 1 0-.707-.706l-1.56 1.56-.707-.706a.5.5 0 0 0-.707 0L5.318 5.975a3.5 3.5 0 0 0-.328 4.571l-1.8 1.8c-.58.58-.62 1.6.121 2.137A8 8 0 1 0 0 8a.5.5 0 0 0 1 0Z"></path> </symbol> <symbol id="plus" viewBox="0 0 16 16"> <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path> </symbol> <symbol id="sun-fill" viewBox="0 0 16 16"> <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path> </symbol> <symbol id="three-dots" viewBox="0 0 16 16"> <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path> </symbol> <symbol id="tools" viewBox="0 0 16 16"> <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.356 3.356a1 1 0 0 0 1.414 0l1.586-1.586a1 1 0 0 0 0-1.414l-3.356-3.356a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0zm9.646 10.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708zM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11z"></path> </symbol> <symbol id="ui-radios" viewBox="0 0 16 16"> <path d="M7 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1zM0 12a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm7-1.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1zm0-5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 8a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zM3 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path> </symbol> </svg> <div class="container-xxl bd-gutter mt-3 my-md-4 bd-layout"> <aside class="bd-sidebar"> <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel"> <div class="offcanvas-header border-bottom"> <h5 class="offcanvas-title" id="bdSidebarOffcanvasLabel">Browse docs</h5> <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdSidebar"></button> </div> <div class="offcanvas-body"> <nav class="bd-links w-100" id="bd-docs-nav" aria-label="Docs navigation"> <ul class="bd-links-nav list-unstyled mb-0 pb-3 pb-md-2 pe-lg-2"> <li class="bd-links-group py-2"> <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold"> <svg class="bi me-2" style="color: var(--bs-indigo);" aria-hidden="true"> <use  xlink:href="#book-half"></use> </svg> Getting started </strong> <ul class="list-unstyled fw-normal pb-2 small"> <li> <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction" class="bd-links-link d-inline-block rounded"> Introduction </a> </li><li> <a href="https://getbootstrap.com/docs/5.3/getting-started/download" class="bd-links-link d-inline-block rounded"> Download </a> </li><li> <a href="https://getbootstrap.com/docs/5.3/getting-started/contents" class="bd-links-link d-inline-block rounded"> Contents </a> </li><li> <a href="https://getbootstrap.com/docs/5.3/getting-started/browsers-devices" class="bd-links-link d-inline-block rounded"> Browsers &amp; devices </a> </li><li> <a href="https://getbootstrap.com/docs/5.3/getting-started/javascript" class="bd-links-link d-inline-block rounded"> JavaScript </a> </li><li> <a href="https://getbootstrap.com/docs/5.3/getting-started/webpack" class="bd-links-link d-inline-block rounded"> Webpack </a> </li><li> <a href="https://getbootstrap.com/docs/5.3/getting-started/parcel" class="bd-links-link d-inline-block rounded"> Parcel </a> </li><li> <a href="https://getbootstrap.com/docs/5.3/getting-started/vite" class="bd-links-link d-inline-block rounded"> Vite </a> </li><li> <a href="https://getbootstrap.com/docs/5.3/getting-started/accessibility" class="bd-links-link d-inline-block rounded"> Accessibility </a> </li><li> <a href="https://getbootstrap.com/docs/5.3/getting-started/rfs" class="bd-links-link d-inline-block rounded"> RFS </a> </li><li> <a href="https://getbootstrap.com/docs/5.3/getting-started/rtl" class="bd-links-link d-inline-block rounded"> RTL </a> </li><li> <a href="https://getbootstrap.com/docs/5.3/getting-started/contribute" class="bd-links-link d-inline-block rounded"> Contribute </a> </li> </ul> </li><li class="bd-links-group py-2"> <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold"> <svg class="bi me-2" style="color: var(--bs-pink);" aria-hidden="true"> <use  xlink:href="#palette2"></use> </svg> Customize </strong> <ul class="list-unstyled fw-normal pb-2 small"> <li> <a href="../customize/overview.html" class="bd-links-link d-inline-block rounded"> Overview </a> </li><li> <a href="../customize/sass.html" class="bd-links-link d-inline-block rounded"> Sass </a> </li><li> <a href="../customize/options.html" class="bd-links-link d-inline-block rounded"> Options </a> </li><li> <a href="../customize/color.html" class="bd-links-link d-inline-block rounded"> Color </a> </li><li> <a href="../customize/color-modes.html" class="bd-links-link d-inline-block rounded"> Color modes </a> </li><li> <a href="../customize/components.html" class="bd-links-link d-inline-block rounded"> Components </a> </li><li> <a href="../customize/css-variables.html" class="bd-links-link d-inline-block rounded"> CSS variables </a> </li><li> <a href="../customize/optimize.html" class="bd-links-link d-inline-block rounded"> Optimize </a> </li> </ul> </li><li class="bd-links-group py-2"> <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold"> <svg class="bi me-2" style="color: var(--bs-teal);" aria-hidden="true"> <use  xlink:href="#grid-fill"></use> </svg> Layout </strong> <ul class="list-unstyled fw-normal pb-2 small"> <li> <a href="../layout/breakpoints.html" class="bd-links-link d-inline-block rounded"> Breakpoints </a> </li><li> <a href="../layout/containers.html" class="bd-links-link d-inline-block rounded"> Containers </a> </li><li> <a href="../layout/grid.html" class="bd-links-link d-inline-block rounded"> Grid </a> </li><li> <a href="../layout/columns.html" class="bd-links-link d-inline-block rounded"> Columns </a> </li><li> <a href="../layout/gutters.html" class="bd-links-link d-inline-block rounded"> Gutters </a> </li><li> <a href="../layout/utilities.html" class="bd-links-link d-inline-block rounded"> Utilities </a> </li><li> <a href="../layout/z-index.html" class="bd-links-link d-inline-block rounded"> Z-index </a> </li><li> <a href="../layout/css-grid.html" class="bd-links-link d-inline-block rounded"> CSS Grid </a> </li> </ul> </li><li class="bd-links-group py-2"> <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold"> <svg class="bi me-2" style="color: var(--bs-gray);" aria-hidden="true"> <use  xlink:href="#file-earmark-richtext"></use> </svg> Content </strong> <ul class="list-unstyled fw-normal pb-2 small"> <li> <a href="../content/reboot.html" class="bd-links-link d-inline-block rounded"> Reboot </a> </li><li> <a href="../content/typography.html" class="bd-links-link d-inline-block rounded"> Typography </a> </li><li> <a href="../content/images.html" class="bd-links-link d-inline-block rounded"> Images </a> </li><li> <a href="../content/tables.html" class="bd-links-link d-inline-block rounded"> Tables </a> </li><li> <a href="../content/figures.html" class="bd-links-link d-inline-block rounded"> Figures </a> </li> </ul> </li><li class="bd-links-group py-2"> <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold"> <svg class="bi me-2" style="color: var(--bs-blue);" aria-hidden="true"> <use  xlink:href="#ui-radios"></use> </svg> Forms </strong> <ul class="list-unstyled fw-normal pb-2 small"> <li> <a href="../forms/overview.html" class="bd-links-link d-inline-block rounded"> Overview </a> </li><li> <a href="../forms/form-control.html" class="bd-links-link d-inline-block rounded"> Form control </a> </li><li> <a href="../forms/select.html" class="bd-links-link d-inline-block rounded"> Select </a> </li><li> <a href="../forms/checks-radios.html" class="bd-links-link d-inline-block rounded"> Checks &amp; radios </a> </li><li> <a href="../forms/range.html" class="bd-links-link d-inline-block rounded"> Range </a> </li><li> <a href="../forms/input-group.html" class="bd-links-link d-inline-block rounded"> Input group </a> </li><li> <a href="../forms/floating-labels.html" class="bd-links-link d-inline-block rounded"> Floating labels </a> </li><li> <a href="../forms/layout.html" class="bd-links-link d-inline-block rounded"> Layout </a> </li><li> <a href="../forms/validation.html" class="bd-links-link d-inline-block rounded"> Validation </a> </li> </ul> </li><li class="bd-links-group py-2"> <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold"> <svg class="bi me-2" style="color: var(--bs-cyan);" aria-hidden="true"> <use  xlink:href="#menu-button-wide-fill"></use> </svg> Components </strong> <ul class="list-unstyled fw-normal pb-2 small"> <li> <a href="../components/accordion.html" class="bd-links-link d-inline-block rounded"> Accordion </a> </li><li> <a href="../components/alerts.html" class="bd-links-link d-inline-block rounded"> Alerts </a> </li><li> <a href="../components/badge.html" class="bd-links-link d-inline-block rounded"> Badge </a> </li><li> <a href="../components/breadcrumb.html" class="bd-links-link d-inline-block rounded"> Breadcrumb </a> </li><li> <a href="../components/buttons.html" class="bd-links-link d-inline-block rounded"> Buttons </a> </li><li> <a href="../components/button-group.html" class="bd-links-link d-inline-block rounded"> Button group </a> </li><li> <a href="../components/card.html" class="bd-links-link d-inline-block rounded"> Card </a> </li><li> <a href="../components/carousel.html" class="bd-links-link d-inline-block rounded"> Carousel </a> </li><li> <a href="../components/close-button.html" class="bd-links-link d-inline-block rounded"> Close button </a> </li><li> <a href="../components/collapse.html" class="bd-links-link d-inline-block rounded"> Collapse </a> </li><li> <a href="../components/dropdowns.html" class="bd-links-link d-inline-block rounded"> Dropdowns </a> </li><li> <a href="../components/list-group.html" class="bd-links-link d-inline-block rounded"> List group </a> </li><li> <a href="../components/modal.html" class="bd-links-link d-inline-block rounded"> Modal </a> </li><li> <a href="../components/navbar.html" class="bd-links-link d-inline-block rounded"> Navbar </a> </li><li> <a href="../components/navs-tabs.html" class="bd-links-link d-inline-block rounded"> Navs &amp; tabs </a> </li><li> <a href="../components/offcanvas.html" class="bd-links-link d-inline-block rounded"> Offcanvas </a> </li><li> <a href="../components/pagination.html" class="bd-links-link d-inline-block rounded"> Pagination </a> </li><li> <a href="../components/placeholders.html" class="bd-links-link d-inline-block rounded"> Placeholders </a> </li><li> <a href="../components/popovers.html" class="bd-links-link d-inline-block rounded"> Popovers </a> </li><li> <a href="../components/progress.html" class="bd-links-link d-inline-block rounded"> Progress </a> </li><li> <a href="../components/scrollspy.html" class="bd-links-link d-inline-block rounded"> Scrollspy </a> </li><li> <a href="../components/spinners.html" class="bd-links-link d-inline-block rounded"> Spinners </a> </li><li> <a href="../components/toasts.html" class="bd-links-link d-inline-block rounded"> Toasts </a> </li><li> <a href="../components/tooltips.html" class="bd-links-link d-inline-block rounded"> Tooltips </a> </li> </ul> </li><li class="bd-links-group py-2"> <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold"> <svg class="bi me-2" style="color: var(--bs-orange);" aria-hidden="true"> <use  xlink:href="#magic"></use> </svg> Helpers </strong> <ul class="list-unstyled fw-normal pb-2 small"> <li> <a href="../helpers/clearfix.html" class="bd-links-link d-inline-block rounded"> Clearfix </a> </li><li> <a href="../helpers/color-background.html" class="bd-links-link d-inline-block rounded"> Color &amp; background </a> </li><li> <a href="../helpers/colored-links.html" class="bd-links-link d-inline-block rounded"> Colored links </a> </li><li> <a href="../helpers/focus-ring.html" class="bd-links-link d-inline-block rounded"> Focus ring </a> </li><li> <a href="../helpers/icon-link.html" class="bd-links-link d-inline-block rounded"> Icon link </a> </li><li> <a href="../helpers/position.html" class="bd-links-link d-inline-block rounded"> Position </a> </li><li> <a href="../helpers/ratio.html" class="bd-links-link d-inline-block rounded"> Ratio </a> </li><li> <a href="../helpers/stacks.html" class="bd-links-link d-inline-block rounded"> Stacks </a> </li><li> <a href="../helpers/stretched-link.html" class="bd-links-link d-inline-block rounded"> Stretched link </a> </li><li> <a href="../helpers/text-truncation.html" class="bd-links-link d-inline-block rounded"> Text truncation </a> </li><li> <a href="../helpers/vertical-rule.html" class="bd-links-link d-inline-block rounded"> Vertical rule </a> </li><li> <a href="../helpers/visually-hidden.html" class="bd-links-link d-inline-block rounded"> Visually hidden </a> </li> </ul> </li><li class="bd-links-group py-2"> <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold"> <svg class="bi me-2" style="color: var(--bs-red);" aria-hidden="true"> <use  xlink:href="#braces-asterisk"></use> </svg> Utilities </strong> <ul class="list-unstyled fw-normal pb-2 small"> <li> <a href="../utilities/api.html" class="bd-links-link d-inline-block rounded active" aria-current="page"> API </a> </li><li> <a href="../utilities/background.html" class="bd-links-link d-inline-block rounded"> Background </a> </li><li> <a href="../utilities/borders.html" class="bd-links-link d-inline-block rounded"> Borders </a> </li><li> <a href="../utilities/colors.html" class="bd-links-link d-inline-block rounded"> Colors </a> </li><li> <a href="../utilities/display.html" class="bd-links-link d-inline-block rounded"> Display </a> </li><li> <a href="../utilities/flex.html" class="bd-links-link d-inline-block rounded"> Flex </a> </li><li> <a href="../utilities/float.html" class="bd-links-link d-inline-block rounded"> Float </a> </li><li> <a href="../utilities/interactions.html" class="bd-links-link d-inline-block rounded"> Interactions </a> </li><li> <a href="../utilities/link.html" class="bd-links-link d-inline-block rounded"> Link </a> </li><li> <a href="../utilities/object-fit.html" class="bd-links-link d-inline-block rounded"> Object fit </a> </li><li> <a href="../utilities/opacity.html" class="bd-links-link d-inline-block rounded"> Opacity </a> </li><li> <a href="../utilities/overflow.html" class="bd-links-link d-inline-block rounded"> Overflow </a> </li><li> <a href="../utilities/position.html" class="bd-links-link d-inline-block rounded"> Position </a> </li><li> <a href="../utilities/shadows.html" class="bd-links-link d-inline-block rounded"> Shadows </a> </li><li> <a href="../utilities/sizing.html" class="bd-links-link d-inline-block rounded"> Sizing </a> </li><li> <a href="../utilities/spacing.html" class="bd-links-link d-inline-block rounded"> Spacing </a> </li><li> <a href="../utilities/text.html" class="bd-links-link d-inline-block rounded"> Text </a> </li><li> <a href="../utilities/vertical-align.html" class="bd-links-link d-inline-block rounded"> Vertical align </a> </li><li> <a href="../utilities/visibility.html" class="bd-links-link d-inline-block rounded"> Visibility </a> </li><li> <a href="../utilities/z-index.html" class="bd-links-link d-inline-block rounded"> Z-index </a> </li> </ul> </li><li class="bd-links-group py-2"> <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold"> <svg class="bi me-2" style="color: var(--bs-blue);" aria-hidden="true"> <use  xlink:href="#tools"></use> </svg> Extend </strong> <ul class="list-unstyled fw-normal pb-2 small"> <li> <a href="https://getbootstrap.com/docs/5.3/extend/approach" class="bd-links-link d-inline-block rounded"> Approach </a> </li><li> <a href="https://getbootstrap.com/docs/5.3/extend/icons" class="bd-links-link d-inline-block rounded"> Icons </a> </li> </ul> </li><li class="bd-links-group py-2"> <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold"> <svg class="bi me-2" style="color: var(--bs-indigo);" aria-hidden="true"> <use  xlink:href="#globe2"></use> </svg> About </strong> <ul class="list-unstyled fw-normal pb-2 small"> <li> <a href="https://getbootstrap.com/docs/5.3/about/overview" class="bd-links-link d-inline-block rounded"> Overview </a> </li><li> <a href="https://getbootstrap.com/docs/5.3/about/team" class="bd-links-link d-inline-block rounded"> Team </a> </li><li> <a href="https://getbootstrap.com/docs/5.3/about/brand" class="bd-links-link d-inline-block rounded"> Brand </a> </li><li> <a href="https://getbootstrap.com/docs/5.3/about/license" class="bd-links-link d-inline-block rounded"> License </a> </li><li> <a href="https://getbootstrap.com/docs/5.3/about/translations" class="bd-links-link d-inline-block rounded"> Translations </a> </li> </ul> </li> <li class="bd-links-span-all mt-1 mb-3 mx-4 border-top"></li> <li class="bd-links-span-all"> <a href="https://getbootstrap.com/docs/5.3/migration/" class="bd-links-link d-inline-block rounded small"> Migration </a> </li>  </ul> </nav> </div> </div> </aside> <main class="bd-main order-1"> <div class="bd-intro pt-2 ps-lg-2"> <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between"> <h1 class="bd-title mb-0" id="content">Utility API</h1> </div> <div class="bd-subtitle"> <p>The utility API is a Sass-based tool to generate utility classes.</p>
+ </div> </div> <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary"> <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
+On this page
+<svg class="bi d-md-none ms-2" aria-hidden="true"> <use xlink:href="#chevron-expand"></use> </svg> </button>
+            <strong class="d-none d-md-block h6 my-2 ms-3" id="docs-tocs">On this page</strong>
+            <hr class="d-none d-md-block my-2 ms-3">
+            <div class="collapse bd-toc-collapse" id="tocContents"> <nav id="TableOfContents" aria-labelledby="docs-tocs"> <ul> <li> <a href="#api-explained">API explained</a> <ul> <li> <a href="#property">Property</a>  </li><li> <a href="#values">Values</a>  </li><li> <a href="#class">Class</a>  </li><li> <a href="#css-variable-utilities">CSS variable utilities</a>  </li><li> <a href="#local-css-variables">Local CSS variables</a>  </li><li> <a href="#states">States</a>  </li><li> <a href="#responsive">Responsive</a>  </li><li> <a href="#print">Print</a>  </li> </ul> </li><li> <a href="#importance">Importance</a>  </li><li> <a href="#using-the-api">Using the API</a> <ul> <li> <a href="#override-utilities">Override utilities</a>  </li><li> <a href="#add-utilities">Add utilities</a>  </li><li> <a href="#modify-utilities">Modify utilities</a> <ul> <li> <a href="#enable-responsive">Enable responsive</a>  </li><li> <a href="#rename-utilities">Rename utilities</a>  </li> </ul> </li><li> <a href="#remove-utilities">Remove utilities</a>  </li><li> <a href="#add-remove-modify">Add, remove, modify</a> <ul> <li> <a href="#remove-utility-in-rtl">Remove utility in RTL</a>  </li> </ul> </li> </ul> </li> </ul> </nav> </div> </div> <div class="bd-content ps-lg-2">   <p>Bootstrap utilities are generated with our utility API and can be used to modify or extend our default set of utility classes via Sass. Our utility API is based on a series of Sass maps and functions for generating families of classes with various options. If you’re unfamiliar with Sass maps, read up on the <a href="https://sass-lang.com/documentation/values/maps/">official Sass docs</a> to get started.</p>
+<p>The <code>$utilities</code> map contains all our utilities and is later merged with your custom <code>$utilities</code> map, if present. The utility map contains a keyed list of utility groups which accept the following options:</p>
+<div class="table-responsive"> 
 
-  <a class="visually-hidden-focusable" href="#content">Skip to main content</a>
-  <a class="visually-hidden-focusable" href="#bd-docs-nav">Skip to docs navigation</a>
 
-  <!-- ===================== Navbar ===================== -->
-  <header class="navbar navbar-expand-lg navbar-dark bd-navbar sticky-top">
-    <div class="container-xl">
-      <a class="navbar-brand" href="../index.html">WindStrap<span class="bd-badge">v5.3.8</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bd-navbar" aria-controls="bd-navbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="bd-navbar">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="../index.html">Docs</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://getbootstrap.com/docs/5.3/" target="_blank" rel="noopener">Bootstrap docs</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
-        </ul>
-      </div>
-    </div>
-  </header>
 
-  <!-- ===================== Layout ===================== -->
-  <div class="bd-layout container-xl" id="bd-docs-nav">
 
-    <!-- Left sidebar navigation -->
-    <aside class="bd-sidebar">
-      <nav class="bd-links" aria-label="Docs navigation">
-        <ul class="bd-links-nav list-unstyled mb-0 pb-lg-3 pb-4">
-  <li class="bd-links-group py-2">
-    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Customize</strong>
-    <ul class="list-unstyled fw-normal pb-2 small">
-      <li><a class="bd-links-link d-inline-block rounded" href="../customize/overview.html">Overview</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../customize/sass.html">Sass</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../customize/color.html">Color</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../customize/components.html">Components</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../customize/css-variables.html">CSS variables</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../customize/optimize.html">Optimize</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../customize/dark-mode.html">Dark mode</a></li>
-    </ul>
-  </li>
-  <li class="bd-links-group py-2">
-    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Layout</strong>
-    <ul class="list-unstyled fw-normal pb-2 small">
-      <li><a class="bd-links-link d-inline-block rounded" href="../layout/breakpoints.html">Breakpoints</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../layout/containers.html">Containers</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../layout/grid.html">Grid</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../layout/columns.html">Columns</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../layout/gutters.html">Gutters</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../layout/utilities.html">Utilities</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../layout/z-index.html">Z-index</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../layout/css-grid.html">CSS grid</a></li>
-    </ul>
-  </li>
-  <li class="bd-links-group py-2">
-    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Content</strong>
-    <ul class="list-unstyled fw-normal pb-2 small">
-      <li><a class="bd-links-link d-inline-block rounded" href="../content/reboot.html">Reboot</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../content/typography.html">Typography</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../content/images.html">Images</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../content/tables.html">Tables</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../content/figures.html">Figures</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../content/syntax-highlighting.html">Syntax highlighting</a></li>
-    </ul>
-  </li>
-  <li class="bd-links-group py-2">
-    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Forms</strong>
-    <ul class="list-unstyled fw-normal pb-2 small">
-      <li><a class="bd-links-link d-inline-block rounded" href="../forms/overview.html">Overview</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../forms/form-control.html">Form control</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../forms/select.html">Select</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../forms/checks-radios.html">Checks & radios</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../forms/range.html">Range</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../forms/input-group.html">Input group</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../forms/floating-labels.html">Floating labels</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../forms/layout.html">Layout</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../forms/validation.html">Validation</a></li>
-    </ul>
-  </li>
-  <li class="bd-links-group py-2">
-    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Components</strong>
-    <ul class="list-unstyled fw-normal pb-2 small">
-      <li><a class="bd-links-link d-inline-block rounded" href="../components/accordion.html">Accordion</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../components/alerts.html">Alerts</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../components/badge.html">Badge</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../components/breadcrumb.html">Breadcrumb</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../components/buttons.html">Buttons</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../components/button-group.html">Button group</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../components/card.html">Card</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../components/carousel.html">Carousel</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../components/collapse.html">Collapse</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../components/dropdowns.html">Dropdowns</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../components/list-group.html">List group</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../components/modal.html">Modal</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../components/navs-tabs.html">Navs & tabs</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../components/navbar.html">Navbar</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../components/offcanvas.html">Offcanvas</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../components/pagination.html">Pagination</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../components/placeholders.html">Placeholders</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../components/popovers.html">Popovers</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../components/progress.html">Progress</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../components/scrollspy.html">Scrollspy</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../components/spinners.html">Spinners</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../components/toasts.html">Toasts</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../components/tooltips.html">Tooltips</a></li>
-    </ul>
-  </li>
-  <li class="bd-links-group py-2">
-    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Helpers</strong>
-    <ul class="list-unstyled fw-normal pb-2 small">
-      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/clearfix.html">Clearfix</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/color-background.html">Color & background</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/colored-links.html">Colored links</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/focus-ring.html">Focus ring</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/icon-link.html">Icon link</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/position.html">Position</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/ratio.html">Ratio</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/stacks.html">Stacks</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/stretched-link.html">Stretched link</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/text-truncation.html">Text truncation</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/vertical-rule.html">Vertical rule</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="../helpers/visually-hidden.html">Visually hidden</a></li>
-    </ul>
-  </li>
-  <li class="bd-links-group py-2">
-    <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">Utilities</strong>
-    <ul class="list-unstyled fw-normal pb-2 small">
-      <li><a class="bd-links-link d-inline-block rounded active" href="api.html">API</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="background.html">Background</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="borders.html">Borders</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="colors.html">Colors</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="display.html">Display</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="flex.html">Flex</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="float.html">Float</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="interactions.html">Interactions</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="link.html">Link</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="object-fit.html">Object fit</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="opacity.html">Opacity</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="overflow.html">Overflow</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="position.html">Position</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="shadows.html">Shadows</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="sizing.html">Sizing</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="spacing.html">Spacing</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="text.html">Text</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="vertical-alignment.html">Vertical alignment</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="visibility.html">Visibility</a></li>
-      <li><a class="bd-links-link d-inline-block rounded" href="z-index.html">Z-index</a></li>
-    </ul>
-  </li>
-</ul>
 
-      </nav>
-    </aside>
 
-    <!-- Main content -->
-    <main class="bd-main" id="content">
-      <div class="bd-intro">
-        <div class="bd-intro-inner">
-          <h1 class="bd-title">API</h1>
-          <p class="bd-lead">The utility API is a Sass-based tool to generate utility classes.</p>
-        </div>
-        <nav class="bd-toc" aria-label="On this page">
-          <strong>On this page</strong>
-          <ul>
-  <li><a href="#how-it-works">How it works</a>
-  </li>
-  <li><a href="#overview">Overview of utility groups</a>
-  </li>
-</ul>
 
-        </nav>
-      </div>
 
-      <div class="bd-content">
-        <h2 id="how-it-works">How it works <a class="anchor" href="#how-it-works">#</a></h2>
-<p>
-  The Bootstrap utility API is a Sass-based tool to generate utility classes. In
-  WindStrap, those utility classes are rebuilt as Tailwind CSS rules via
-  <code>@apply</code>, giving you the same class names and behavior.
-</p>
-<p>
-  All Bootstrap utility classes — like <code>.m-*</code>, <code>.p-*</code>,
-  <code>.d-*</code>, <code>.text-*</code>, <code>.bg-*</code>, and the responsive
-  <code>d-sm-flex</code> / <code>mt-lg-3</code> variants — are available with the
-  exact Bootstrap naming, generated in <code>src/generated/</code>.
-</p>
-<div class="bd-callout bd-callout-info">
-  <h5>Customizing the utilities</h5>
-  <p class="mb-0">
-    Because WindStrap maps Bootstrap utilities onto Tailwind, you can also use
-    Tailwind’s own <code>@apply</code> in your markup if you prefer. But the docs
-    here always show the Bootstrap class names for a one-to-one translation.
-  </p>
-</div>
 
-<h2 id="overview">Overview of utility groups <a class="anchor" href="#overview">#</a></h2>
-<div class="table-responsive">
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Group</th>
-        <th>Example classes</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td><a href="background.html">Background</a></td><td><code>.bg-primary</code>, <code>.bg-opacity-50</code></td></tr>
-      <tr><td><a href="borders.html">Borders</a></td><td><code>.border</code>, <code>.rounded-3</code></td></tr>
-      <tr><td><a href="colors.html">Colors</a></td><td><code>.text-primary</code>, <code>.text-opacity-75</code></td></tr>
-      <tr><td><a href="display.html">Display</a></td><td><code>.d-flex</code>, <code>.d-sm-none</code></td></tr>
-      <tr><td><a href="flex.html">Flex</a></td><td><code>.justify-content-center</code>, <code>.flex-grow-1</code></td></tr>
-      <tr><td><a href="float.html">Float</a></td><td><code>.float-start</code>, <code>.float-sm-end</code></td></tr>
-      <tr><td><a href="interactions.html">Interactions</a></td><td><code>.user-select-all</code>, <code>.pe-none</code></td></tr>
-      <tr><td><a href="link.html">Link</a></td><td><code>.link-primary</code>, <code>.link-underline-opacity-25</code></td></tr>
-      <tr><td><a href="object-fit.html">Object fit</a></td><td><code>.object-fit-cover</code>, <code>.object-fit-sm-contain</code></td></tr>
-      <tr><td><a href="opacity.html">Opacity</a></td><td><code>.opacity-75</code>, <code>.opacity-50</code></td></tr>
-      <tr><td><a href="overflow.html">Overflow</a></td><td><code>.overflow-auto</code>, <code>.overflow-hidden</code></td></tr>
-      <tr><td><a href="position.html">Position</a></td><td><code>.position-absolute</code>, <code>.top-0</code></td></tr>
-      <tr><td><a href="shadows.html">Shadows</a></td><td><code>.shadow-sm</code>, <code>.shadow-lg</code></td></tr>
-      <tr><td><a href="sizing.html">Sizing</a></td><td><code>.w-100</code>, <code>.mw-100</code></td></tr>
-      <tr><td><a href="spacing.html">Spacing</a></td><td><code>.mt-3</code>, <code>.px-sm-2</code></td></tr>
-      <tr><td><a href="text.html">Text</a></td><td><code>.text-center</code>, <code>.fw-bold</code></td></tr>
-      <tr><td><a href="vertical-alignment.html">Vertical alignment</a></td><td><code>.align-middle</code>, <code>.align-baseline</code></td></tr>
-      <tr><td><a href="visibility.html">Visibility</a></td><td><code>.visible</code>, <code>.invisible</code></td></tr>
-      <tr><td><a href="z-index.html">Z-index</a></td><td><code>.z-1</code>, <code>.z-3</code></td></tr>
-    </tbody>
-  </table>
-</div>
 
-      </div>
 
-      <!-- Prev / Next -->
-      <nav class="bd-prev-next" aria-label="Previous and next pages">
-        <a class="bd-prev" href="../helpers/visually-hidden.html"><span class="bd-prev-next-label">Previous</span><span class="bd-prev-next-title">Visually hidden</span></a><a class="bd-next text-end" href="../utilities/background.html"><span class="bd-prev-next-label">Next</span><span class="bd-prev-next-title">Background</span></a>
-      </nav>
-    </main>
-  </div>
 
-  <!-- ===================== Footer ===================== -->
-  <footer class="bd-footer py-5 mt-5">
-    <div class="container-xl">
-      <div class="row">
-        <div class="col-6 col-lg-2 mb-3">
-          <h5>Links</h5>
-          <ul class="list-unstyled">
-            <li><a href="../index.html">Docs</a></li>
-            <li></li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
-            <li></li><a href="https://www.npmjs.com/" target="_blank" rel="noopener">npm</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-lg-2 mb-3">
-          <h5>Guides</h5>
-          <ul class="list-unstyled">
-            <li><a href="../index.html">Getting started</a></li>
-            <li><a href="../components/buttons.html">Buttons</a></li>
-            <li><a href="../components/card.html">Cards</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-lg-2 mb-3">
-          <h5>Components</h5>
-          <ul class="list-unstyled">
-            <li><a href="../components/accordion.html">Accordion</a></li>
-            <li><a href="../components/navbar.html">Navbar</a></li>
-            <li><a href="../components/modal.html">Modal</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-lg-2 mb-3">
-          <h5>Community</h5>
-          <ul class="list-unstyled">
-            <li><a href="https://github.com/" target="_blank" rel="noopener">Issues</a></li>
-            <li><a href="https://stackoverflow.com/questions/tagged/bootstrap-5" target="_blank" rel="noopener">Stack Overflow</a></li>
-            <li><a href="https://discord.gg/bZUvakRU3M" target="_blank" rel="noopener">Discord</a></li>
-          </ul>
-        </div>
-        <div class="col-12 col-lg-4 mb-3">
-          <p class="small text-body-secondary mb-0">WindStrap — Bootstrap 5.3.8 translated 1:1 into Tailwind CSS via the <code>@apply</code> directive. This documentation mirrors <a href="https://getbootstrap.com/docs/5.3/">getbootstrap.com/docs/5.3</a>. Docs content licensed <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a>.</p>
-        </div>
-      </div>
-    </div>
-  </footer>
 
-  <!-- Bootstrap JS (for interactive demos: dropdowns, collapse, modals…).
-       The WindStrap translation covers the CSS; the JS behaviors are
-       Bootstrap's own and are intentionally not re-implemented here. -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-  <script src="../js/docs.js"></script>
-</body>
-</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table class="table table-utilities"><thead><tr><th>Option</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody><tr><td><a href="#property"><code>property</code></a></td><td><strong>Required</strong></td><td>–</td><td>Name of the property, this can be a string or an array of strings (e.g., horizontal paddings or margins).</td></tr><tr><td><a href="#values"><code>values</code></a></td><td><strong>Required</strong></td><td>–</td><td>List of values, or a map if you don’t want the class name to be the same as the value. If <code>null</code> is used as map key, <code>class</code> is not prepended to the class name.</td></tr><tr><td><a href="#class"><code>class</code></a></td><td>Optional</td><td>null</td><td>Name of the generated class. If not provided and <code>property</code> is an array of strings, <code>class</code> will default to the first element of the <code>property</code> array. If not provided and <code>property</code> is a string, the <code>values</code> keys are used for the <code>class</code> names.</td></tr><tr><td><a href="#css-variable-utilities"><code>css-var</code></a></td><td>Optional</td><td><code>false</code></td><td>Boolean to generate CSS variables instead of CSS rules.</td></tr><tr><td><a href="#css-variable-utilities"><code>css-variable-name</code></a></td><td>Optional</td><td>null</td><td>Custom un-prefixed name for the CSS variable inside the ruleset.</td></tr><tr><td><a href="#local-css-variables"><code>local-vars</code></a></td><td>Optional</td><td>null</td><td>Map of local CSS variables to generate in addition to the CSS rules.</td></tr><tr><td><a href="#states"><code>state</code></a></td><td>Optional</td><td>null</td><td>List of pseudo-class variants (e.g., <code>:hover</code> or <code>:focus</code>) to generate.</td></tr><tr><td><a href="#responsive"><code>responsive</code></a></td><td>Optional</td><td><code>false</code></td><td>Boolean indicating if responsive classes should be generated.</td></tr><tr><td><code>rfs</code></td><td>Optional</td><td><code>false</code></td><td>Boolean to enable <a href="https://getbootstrap.com/docs/5.3/getting-started/rfs">fluid rescaling with RFS</a>.</td></tr><tr><td><a href="#print"><code>print</code></a></td><td>Optional</td><td><code>false</code></td><td>Boolean indicating if print classes need to be generated.</td></tr><tr><td><code>rtl</code></td><td>Optional</td><td><code>true</code></td><td>Boolean indicating if utility should be kept in RTL.</td></tr></tbody></table> </div>
+<h2 id="api-explained">API explained<a class="anchor-link" aria-label="Link to this section: API explained" href="#api-explained"> </a></h2>
+<p>All utility variables are added to the <code>$utilities</code> variable within our <code>_utilities.scss</code> stylesheet. Each group of utilities looks something like this:</p>
+<div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-scss"><code is:raw class="language-scss"><span class="token property"><span class="token variable">$utilities</span></span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+  <span class="token string">&quot;opacity&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+    <span class="token property">property</span><span class="token punctuation">:</span> opacity<span class="token punctuation">,</span>
+    <span class="token property">values</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+      <span class="token property">0</span><span class="token punctuation">:</span> 0<span class="token punctuation">,</span>
+      <span class="token property">25</span><span class="token punctuation">:</span> .25<span class="token punctuation">,</span>
+      <span class="token property">50</span><span class="token punctuation">:</span> .5<span class="token punctuation">,</span>
+      <span class="token property">75</span><span class="token punctuation">:</span> .75<span class="token punctuation">,</span>
+      <span class="token property">100</span><span class="token punctuation">:</span> 1<span class="token punctuation">,</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> </div> </div>
+<p>Which outputs the following:</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-css"><code is:raw class="language-css"><span class="token selector">.opacity-0</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.opacity-25</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .25<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.opacity-50</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .5<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.opacity-75</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .75<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.opacity-100</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+</code></pre> </div> </div>
+<h3 id="property">Property<a class="anchor-link" aria-label="Link to this section: Property" href="#property"> </a></h3>
+<p>The required <code>property</code> key must be set for any utility, and it must contain a valid CSS property. This property is used in the generated utility’s ruleset. When the <code>class</code> key is omitted, it also serves as the default class name. Consider the <code>text-decoration</code> utility:</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-scss"><code is:raw class="language-scss"><span class="token property"><span class="token variable">$utilities</span></span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+  <span class="token string">&quot;text-decoration&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+    <span class="token property">property</span><span class="token punctuation">:</span> text-decoration<span class="token punctuation">,</span>
+    <span class="token property">values</span><span class="token punctuation">:</span> none underline line-through
+  <span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> </div> </div>
+<p>Output:</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-css"><code is:raw class="language-css"><span class="token selector">.text-decoration-none</span> <span class="token punctuation">{</span> <span class="token property">text-decoration</span><span class="token punctuation">:</span> none <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.text-decoration-underline</span> <span class="token punctuation">{</span> <span class="token property">text-decoration</span><span class="token punctuation">:</span> underline <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.text-decoration-line-through</span> <span class="token punctuation">{</span> <span class="token property">text-decoration</span><span class="token punctuation">:</span> line-through <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+</code></pre> </div> </div>
+<h3 id="values">Values<a class="anchor-link" aria-label="Link to this section: Values" href="#values"> </a></h3>
+<p>Use the <code>values</code> key to specify which values for the specified <code>property</code> should be used in the generated class names and rules. Can be a list or map (set in the utilities or in a Sass variable).</p>
+<p>As a list, like with <a href="https://getbootstrap.com/docs/5.3/utilities/text#text-decoration"><code>text-decoration</code> utilities</a>:</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-scss"><code is:raw class="language-scss"><span class="token property">values</span><span class="token punctuation">:</span> none underline line-through
+</code></pre> </div> </div>
+<p>As a map, like with <a href="https://getbootstrap.com/docs/5.3/utilities/opacity"><code>opacity</code> utilities</a>:</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-scss"><code is:raw class="language-scss"><span class="token property">values</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+  <span class="token property">0</span><span class="token punctuation">:</span> 0<span class="token punctuation">,</span>
+  <span class="token property">25</span><span class="token punctuation">:</span> .25<span class="token punctuation">,</span>
+  <span class="token property">50</span><span class="token punctuation">:</span> .5<span class="token punctuation">,</span>
+  <span class="token property">75</span><span class="token punctuation">:</span> .75<span class="token punctuation">,</span>
+  <span class="token property">100</span><span class="token punctuation">:</span> 1<span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+</code></pre> </div> </div>
+<p>As a Sass variable that sets the list or map, as in our <a href="https://getbootstrap.com/docs/5.3/utilities/position"><code>position</code> utilities</a>:</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-scss"><code is:raw class="language-scss"><span class="token property">values</span><span class="token punctuation">:</span> <span class="token variable">$position-values</span>
+</code></pre> </div> </div>
+<h3 id="class">Class<a class="anchor-link" aria-label="Link to this section: Class" href="#class"> </a></h3>
+<p>Use the <code>class</code> option to change the class prefix used in the compiled CSS. For example, to change from <code>.opacity-*</code> to <code>.o-*</code>:</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-scss"><code is:raw class="language-scss"><span class="token property"><span class="token variable">$utilities</span></span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+  <span class="token string">&quot;opacity&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+    <span class="token property">property</span><span class="token punctuation">:</span> opacity<span class="token punctuation">,</span>
+    <span class="token property">class</span><span class="token punctuation">:</span> o<span class="token punctuation">,</span>
+    <span class="token property">values</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+      <span class="token property">0</span><span class="token punctuation">:</span> 0<span class="token punctuation">,</span>
+      <span class="token property">25</span><span class="token punctuation">:</span> .25<span class="token punctuation">,</span>
+      <span class="token property">50</span><span class="token punctuation">:</span> .5<span class="token punctuation">,</span>
+      <span class="token property">75</span><span class="token punctuation">:</span> .75<span class="token punctuation">,</span>
+      <span class="token property">100</span><span class="token punctuation">:</span> 1<span class="token punctuation">,</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> </div> </div>
+<p>Output:</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-css"><code is:raw class="language-css"><span class="token selector">.o-0</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> 0 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.o-25</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .25 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.o-50</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .5 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.o-75</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .75 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.o-100</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> 1 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+</code></pre> </div> </div>
+<p>If <code>class: null</code>, generates classes for each of the <code>values</code> keys:</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-scss"><code is:raw class="language-scss"><span class="token property"><span class="token variable">$utilities</span></span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+  <span class="token string">&quot;visibility&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+    <span class="token property">property</span><span class="token punctuation">:</span> visibility<span class="token punctuation">,</span>
+    <span class="token property">class</span><span class="token punctuation">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+    <span class="token property">values</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+      <span class="token property">visible</span><span class="token punctuation">:</span> visible<span class="token punctuation">,</span>
+      <span class="token property">invisible</span><span class="token punctuation">:</span> hidden<span class="token punctuation">,</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> </div> </div>
+<p>Output:</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-css"><code is:raw class="language-css"><span class="token selector">.visible</span> <span class="token punctuation">{</span> <span class="token property">visibility</span><span class="token punctuation">:</span> visible <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.invisible</span> <span class="token punctuation">{</span> <span class="token property">visibility</span><span class="token punctuation">:</span> hidden <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+</code></pre> </div> </div>
+<h3 id="css-variable-utilities">CSS variable utilities<a class="anchor-link" aria-label="Link to this section: CSS variable utilities" href="#css-variable-utilities"> </a></h3>
+<p>Set the <code>css-var</code> boolean option to <code>true</code> and the API will generate local CSS variables for the given selector instead of the usual <code>property: value</code> rules. Add an optional <code>css-variable-name</code> to set a different CSS variable name than the class name.</p>
+<p>Consider our <code>.text-opacity-*</code> utilities. If we add the <code>css-variable-name</code> option, we&#39;ll get a custom output.</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-scss"><code is:raw class="language-scss"><span class="token property"><span class="token variable">$utilities</span></span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+  <span class="token string">&quot;text-opacity&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+    <span class="token property">css-var</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">css-variable-name</span><span class="token punctuation">:</span> text-alpha<span class="token punctuation">,</span>
+    <span class="token property">class</span><span class="token punctuation">:</span> text-opacity<span class="token punctuation">,</span>
+    <span class="token property">values</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+      <span class="token property">25</span><span class="token punctuation">:</span> .25<span class="token punctuation">,</span>
+      <span class="token property">50</span><span class="token punctuation">:</span> .5<span class="token punctuation">,</span>
+      <span class="token property">75</span><span class="token punctuation">:</span> .75<span class="token punctuation">,</span>
+      <span class="token property">100</span><span class="token punctuation">:</span> 1
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> </div> </div>
+<p>Output:</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-css"><code is:raw class="language-css"><span class="token selector">.text-opacity-25</span> <span class="token punctuation">{</span> <span class="token property">--bs-text-alpha</span><span class="token punctuation">:</span> .25<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.text-opacity-50</span> <span class="token punctuation">{</span> <span class="token property">--bs-text-alpha</span><span class="token punctuation">:</span> .5<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.text-opacity-75</span> <span class="token punctuation">{</span> <span class="token property">--bs-text-alpha</span><span class="token punctuation">:</span> .75<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.text-opacity-100</span> <span class="token punctuation">{</span> <span class="token property">--bs-text-alpha</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+</code></pre> </div> </div>
+<h3 id="local-css-variables">Local CSS variables<a class="anchor-link" aria-label="Link to this section: Local CSS variables" href="#local-css-variables"> </a></h3>
+<p>Use the <code>local-vars</code> option to specify a Sass map that will generate local CSS variables within the utility class’s ruleset. Please note that it may require additional work to consume those local CSS variables in the generated CSS rules. For example, consider our <code>.bg-*</code> utilities:</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-scss"><code is:raw class="language-scss"><span class="token property"><span class="token variable">$utilities</span></span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+  <span class="token string">&quot;background-color&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+    <span class="token property">property</span><span class="token punctuation">:</span> background-color<span class="token punctuation">,</span>
+    <span class="token property">class</span><span class="token punctuation">:</span> bg<span class="token punctuation">,</span>
+    <span class="token property">local-vars</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+      <span class="token string">&quot;bg-opacity&quot;</span><span class="token punctuation">:</span> 1
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token property">values</span><span class="token punctuation">:</span> <span class="token function">map-merge</span><span class="token punctuation">(</span>
+      <span class="token variable">$utilities-bg-colors</span><span class="token punctuation">,</span>
+      <span class="token punctuation">(</span>
+        <span class="token string">&quot;transparent&quot;</span><span class="token punctuation">:</span> transparent
+      <span class="token punctuation">)</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> </div> </div>
+<p>Output:</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-css"><code is:raw class="language-css"><span class="token selector">.bg-primary</span> <span class="token punctuation">{</span>
+  <span class="token property">--bs-bg-opacity</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token function">var</span><span class="token punctuation">(</span>--bs-primary-rgb<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">var</span><span class="token punctuation">(</span>--bs-bg-opacity<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token important">!important</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> </div> </div>
+<h3 id="states">States<a class="anchor-link" aria-label="Link to this section: States" href="#states"> </a></h3>
+<p>Use the <code>state</code> option to generate pseudo-class variations. Example pseudo-classes are <code>:hover</code> and <code>:focus</code>. When a list of states are provided, classnames are created for that pseudo-class. For example, to change opacity on hover, add <code>state: hover</code> and you’ll get <code>.opacity-hover:hover</code> in your compiled CSS.</p>
+<p>Need multiple pseudo-classes? Use a space-separated list of states: <code>state: hover focus</code>.</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-scss"><code is:raw class="language-scss"><span class="token property"><span class="token variable">$utilities</span></span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+  <span class="token string">&quot;opacity&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+    <span class="token property">property</span><span class="token punctuation">:</span> opacity<span class="token punctuation">,</span>
+    <span class="token property">class</span><span class="token punctuation">:</span> opacity<span class="token punctuation">,</span>
+    <span class="token property">state</span><span class="token punctuation">:</span> hover<span class="token punctuation">,</span>
+    <span class="token property">values</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+      <span class="token property">0</span><span class="token punctuation">:</span> 0<span class="token punctuation">,</span>
+      <span class="token property">25</span><span class="token punctuation">:</span> .25<span class="token punctuation">,</span>
+      <span class="token property">50</span><span class="token punctuation">:</span> .5<span class="token punctuation">,</span>
+      <span class="token property">75</span><span class="token punctuation">:</span> .75<span class="token punctuation">,</span>
+      <span class="token property">100</span><span class="token punctuation">:</span> 1<span class="token punctuation">,</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> </div> </div>
+<p>Output:</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-css"><code is:raw class="language-css"><span class="token selector">.opacity-0-hover:hover</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> 0 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.opacity-25-hover:hover</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .25 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.opacity-50-hover:hover</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .5 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.opacity-75-hover:hover</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .75 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.opacity-100-hover:hover</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> 1 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+</code></pre> </div> </div>
+<h3 id="responsive">Responsive<a class="anchor-link" aria-label="Link to this section: Responsive" href="#responsive"> </a></h3>
+<p>Add the <code>responsive</code> boolean to generate responsive utilities (e.g., <code>.opacity-md-25</code>) across <a href="https://getbootstrap.com/docs/5.3/layout/breakpoints">all breakpoints</a>.</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-scss"><code is:raw class="language-scss"><span class="token property"><span class="token variable">$utilities</span></span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+  <span class="token string">&quot;opacity&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+    <span class="token property">property</span><span class="token punctuation">:</span> opacity<span class="token punctuation">,</span>
+    <span class="token property">responsive</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">values</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+      <span class="token property">0</span><span class="token punctuation">:</span> 0<span class="token punctuation">,</span>
+      <span class="token property">25</span><span class="token punctuation">:</span> .25<span class="token punctuation">,</span>
+      <span class="token property">50</span><span class="token punctuation">:</span> .5<span class="token punctuation">,</span>
+      <span class="token property">75</span><span class="token punctuation">:</span> .75<span class="token punctuation">,</span>
+      <span class="token property">100</span><span class="token punctuation">:</span> 1<span class="token punctuation">,</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> </div> </div>
+<p>Output:</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-css"><code is:raw class="language-css"><span class="token selector">.opacity-0</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> 0 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.opacity-25</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .25 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.opacity-50</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .5 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.opacity-75</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .75 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.opacity-100</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> 1 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 576px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">.opacity-sm-0</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> 0 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">.opacity-sm-25</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .25 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">.opacity-sm-50</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .5 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">.opacity-sm-75</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .75 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">.opacity-sm-100</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> 1 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 768px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">.opacity-md-0</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> 0 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">.opacity-md-25</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .25 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">.opacity-md-50</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .5 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">.opacity-md-75</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .75 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">.opacity-md-100</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> 1 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 992px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">.opacity-lg-0</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> 0 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">.opacity-lg-25</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .25 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">.opacity-lg-50</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .5 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">.opacity-lg-75</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .75 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">.opacity-lg-100</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> 1 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 1200px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">.opacity-xl-0</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> 0 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">.opacity-xl-25</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .25 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">.opacity-xl-50</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .5 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">.opacity-xl-75</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .75 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">.opacity-xl-100</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> 1 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 1400px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">.opacity-xxl-0</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> 0 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">.opacity-xxl-25</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .25 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">.opacity-xxl-50</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .5 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">.opacity-xxl-75</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .75 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">.opacity-xxl-100</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> 1 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> </div> </div>
+<h3 id="print">Print<a class="anchor-link" aria-label="Link to this section: Print" href="#print"> </a></h3>
+<p>Enabling the <code>print</code> option will <strong>also</strong> generate utility classes for print, which are only applied within the <code>@media print { ... }</code> media query.</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-scss"><code is:raw class="language-scss"><span class="token property"><span class="token variable">$utilities</span></span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+  <span class="token string">&quot;opacity&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+    <span class="token property">property</span><span class="token punctuation">:</span> opacity<span class="token punctuation">,</span>
+    <span class="token property">print</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">values</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+      <span class="token property">0</span><span class="token punctuation">:</span> 0<span class="token punctuation">,</span>
+      <span class="token property">25</span><span class="token punctuation">:</span> .25<span class="token punctuation">,</span>
+      <span class="token property">50</span><span class="token punctuation">:</span> .5<span class="token punctuation">,</span>
+      <span class="token property">75</span><span class="token punctuation">:</span> .75<span class="token punctuation">,</span>
+      <span class="token property">100</span><span class="token punctuation">:</span> 1<span class="token punctuation">,</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> </div> </div>
+<p>Output:</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-css"><code is:raw class="language-css"><span class="token selector">.opacity-0</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> 0 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.opacity-25</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .25 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.opacity-50</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .5 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.opacity-75</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .75 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.opacity-100</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> 1 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@media</span> print</span> <span class="token punctuation">{</span>
+  <span class="token selector">.opacity-print-0</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> 0 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">.opacity-print-25</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .25 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">.opacity-print-50</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .5 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">.opacity-print-75</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .75 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">.opacity-print-100</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> 1 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> </div> </div>
+<h2 id="importance">Importance<a class="anchor-link" aria-label="Link to this section: Importance" href="#importance"> </a></h2>
+<p>All utilities generated by the API include <code>!important</code> to ensure they override components and modifier classes as intended. You can toggle this setting globally with the <code>$enable-important-utilities</code> variable (defaults to <code>true</code>).</p>
+<h2 id="using-the-api">Using the API<a class="anchor-link" aria-label="Link to this section: Using the API" href="#using-the-api"> </a></h2>
+<p>Now that you’re familiar with how the utilities API works, learn how to add your own custom classes and modify our default utilities.</p>
+<h3 id="override-utilities">Override utilities<a class="anchor-link" aria-label="Link to this section: Override utilities" href="#override-utilities"> </a></h3>
+<p>Override existing utilities by using the same key. For example, if you want additional responsive overflow utility classes, you can do this:</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-scss"><code is:raw class="language-scss"><span class="token property"><span class="token variable">$utilities</span></span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+  <span class="token string">&quot;overflow&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+    <span class="token property">responsive</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">property</span><span class="token punctuation">:</span> overflow<span class="token punctuation">,</span>
+    <span class="token property">values</span><span class="token punctuation">:</span> visible hidden scroll auto<span class="token punctuation">,</span>
+  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> </div> </div>
+<h3 id="add-utilities">Add utilities<a class="anchor-link" aria-label="Link to this section: Add utilities" href="#add-utilities"> </a></h3>
+<p>New utilities can be added to the default <code>$utilities</code> map with a <code>map-merge</code>. Make sure our required Sass files and <code>_utilities.scss</code> are imported first, then use the <code>map-merge</code> to add your additional utilities. For example, here’s how to add a responsive <code>cursor</code> utility with three values.</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-scss"><code is:raw class="language-scss"><span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/functions&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/variables&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/variables-dark&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/maps&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/mixins&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/utilities&quot;</span><span class="token punctuation">;</span>
+
+<span class="token property"><span class="token variable">$utilities</span></span><span class="token punctuation">:</span> <span class="token function">map-merge</span><span class="token punctuation">(</span>
+  <span class="token variable">$utilities</span><span class="token punctuation">,</span>
+  <span class="token punctuation">(</span>
+    <span class="token string">&quot;cursor&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+      <span class="token property">property</span><span class="token punctuation">:</span> cursor<span class="token punctuation">,</span>
+      <span class="token property">class</span><span class="token punctuation">:</span> cursor<span class="token punctuation">,</span>
+      <span class="token property">responsive</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token property">values</span><span class="token punctuation">:</span> auto pointer grab<span class="token punctuation">,</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/utilities/api&quot;</span><span class="token punctuation">;</span>
+</code></pre> </div> </div>
+<h3 id="modify-utilities">Modify utilities<a class="anchor-link" aria-label="Link to this section: Modify utilities" href="#modify-utilities"> </a></h3>
+<p>Modify existing utilities in the default <code>$utilities</code> map with <code>map-get</code> and <code>map-merge</code> functions. In the example below, we’re adding an additional value to the <code>width</code> utilities. Start with an initial <code>map-merge</code> and then specify which utility you want to modify. From there, fetch the nested <code>&quot;width&quot;</code> map with <code>map-get</code> to access and modify the utility’s options and values.</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-scss"><code is:raw class="language-scss"><span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/functions&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/variables&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/variables-dark&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/maps&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/mixins&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/utilities&quot;</span><span class="token punctuation">;</span>
+
+<span class="token property"><span class="token variable">$utilities</span></span><span class="token punctuation">:</span> <span class="token function">map-merge</span><span class="token punctuation">(</span>
+  <span class="token variable">$utilities</span><span class="token punctuation">,</span>
+  <span class="token punctuation">(</span>
+    <span class="token string">&quot;width&quot;</span><span class="token punctuation">:</span> <span class="token function">map-merge</span><span class="token punctuation">(</span>
+      <span class="token function">map-get</span><span class="token punctuation">(</span><span class="token variable">$utilities</span><span class="token punctuation">,</span> <span class="token string">&quot;width&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">(</span>
+        <span class="token property">values</span><span class="token punctuation">:</span> <span class="token function">map-merge</span><span class="token punctuation">(</span>
+          <span class="token function">map-get</span><span class="token punctuation">(</span><span class="token function">map-get</span><span class="token punctuation">(</span><span class="token variable">$utilities</span><span class="token punctuation">,</span> <span class="token string">&quot;width&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;values&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token punctuation">(</span><span class="token property">10</span><span class="token punctuation">:</span> 10%<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/utilities/api&quot;</span><span class="token punctuation">;</span>
+</code></pre> </div> </div>
+<h4 id="enable-responsive">Enable responsive<a class="anchor-link" aria-label="Link to this section: Enable responsive" href="#enable-responsive"> </a></h4>
+<p>You can enable responsive classes for an existing set of utilities that are not currently responsive by default. For example, to make the <code>border</code> classes responsive:</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-scss"><code is:raw class="language-scss"><span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/functions&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/variables&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/variables-dark&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/maps&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/mixins&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/utilities&quot;</span><span class="token punctuation">;</span>
+
+<span class="token property"><span class="token variable">$utilities</span></span><span class="token punctuation">:</span> <span class="token function">map-merge</span><span class="token punctuation">(</span>
+  <span class="token variable">$utilities</span><span class="token punctuation">,</span>
+  <span class="token punctuation">(</span>
+    <span class="token string">&quot;border&quot;</span><span class="token punctuation">:</span> <span class="token function">map-merge</span><span class="token punctuation">(</span>
+      <span class="token function">map-get</span><span class="token punctuation">(</span><span class="token variable">$utilities</span><span class="token punctuation">,</span> <span class="token string">&quot;border&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">(</span> <span class="token property">responsive</span><span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/utilities/api&quot;</span><span class="token punctuation">;</span>
+</code></pre> </div> </div>
+<p>This will now generate responsive variations of <code>.border</code> and <code>.border-0</code> for each breakpoint. Your generated CSS will look like this:</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-css"><code is:raw class="language-css"><span class="token selector">.border</span> <span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
+<span class="token selector">.border-0</span> <span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 576px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">.border-sm</span> <span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
+  <span class="token selector">.border-sm-0</span> <span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 768px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">.border-md</span> <span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
+  <span class="token selector">.border-md-0</span> <span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 992px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">.border-lg</span> <span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
+  <span class="token selector">.border-lg-0</span> <span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 1200px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">.border-xl</span> <span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
+  <span class="token selector">.border-xl-0</span> <span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 1400px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">.border-xxl</span> <span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
+  <span class="token selector">.border-xxl-0</span> <span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> </div> </div>
+<h4 id="rename-utilities">Rename utilities<a class="anchor-link" aria-label="Link to this section: Rename utilities" href="#rename-utilities"> </a></h4>
+<p>Missing v4 utilities, or used to another naming convention? The utilities API can be used to override the resulting <code>class</code> of a given utility—for example, to rename <code>.ms-*</code> utilities to oldish <code>.ml-*</code>:</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-scss"><code is:raw class="language-scss"><span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/functions&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/variables&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/variables-dark&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/maps&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/mixins&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/utilities&quot;</span><span class="token punctuation">;</span>
+
+<span class="token property"><span class="token variable">$utilities</span></span><span class="token punctuation">:</span> <span class="token function">map-merge</span><span class="token punctuation">(</span>
+  <span class="token variable">$utilities</span><span class="token punctuation">,</span>
+  <span class="token punctuation">(</span>
+    <span class="token string">&quot;margin-start&quot;</span><span class="token punctuation">:</span> <span class="token function">map-merge</span><span class="token punctuation">(</span>
+      <span class="token function">map-get</span><span class="token punctuation">(</span><span class="token variable">$utilities</span><span class="token punctuation">,</span> <span class="token string">&quot;margin-start&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">(</span> <span class="token property">class</span><span class="token punctuation">:</span> ml <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/utilities/api&quot;</span><span class="token punctuation">;</span>
+</code></pre> </div> </div>
+<h3 id="remove-utilities">Remove utilities<a class="anchor-link" aria-label="Link to this section: Remove utilities" href="#remove-utilities"> </a></h3>
+<p>Remove any of the default utilities with the <a href="https://sass-lang.com/documentation/modules/map/#remove"><code>map-remove()</code> Sass function</a>.</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-scss"><code is:raw class="language-scss"><span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/functions&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/variables&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/variables-dark&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/maps&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/mixins&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/utilities&quot;</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Remove multiple utilities with a comma-separated list</span>
+<span class="token property"><span class="token variable">$utilities</span></span><span class="token punctuation">:</span> <span class="token function">map-remove</span><span class="token punctuation">(</span><span class="token variable">$utilities</span><span class="token punctuation">,</span> <span class="token string">&quot;width&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;float&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/utilities/api&quot;</span><span class="token punctuation">;</span>
+</code></pre> </div> </div>
+<p>You can also use the <a href="https://sass-lang.com/documentation/modules/map/#merge"><code>map-merge()</code> Sass function</a> and set the group key to <code>null</code> to remove the utility.</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-scss"><code is:raw class="language-scss"><span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/functions&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/variables&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/variables-dark&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/maps&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/mixins&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/utilities&quot;</span><span class="token punctuation">;</span>
+
+<span class="token property"><span class="token variable">$utilities</span></span><span class="token punctuation">:</span> <span class="token function">map-merge</span><span class="token punctuation">(</span>
+  <span class="token variable">$utilities</span><span class="token punctuation">,</span>
+  <span class="token punctuation">(</span>
+    <span class="token string">&quot;width&quot;</span><span class="token punctuation">:</span> <span class="token null keyword">null</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/utilities/api&quot;</span><span class="token punctuation">;</span>
+</code></pre> </div> </div>
+<h3 id="add-remove-modify">Add, remove, modify<a class="anchor-link" aria-label="Link to this section: Add, remove, modify" href="#add-remove-modify"> </a></h3>
+<p>You can add, remove, and modify many utilities all at once with the <a href="https://sass-lang.com/documentation/modules/map/#merge"><code>map-merge()</code> Sass function</a>. Here’s how you can combine the previous examples into one larger map.</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-scss"><code is:raw class="language-scss"><span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/functions&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/variables&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/variables-dark&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/maps&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/mixins&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/utilities&quot;</span><span class="token punctuation">;</span>
+
+<span class="token property"><span class="token variable">$utilities</span></span><span class="token punctuation">:</span> <span class="token function">map-merge</span><span class="token punctuation">(</span>
+  <span class="token variable">$utilities</span><span class="token punctuation">,</span>
+  <span class="token punctuation">(</span>
+    <span class="token comment">// Remove the `width` utility</span>
+    <span class="token string">&quot;width&quot;</span><span class="token punctuation">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+    <span class="token comment">// Make an existing utility responsive</span>
+    <span class="token string">&quot;border&quot;</span><span class="token punctuation">:</span> <span class="token function">map-merge</span><span class="token punctuation">(</span>
+      <span class="token function">map-get</span><span class="token punctuation">(</span><span class="token variable">$utilities</span><span class="token punctuation">,</span> <span class="token string">&quot;border&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">(</span> <span class="token property">responsive</span><span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token comment">// Add new utilities</span>
+    <span class="token string">&quot;cursor&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+      <span class="token property">property</span><span class="token punctuation">:</span> cursor<span class="token punctuation">,</span>
+      <span class="token property">class</span><span class="token punctuation">:</span> cursor<span class="token punctuation">,</span>
+      <span class="token property">responsive</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token property">values</span><span class="token punctuation">:</span> auto pointer grab<span class="token punctuation">,</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">@import</span> <span class="token string">&quot;bootstrap/scss/utilities/api&quot;</span><span class="token punctuation">;</span>
+</code></pre> </div> </div>
+<h4 id="remove-utility-in-rtl">Remove utility in RTL<a class="anchor-link" aria-label="Link to this section: Remove utility in RTL" href="#remove-utility-in-rtl"> </a></h4>
+<p>Some edge cases make <a href="https://rtlstyling.com/posts/rtl-styling#common-things-that-might-not-work-for-rtl">RTL styling difficult</a>, such as line breaks in Arabic. Thus utilities can be dropped from RTL output by setting the <code>rtl</code> option to <code>false</code>:</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-scss"><code is:raw class="language-scss"><span class="token property"><span class="token variable">$utilities</span></span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+  <span class="token string">&quot;word-wrap&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+    <span class="token property">property</span><span class="token punctuation">:</span> word-wrap word-break<span class="token punctuation">,</span>
+    <span class="token property">class</span><span class="token punctuation">:</span> text<span class="token punctuation">,</span>
+    <span class="token property">values</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token property">break</span><span class="token punctuation">:</span> break-word<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token property">rtl</span><span class="token punctuation">:</span> <span class="token boolean">false</span>
+  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> </div> </div>
+<p>Output:</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copy"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-css"><code is:raw class="language-css"><span class="token comment">/* rtl:begin:remove */</span>
+<span class="token selector">.text-break</span> <span class="token punctuation">{</span>
+  <span class="token property">word-wrap</span><span class="token punctuation">:</span> break-word <span class="token important">!important</span><span class="token punctuation">;</span>
+  <span class="token property">word-break</span><span class="token punctuation">:</span> break-word <span class="token important">!important</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/* rtl:end:remove */</span>
+</code></pre> </div> </div>
+<p>This doesn’t output anything in RTL, thanks to <a href="https://rtlcss.com/learn/usage-guide/control-directives/#remove">the RTLCSS <code>remove</code> control directive</a>.</p>  </div> </main> </div>  <script type="module">const p=()=>{const t=document.querySelector(".bd-sidebar"),a=document.querySelector(".bd-links-nav .active");if(!t||!a)return;const c=t.clientHeight,i=a.offsetTop,r=a.clientHeight,n=i,s=n-c+r;(t.scrollTop>n||t.scrollTop<s)&&(t.scrollTop=n-c/2+r/2)},v=()=>{document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(e=>{new bootstrap.Tooltip(e)}),document.querySelectorAll('[data-bs-toggle="popover"]').forEach(e=>{new bootstrap.Popover(e)});const t=document.getElementById("toastPlacement");t&&document.getElementById("selectToastPlacement").addEventListener("change",function(){t.dataset.originalClass||(t.dataset.originalClass=t.className),t.className=`${t.dataset.originalClass} ${this.value}`}),document.querySelectorAll(".bd-example .toast").forEach(e=>{new bootstrap.Toast(e,{autohide:!1}).show()});const a=document.getElementById("liveToastBtn"),c=document.getElementById("liveToast");if(a){const e=bootstrap.Toast.getOrCreateInstance(c);a.addEventListener("click",()=>{e.show()})}const i=document.getElementById("liveAlertPlaceholder"),r=(e,o)=>{const l=document.createElement("div");l.innerHTML=[`<div class="alert alert-${o} alert-dismissible" role="alert">`,`   <div>${e}</div>`,'   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',"</div>"].join(""),i.append(l)},n=document.getElementById("liveAlertBtn");n&&n.addEventListener("click",()=>{r("Nice, you triggered this alert message!","success")}),document.querySelectorAll('.carousel:not([data-bs-ride="carousel"])').forEach(e=>{bootstrap.Carousel.getOrCreateInstance(e)}),document.querySelectorAll('.bd-example-indeterminate [type="checkbox"]').forEach(e=>{e.id.includes("Indeterminate")&&(e.indeterminate=!0)}),document.querySelectorAll('.bd-content [href="#"]').forEach(e=>{e.addEventListener("click",o=>{o.preventDefault()})});const s=document.getElementById("exampleModal");s&&s.addEventListener("show.bs.modal",e=>{const l=e.relatedTarget.getAttribute("data-bs-whatever"),m=s.querySelector(".modal-title"),u=s.querySelector(".modal-body input");m.textContent=`New message to ${l}`,u.value=l});const d=document.querySelectorAll(".bd-example-offcanvas .offcanvas");d&&d.forEach(e=>{e.addEventListener("show.bs.offcanvas",o=>{o.preventDefault()},!1)})};p();v();</script> <div class="position-fixed" aria-hidden="true"> <input type="text" tabindex="-1"> </div> </body></html>

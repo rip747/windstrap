@@ -1,0 +1,3 @@
+# Keep repo git hooks as LF so they run under sh even on Windows (core.autocrlf
+# would otherwise check them out with CRLF line endings, which breaks sh).
+githooks/** text eol=lf
