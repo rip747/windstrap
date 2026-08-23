@@ -2,7 +2,7 @@
 # jsDelivr and unpkg mirror npm automatically, so publishing here is what
 # makes the framework available on those CDNs.
 #
-#   git tag v1.0.0 && git push origin v1.0.0
+#   git tag v5.3.8-1 && git push origin v5.3.8-1
 #
 # Requires an npm automation token stored as a repository secret named NPM_TOKEN.
 name: Publish to npm
@@ -34,6 +34,9 @@ jobs:
         run: npm run build
 
       - name: Publish to npm
-        run: npm publish --provenance --access public
+        # --tag latest: WindStrap versions are prereleases (e.g. 5.3.8-1), and
+        # npm tags prereleases as "next" by default, which a plain `npm i`
+        # would not install. Forcing the latest tag keeps them installable.
+        run: npm publish --provenance --access public --tag latest
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

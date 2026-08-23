@@ -4,6 +4,19 @@
 
 WindStrap is a drop-in stylesheet that gives you Bootstrap's exact class names (`.btn-primary`, `.col-md-6`, `.d-flex`, `.text-bg-success`, …) built on top of Tailwind's utility engine — so you get Bootstrap's API with Tailwind's pipeline (JIT output, PurgeCSS-style tree-shaking, familiar utility syntax for custom tweaks).
 
+## Versioning
+
+WindStrap mirrors Bootstrap's version and appends its own patch as a semver
+prerelease suffix. For example, **`5.3.8-1`** tracks **Bootstrap 5.3.8** with
+**WindStrap patch 1**. WindStrap patches fix WindStrap-specific issues (a CSS
+translation bug, build/publishing problem, etc.) without changing the
+Bootstrap classes it targets.
+
+WindStrap prereleases are published under the `latest` npm dist-tag, so a plain
+`npm install @rip747/windstrap` (or the CDN links below) gets the newest one.
+Because they're prereleases, semver ranges like `^5.3.8` will not match them —
+pin the exact version if you use a range.
+
 ## Quick start
 
 Install from npm:
@@ -16,16 +29,16 @@ Or link the compiled stylesheet straight from a CDN (jsDelivr mirrors npm automa
 
 ```html
 <!-- Minified -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@rip747/windstrap@1.0.0/dist/windstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@rip747/windstrap@5.3.8-1/dist/windstrap.min.css">
 
 <!-- Unminified -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@rip747/windstrap@1.0.0/dist/windstrap.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@rip747/windstrap@5.3.8-1/dist/windstrap.css">
 ```
 
 unpkg serves the same files:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@rip747/windstrap@1.0.0/dist/windstrap.min.css">
+<link rel="stylesheet" href="https://unpkg.com/@rip747/windstrap@5.3.8-1/dist/windstrap.min.css">
 ```
 
 ## How it works
